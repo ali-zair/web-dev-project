@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+    margin: 0rem 0.2rem;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 160;
+}
+
+h1 {
+    color: black; 
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    li a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8da5b; 
+    color: black;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: none;
+    padding: 0.3rem;
+    max-width: 12rem;
+}
+
+ul li a {
+    color: #f8da5b;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: none;
+    padding: 0.1rem;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: small;
+    display: grid;
+    grid-gap: 0.5rem;
+
+    .header {
+
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            align-self: start;
+            flex-direction: column;
+            cursor: pointer;
+
+            .bar {
+                width: 2rem;
+                height: 0.2rem;
+                background-color: black;
+                margin: 0.2em 0;
+              }
+
+        }
+    }
+
+    .navbar {
+
+        .menu {
+           display:  none;
+           
+           ul {
+            padding: 0;
+            margin: 0;
+           }
+           
+        }
+
+        a {
+            color: black;
+        }
+    }
+    
+    .search-bar {
+        padding: 0.5rem 0.5rem 0.5rem 0rem;
+        input {
+            width: 80%;
+        }
+        button {
+            min-width: 16%;
+        }
+    }
+
+    .login {
+        /* position: absolute; */
+        top: 2rem;
+        right: 0.2rem;
+        padding: 8px 16px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+        grid-gap: 0.2rem;
+        .item {
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 0.5rem;
+    
+            :nth-child(2) {
+                font-weight: bold;
+            }
+    
+            button {
+                margin-top: 0.5rem;
+                size: 50%;
+            }
+    
+        }
+    }
+}

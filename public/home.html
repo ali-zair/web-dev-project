@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyberian Store</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XXXXXX" crossorigin="anonymous" />  
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body>
-    <header>
-        <h1>Cyberian Store</h1>
-        <div class="login">
-            <button>Login</button>
+    <header class="header">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
+        <h1 class="title">Cyberian Store</h1>
+        <button class="login">Login</button>
     </header>
-    <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="search-bar">
         <input type="text" id="search-item" placeholder="Search products...">
-        <button typ="submit"><i class="fa fa-search"></i></button>
+        <button type="submit"><i class="fa fa-search"></i></button>
     </div>
     <main class="main">
         <section class="item">
