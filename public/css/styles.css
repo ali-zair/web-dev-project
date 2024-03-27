@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
 * {
     margin: 0rem 0.2rem;
     padding: 0;
@@ -23,7 +21,7 @@ ul {
 }
 
 button {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f8da5b; 
     color: black;
     font-weight: bold;
@@ -44,7 +42,7 @@ ul li a {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: small;
     display: grid;
     grid-gap: 0.5rem;
@@ -104,7 +102,7 @@ body {
         }
     }
 
-    .login {
+    .login-btn {
         /* position: absolute; */
         top: 2rem;
         right: 0.2rem;
@@ -122,7 +120,32 @@ body {
             padding: 0.5rem;
     
             :nth-child(2) {
+                font-size: medium;
                 font-weight: bold;
+            }
+
+            .note {
+                font-style: italic;
+                font-size: normal;
+                margin: 0.3rem;
+                margin-top: 1rem;
+            }
+
+            .best-for {
+                margin: 0.5rem 0.3rem;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            .price {
+                font-size: medium;
+                font-weight: bold;
+                margin-top: 1rem;
+            }
+
+            .features {
+                font-weight: bold;
+                margin: 0.3rem;
             }
     
             button {
