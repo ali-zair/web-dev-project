@@ -107,10 +107,12 @@ body {
 
   .main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
-    grid-gap: 0.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(55vh, 1fr));
+    grid-gap: 3vh;
     .item {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       padding: 0.5rem;
@@ -152,12 +154,17 @@ body {
   }
 }
 .container {
+  font-family: "Montserrat", sans-serif;
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    padding: 1rem 0.5rem;
+  }
 }
 .form-group {
   margin-bottom: 20px;
@@ -171,6 +178,7 @@ body {
 .form-group input[type="tel"],
 .form-group input[type="email"],
 .form-group textarea {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;

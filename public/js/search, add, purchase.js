@@ -50,14 +50,10 @@ function find(search_term) {
     item.title.toLowerCase().includes(search_term.toLowerCase())
   );
 }
-// function addItem(title, note, features, extra_details, price, purchased) {
-//   const newItem = { title, note, features, extra_details, price, purchased };
-//   const updatedItems = items.concat(newItem);
-//   items = updatedItems;
-//   return items;
-// }
+
 function addItem(title, note, features, extra_details, price) {
   //can't be ourchased when added so we just set it as false by default
+  //in documentation, check if logged in
   const newItem = {
     title,
     note,
@@ -79,6 +75,7 @@ function removeItem(title) {
 }
 function purchaseItem(title) {
   //maybe should be added to cart, since it is only purchesed after deducting money from customer
+  //check balance , change in DOM
   const index = items.findIndex(
     (item) => item.title.toLowerCase() === title.toLowerCase()
   );
@@ -99,7 +96,7 @@ addItem(
   1233
 );
 line();
-console.log(find("lemur"));
+console.log(find("l"));
 line();
 line();
 console.log(items);
