@@ -3,6 +3,7 @@ import fs from 'fs-extra';
 
 const users = [
 	{
+		uid: 1,
 		name: 'Sid',
 		surname: 'Thomas',
 		address: '4073 Hayhurst Lane Southfield, MI 48075',
@@ -18,6 +19,7 @@ const users = [
 		}]
 	},
 	{
+		uid: 2,
 		name: 'Lucy',
 		surname: 'Batts',
 		address: '3121 Bottom Lane Gasport, NY 14067', 
@@ -33,6 +35,7 @@ const users = [
 		}]
 	},
 	{
+		uid: 3,
 		name: 'Tammy',
 		surname: 'Scudder',
 		address: '253 Michigan Avenue Connellsville, PA 15425',
@@ -48,6 +51,7 @@ const users = [
 		}]
 	},
 	{
+		uid: 4,
 		name: 'James',
 		surname: 'Lemus',
 		address: '4985 Roane Avenue Beltsville, MD 20705',
@@ -63,6 +67,7 @@ const users = [
 		}]
 	},
 	{
+		uid: 5,
 		name: 'Jill',
 		surname: 'Bowden',
 		address: '4648 Howard Street Grand Rapids, MI 49503',
@@ -81,29 +86,32 @@ const users = [
 	{ username: 'admin2', password: 'admin123' },
 	{ username: 'admin3', password: 'admin123' },
 	{
-		company: 'companyA',
-		username: 'seller1',
-		password: 'seller123',
-		bankAccount: 'accountA'
+		company: 'System76 Inc.',
+		username: 'system76',
+		password: 'system76123',
+		bankAccount: {
+			accountNumber: 91219092 ,
+			balance: 25340
+		}
 	},
 	{
-		company: 'companyB',
-		username: 'seller2',
-		password: 'seller123',
-		bankAccount: 'accountB'
+		company: 'Framework',
+		username: 'framework',
+		password: 'framework123',
+		bankAccount: {
+			accountNumber: 82013290 ,
+			balance: 2830
+		}
 	},
 	{
-		company: 'companyC',
-		username: 'seller3',
-		password: 'seller123',
-		bankAccount: 'accountC'
+		company: 'Tuxedo Computers',
+		username: 'tuxedo',
+		password: 'tuxedo123',
+		bankAccount: {
+			accountNumber: 61826742,
+			balance: 8210
+		}
 	},
-	{
-		company: 'companyC',
-		username: 'seller4',
-		password: 'seller123',
-		bankAccount: 'accountD'
-	}
 ];
 
 const items = [

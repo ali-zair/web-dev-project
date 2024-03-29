@@ -102,7 +102,7 @@ document.querySelector('#loginForm').addEventListener('submit', (event) => {
 	const password = document.querySelector('#password').value;
 	const user = users.find(user => user.username === username && user.password === password);
 	if (user) {
-		localStorage.isLoggedIn = "true";
+		localStorage.isLoggedIn = user.id;
 		confirm("Successfully Logged In!");
 		window.location.href = "/home.html";
 	} else {
