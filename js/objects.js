@@ -114,6 +114,126 @@ const users = [
     password: "seller123",
     bankAccount: "accountD",
   },
+  {
+    uid: 1,
+    name: "Sid",
+    surname: "Thomas",
+    address: "4073 Hayhurst Lane Southfield, MI 48075",
+    username: "sthomas",
+    password: "thomas123",
+    balance: 500,
+    itemsPurchased: [
+      {
+        itemId: 309,
+        shippingAddress: "4073 Hayhurst Lane Southfield, MI 48075",
+        quantity: 2,
+        date: new Date("2024-19-03"),
+        shippingType: "Standard",
+      },
+    ],
+  },
+  {
+    uid: 2,
+    name: "Lucy",
+    surname: "Batts",
+    address: "3121 Bottom Lane Gasport, NY 14067",
+    username: "lbatts",
+    password: "batts123",
+    balance: 1000,
+    itemsPurchased: [
+      {
+        itemId: 265,
+        shippingAddress: "3121 Bottom Lane Gasport, NY 14067",
+        quantity: 1,
+        date: new Date("2024-20-03"),
+        shippingType: "Express",
+      },
+    ],
+  },
+  {
+    uid: 3,
+    name: "Tammy",
+    surname: "Scudder",
+    address: "253 Michigan Avenue Connellsville, PA 15425",
+    username: "tscudder",
+    password: "scudder123",
+    balance: 1500,
+    itemsPurchased: [
+      {
+        itemId: 401,
+        shippingAddress: "253 Michigan Avenue Connellsville, PA 15425",
+        quantity: 3,
+        date: new Date("2024-21-03"),
+        shippingType: "Priority Mail",
+      },
+    ],
+  },
+  {
+    uid: 4,
+    name: "James",
+    surname: "Lemus",
+    address: "4985 Roane Avenue Beltsville, MD 20705",
+    username: "jlemus",
+    password: "lemus123",
+    balance: 2000,
+    itemsPurchased: [
+      {
+        itemId: 604,
+        shippingAddress: "4985 Roane Avenue Beltsville, MD 20705",
+        quantity: 1,
+        date: new Date("2024-22-03"),
+        shippingType: "Standard",
+      },
+    ],
+  },
+  {
+    uid: 5,
+    name: "Jill",
+    surname: "Bowden",
+    address: "4648 Howard Street Grand Rapids, MI 49503",
+    username: "jbowden",
+    password: "bowden123",
+    balance: 2500,
+    itemsPurchased: [
+      {
+        itemId: 367,
+        shippingAddress: "4648 Howard Street Grand Rapids, MI 49503",
+        quantity: 4,
+        date: new Date("2024-23-03"),
+        shippingType: "Standard",
+      },
+    ],
+  },
+  { username: "admin1", password: "admin123" },
+  { username: "admin2", password: "admin123" },
+  { username: "admin3", password: "admin123" },
+  {
+    company: "System76 Inc.",
+    username: "system76",
+    password: "system76123",
+    bankAccount: {
+      accountNumber: 91219092,
+      balance: 25340,
+    },
+  },
+  {
+    company: "Framework",
+    username: "framework",
+    password: "framework123",
+    bankAccount: {
+      accountNumber: 82013290,
+      balance: 2830,
+    },
+  },
+  {
+    company: "Tuxedo Computers",
+    username: "tuxedo",
+    password: "tuxedo123",
+    bankAccount: {
+      accountNumber: 61826742,
+      balance: 8210,
+    },
+  },
 ];
 
 const items = [
