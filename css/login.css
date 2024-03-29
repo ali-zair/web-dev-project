@@ -33,9 +33,10 @@
 }
 
 @media screen and (min-width: 780px) {
+	
 	.main form {
 
-		padding: 4rem;
+		padding: 2rem;
 
 		h1 {
 				font-size: x-large;

@@ -96,10 +96,6 @@ const users = await data.json();
 
 console.log(users);
 
-if (!localStorage.users) {
-	localStorage.users = users;
-}
-
 document.querySelector('#loginForm').addEventListener('submit', (event) => {
 	event.preventDefault();
 	const username = document.querySelector('#username').value;

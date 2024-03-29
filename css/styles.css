@@ -42,6 +42,7 @@ ul li a {
 }
 
 body {
+	
 	font-size: small;
 	display: grid;
 	grid-gap: 0.5rem;
@@ -105,7 +106,7 @@ body {
 
 	}
 
-	.login-btn {
+	button {
 		position: relative;
 		margin: 0rem 0rem 0rem 0rem;
 		padding: 0.5rem 0.3rem;
@@ -117,6 +118,7 @@ body {
 		grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 		margin: 1rem 1rem;
 		grid-gap: 1rem;
+		
 		.item {
 			display: flex;
 			flex-direction: column;

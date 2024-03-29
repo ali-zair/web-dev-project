@@ -9,7 +9,7 @@ let filteredItems = [];
 // const items = [
 // 	{
 // 		id: Math.floor(Math.random()) * 1000,
-// 		thumbnail: "https://images.prismic.io/system76/96dd06bf-60e2-4ada-bf2c-af6e8ad09830_product-lemp-600x600-scaled.png",
+// 		thumbnail: "https://images.prismic.io/system76/1ff2f4e5-6046-4a93-8f67-59262866fd9d_product-serw13-600x600.png",
 // 		title: "System76 Lemur Pro",
 // 		note: "Best everyday laptop!",
 // 		features: ["Lightest, thinnest laptop", "16:10 screen ratio (1200p)", "Opens to 180°", "Intel Core Ultra (Series 1)"],
@@ -48,7 +48,7 @@ let filteredItems = [];
 // 		price: 2099,
 // 	},
 // 	{
-// 		id: Math.floor(Math.random()) * 1000,
+// 		id: Math.floor(Math.random()) * 1000,a
 // 		thumbnail: "https://images.prismic.io/system76/7d2377e5-ebb6-427d-8169-90affeac1286_product-darp-600x600-scaled.png",
 // 		title: "System76 Bonobo WS",
 // 		note: "Most powerful!",
@@ -68,7 +68,7 @@ loginBtn.addEventListener('click', () => {
 		localStorage.isLoggedIn = "false";
 		loginBtn.textContent = "Login";
 	} else {
-		window.location.href = "/login.html";
+		window.location.href = "/login-type.html";
 	}
 });
 
