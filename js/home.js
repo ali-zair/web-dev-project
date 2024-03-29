@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', await showItems);
+document.addEventListener("DOMContentLoaded", await showItems);
 
 const loginBtn = document.querySelector("#loginBtn");
 const searchBox = document.querySelector("#searchBox");
@@ -60,50 +60,52 @@ let filteredItems = [];
 let items = [];
 
 if (localStorage.isLoggedIn === "true") {
-	loginBtn.textContent = "Logout";
+  loginBtn.textContent = "Logout";
 }
 
-loginBtn.addEventListener('click', () => {
-	if (localStorage.isLoggedIn === "true") {
-		localStorage.isLoggedIn = "false";
-		loginBtn.textContent = "Login";
-	} else {
-		window.location.href = "/login-type.html";
-	}
+loginBtn.addEventListener("click", () => {
+  if (localStorage.isLoggedIn === "true") {
+    localStorage.isLoggedIn = "false";
+    loginBtn.textContent = "Login";
+  } else {
+    window.location.href = "/login-type.html";
+  }
 });
 
-searchBox.addEventListener('input', find);
+searchBox.addEventListener("input", find);
 
 function find() {
-	if (searchBox.value !== "") {
-		filteredItems = items.filter((item) => item.title.toLowerCase().includes(searchBox.value.toLowerCase()));
-		showItems(true);
-	} else {
-		showItems(false);
-	}
+  if (searchBox.value !== "") {
+    filteredItems = items.filter((item) =>
+      item.title.toLowerCase().includes(searchBox.value.toLowerCase())
+    );
+    showItems(true);
+  } else {
+    showItems(false);
+  }
 }
 
 async function showItems(isFiltered) {
-	try {
-		if (localStorage.items) {
-			items = JSON.parse(localStorage.items);
-		} else {
-			const data = await fetch('js/data/items.json');
-			items = await data.json();
-			localStorage.items = JSON.stringify(items);
-		}
-		if (isFiltered === true) {
-			main.innerHTML = filteredItems.map(item => itemToHTML(item)).join('');
-		} else {
-			main.innerHTML = items.map(item => itemToHTML(item)).join('');
-		}
-	} catch (error) {
-		console.error("Failed to load items:", error);
-	}
+  try {
+    if (localStorage.items) {
+      items = JSON.parse(localStorage.items);
+    } else {
+      const data = await fetch("js/data/items.json");
+      items = await data.json();
+      localStorage.items = JSON.stringify(items);
+    }
+    if (isFiltered === true) {
+      main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
+    } else {
+      main.innerHTML = items.map((item) => itemToHTML(item)).join("");
+    }
+  } catch (error) {
+    console.error("Failed to load items:", error);
+  }
 }
 
 function itemToHTML(item) {
-return `<section class="item">
+  return `<section class="item">
 					<figure>
 							<img src="${item.thumbnail}" alt="Image of ${item.title} Laptop">
 					</figure>
@@ -115,54 +117,55 @@ return `<section class="item">
 					<p class="features">${item.features[2]}</p>
 					<p class="features">${item.features[3]}</p>
 					<p class="price">$${item.price}</p>
+					<button>Show Details</button>
 					<button>Buy Now!</button>
-			</section>`
+			</section>`;
 }
-	
+
 function addItem(title, note, features, extra_details, price) {
-	//can't be ourchased when added so we just set it as false by default
-	//in documentation, check if logged in
-	const newItem = {
-			title,
-			note,
-			features,
-			extra_details,
-			price,
-			purchased: false,
-	};
-	items.push(newItem);
+  //can't be ourchased when added so we just set it as false by default
+  //in documentation, check if logged in
+  const newItem = {
+    title,
+    note,
+    features,
+    extra_details,
+    price,
+    purchased: false,
+  };
+  items.push(newItem);
 }
 
 function removeItem(title) {
-	//should add id as an attribute after making a function to randomly generate it, more suitable than title which could be duplicated
-	const index = items.findIndex(
-		(item) => item.title.toLowerCase() === title.toLowerCase()
-	);
-	if (index !== -1) {
-		items.splice(index, 1);
-	}
+  //should add id as an attribute after making a function to randomly generate it, more suitable than title which could be duplicated
+  const index = items.findIndex(
+    (item) => item.title.toLowerCase() === title.toLowerCase()
+  );
+  if (index !== -1) {
+    items.splice(index, 1);
+  }
 }
 function purchaseItem(title) {
-	//maybe should be added to cart, since it is only purchesed after deducting money from customer
-	//check balance , change in DOM
-	const index = items.findIndex(
-		(item) => item.title.toLowerCase() === title.toLowerCase()
-	);
-	items[index].purchased = !items[index].purchased;
+  //maybe should be added to cart, since it is only purchesed after deducting money from customer
+  //check balance , change in DOM
+  const index = items.findIndex(
+    (item) => item.title.toLowerCase() === title.toLowerCase()
+  );
+  items[index].purchased = !items[index].purchased;
 }
 addItem(
-	"New Product",
-	"Note about the new product",
-	["Feature 1", "Feature 2"],
-	"New extra details",
-	12344
+  "New Product",
+  "Note about the new product",
+  ["Feature 1", "Feature 2"],
+  "New extra details",
+  12344
 );
 addItem(
-	"Product2",
-	"Note about the new product",
-	["Feature 1", "Feature 2"],
-	" extra details",
-	1233
+  "Product2",
+  "Note about the new product",
+  ["Feature 1", "Feature 2"],
+  " extra details",
+  1233
 );
 // line();
 // console.log(find("l"));
