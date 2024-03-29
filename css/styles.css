@@ -1,0 +1,326 @@
+* {
+	margin: 0rem 0.2rem;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 160;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	color: black; 
+	font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	list-style-type: none;
+	li a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+button {
+	background-color: #f8da5b; 
+	color: black;
+	font-weight: bold;
+	border-radius: 0.2rem;
+	border: none;
+	box-shadow: none;
+	padding: 0.3rem;
+	max-width: 12rem;
+}
+
+ul li a {
+	color: #f8da5b;
+	font-weight: bold;
+	border: none;
+	box-shadow: none;
+	padding: 0.1rem;
+}
+
+body {
+	font-size: small;
+	display: grid;
+	grid-gap: 0.5rem;
+
+	.header {
+
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.title {
+			flex: 1;
+			text-align: center;
+		}
+
+		.hamburger-menu {
+			display: flex;
+			align-self: start;
+			flex-direction: column;
+			cursor: pointer;
+
+			.bar {
+				width: 2rem;
+				height: 0.2rem;
+				background-color: black;
+				margin: 0.2rem 0;
+			}
+		}
+	}
+
+	.navbar {
+
+		.menu {
+
+			display:  none;
+			ul {
+				padding: 0;
+				margin: 0;
+			}
+		}
+		a {
+			color: black;
+		}
+	}
+	
+	.search-bar {
+
+		padding: 1rem 1rem;
+
+		input {
+			width: 80%;
+			padding: 0.5rem 0.5rem;
+		}
+
+		button {
+			position: absolute;
+			width: 17%;
+			padding: 0.6rem 2rem;
+		}
+
+	}
+
+	.login-btn {
+		position: relative;
+		margin: 0rem 0rem 0rem 0rem;
+		padding: 0.5rem 0.3rem;
+		cursor: grabbing;
+	}
+
+	.main {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+		margin: 1rem 1rem;
+		grid-gap: 1rem;
+		.item {
+			display: flex;
+			flex-direction: column;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+			padding: 0.5rem;
+
+			img {
+				width: 11rem;
+				height: 11rem;
+			}
+	
+			:nth-child(2) {
+				font-size: medium;
+				font-weight: bold;
+			}
+
+			.note {
+				font-style: italic;
+				font-size: normal;
+				margin: 0.3rem;
+				margin-top: 1rem;
+			}
+
+			.best-for {
+				margin: 0.5rem 0.3rem;
+				font-weight: bold;
+				font-style: italic;
+			}
+
+			.price {
+				font-size: medium;
+				font-weight: bold;
+				margin-top: 1rem;
+			}
+
+			.features {
+				font-weight: bold;
+				margin: 0.3rem;
+			}
+	
+			button {
+				margin-top: 0.5rem;
+				size: 50%;
+			}
+	
+		}
+	}
+}
+
+.container {
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.form-group textarea {
+	height: 80px;
+}
+
+.form-group button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background-color: #f8da5b;
+	color: #000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.form-group button:hover {
+	background-color: #ffb701;
+}
+
+footer {
+	text-align: center;
+	text-decoration: none;
+	size: 1em;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+}
+
+footer p {
+	padding: 1rem;
+	text-align: center;
+	font-size: medium;
+}
+
+@media screen and (min-width: 780px) {
+	
+	h1 {
+		font-size: xx-large;
+		margin-bottom: 1rem;
+	}
+
+	body {
+
+		.header .hamburger-menu {
+			display: none;
+		}
+		
+		.search-bar {
+			input {
+				font-size: larger;
+				padding: 0.5rem 0.5rem;
+
+			}
+
+			button {
+				font-size: large;
+				padding: 0.5rem 0.5rem;
+				width: 16%;
+			}
+		}
+
+		.login-btn {
+			font-size: larger;
+			padding: 0.8rem 1rem;
+		}
+
+		.navbar .menu {
+			display: block;
+			font-size: larger;
+		}
+
+		.main {
+			grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+			grid-gap: 2rem;
+
+			.item {
+
+				padding: 2rem;
+
+				img {
+					width: 16rem;
+					height: 16rem;
+				}
+
+				:nth-child(2) {
+					font-size: x-large;
+					font-weight: bold;
+				}
+		
+				.note {
+					font-style: italic;
+					font-size: large;
+					margin: 0.3rem;
+					margin-top: 1rem;
+				}
+		
+				.best-for {
+					font-size: large;
+					font-weight: bold;
+					font-style: italic;
+					margin: 0.5rem 0.3rem;
+				}
+		
+				.price {
+					font-size: x-large;
+					font-weight: bold;
+					margin-top: 1rem;
+				}
+		
+				.features {
+					font-size: larger;
+					font-weight: bold;
+					margin: 0.5re;
+				}
+		
+				button {
+					font-size: larger;
+					margin-top: 0.5rem;
+					size: 50%;
+					padding: 1rem 1rem 1rem 1rem;
+				}
+			}
+		}    
+	}
+}
