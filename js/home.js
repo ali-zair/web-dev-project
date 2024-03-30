@@ -1,6 +1,7 @@
 window.addEventListener("load", async () => {
   showItems();
   window.handleBuyNow = handleBuyNow;
+  window.handleShowDetails = handleShowDetails;
 });
 
 const loginBtn = document.querySelector("#loginBtn");
