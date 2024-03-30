@@ -13,7 +13,7 @@ buyerDetailsForm.addEventListener('submit', async (event) => {
     itemId: parseInt(localStorage.getItem('itemID')),
     shippingAddress: buyerDetailsForm.querySelector('#shippingAddress').value,
     quantity: parseInt(buyerDetailsForm.querySelector('#quantity').value),
-    date: new Date(Date.now()),
+    date: new Date(Date.now()).toISOString(),
     shippingType: buyerDetailsForm.querySelector('#shippingType').value
   };
 

@@ -65,16 +65,16 @@ let items = [];
 const data = await fetch("js/data/users.json");
 const users = await data.json();
 
-// if (!localStorage.loggedInUser) {
-//   localStorage.loggedInUser = -1;
-// }
+if (!localStorage.loggedInUser) {
+  localStorage.loggedInUser = -1;
+}
 
-if (users.some((user) => user.uid === localStorage.getItem("loggedInUser"))) {
+if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')))) {
   loginBtn.textContent = "Logout";
 }
 
 loginBtn.addEventListener("click", () => {
-  if (localStorage.getItem("loggedInUser") == -1) {
+  if (parseInt(localStorage.getItem('loggedInUser')) === -1) {
     window.location.href = "/login-type.html";
   } else {
     localStorage.setItem("loggedInUser", -1);
