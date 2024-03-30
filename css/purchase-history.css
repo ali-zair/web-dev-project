@@ -1,0 +1,26 @@
+.heading {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+body .main {
+        margin: 2rem;
+
+        .item {
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+        
+            :nth-child(2) {
+              font-size: medium;
+              font-weight: bold;
+            }
+        
+            p {
+                font-size: medium;
+                padding: 0.1rem;
+            }
+        
+        }
+    }

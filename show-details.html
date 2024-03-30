@@ -4,19 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
   </head>
   <body>
     <header class="header">
@@ -31,11 +20,10 @@
     <nav class="navbar">
       <div class="menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About Us</a></li>
-          <!-- <li><a href="#">Products</a></li> -->
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
           <li><a href="/contact-us.html">Contact Us</a></li>
+          <li class="hidden" id="purchaseLI"><a href="/purchase-history.html">Purchase History</a></li>
         </ul>
       </div>
     </nav>
@@ -44,34 +32,16 @@
     </main>
     <script src="./js/show-details.js"></script>
     <footer>
-      <div class="socials">
-        <ul>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-facebook.svg"</a
-            >
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-instagram.svg"</a
-            >
-          </li>
-          <li>
-            <a href="https://example.com"><img src="./icons/brand-x.svg"</a>
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-reddit.svg"</a
-            >
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-discord.svg"</a
-            >
-          </li>
-        </ul>
-      </div>
-      <p>&copy; Cyberian Store</p>
-    </footer>
+			<div class="socials">
+			  <ul>
+				<li><a href="https://example.com"><img src="./icons/brand-facebook.svg"></a></li>
+				<li><a href="https://example.com"><img src="./icons/brand-instagram.svg"></a></li>
+				<li><a href="https://example.com"><img src="./icons/brand-x.svg"></a></li>
+				<li><a href="https://example.com"><img src="./icons/brand-reddit.svg"></a></li>
+				<li><a href="https://example.com"><img src="./icons/brand-discord.svg"></a></li>
+			  </ul>
+			</div>
+			<p>&copy; Cyberian Store</p>
+		</footer>
   </body>
 </html>

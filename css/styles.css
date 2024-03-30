@@ -8,7 +8,8 @@
 
 h1 {
   color: black;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: xx-large;
 }
 
 ul {
@@ -39,6 +40,11 @@ ul li a {
   border: none;
   box-shadow: none;
   padding: 0.1rem;
+}
+
+a[href] {
+  color: black;
+  text-decoration: none;
 }
 
 body {
@@ -73,13 +79,7 @@ body {
   }
 
   .navbar {
-    .menu {
-      display: none;
-      ul {
-        padding: 0;
-        margin: 0;
-      }
-    }
+
     a {
       color: black;
     }
@@ -161,6 +161,10 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -212,6 +216,7 @@ body {
 }
 
 footer {
+  padding: 2rem;
   text-align: center;
   text-decoration: none;
   size: 1em;
@@ -231,16 +236,15 @@ footer p {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
   margin: 9.5rem;
   padding: 0.5rem;
-  div {
-    padding: 10rem;
-  }
+
   div .item {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* padding: 10rem; */
+    padding: 10rem;
   }
+
   figure {
     text-align: center;
   }
@@ -347,35 +351,40 @@ footer p {
     }
   }
   .item-details {
+    border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
-    margin: 10%;
+    margin: 2rem;
     padding: 0.5rem;
+
     div {
-      padding: 10rem;
+      padding: 0rem 5rem 5rem 5rem;
     }
+
     div .item {
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      /* padding: 10rem; */
+      padding: 5rem;
     }
-    figure {
-      text-align: center;
+    img {
+      width: 30rem;
     }
+
     p {
       text-align: center;
-      padding: 0.8em;
-      font-size: 1.3rem;
+      padding: 0.5rem;
+      font-size: larger;
       border: 3px groove #ffb701;
       border-radius: 5rem;
       background-color: #f8da5b;
     }
+    
     h2,
     h3 {
       text-align: center;
       padding: 0.5em;
-      font-size: 1.5rem;
+      font-size: x-large;
     }
   }
 }
