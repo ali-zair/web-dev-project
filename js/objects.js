@@ -3,23 +3,26 @@ import fs from "fs-extra";
 
 const users = [
   {
+		uid: 1,
     name: "Sid",
     surname: "Thomas",
     address: "4073 Hayhurst Lane Southfield, MI 48075",
     username: "sthomas",
     password: "thomas123",
-    balance: 500,
+    balance: 5000,
     itemsPurchased: [
       {
-        itemId: 309,
-        shippingAddress: "4073 Hayhurst Lane Southfield, MI 48075",
-        quantity: 2,
-        date: new Date("2024-19-03"),
-        shippingType: "Standard",
+				orderNo: 123,
+				itemId: 309,
+				shippingAddress: "4073 Hayhurst Lane Southfield, MI 48075",
+				quantity: 2,
+				date: new Date("2024-19-03"),
+				shippingType: "Standard",
       },
     ],
   },
   {
+		uid: 2,
     name: "Lucy",
     surname: "Batts",
     address: "3121 Bottom Lane Gasport, NY 14067",
@@ -28,15 +31,17 @@ const users = [
     balance: 1000,
     itemsPurchased: [
       {
-        itemId: 265,
-        shippingAddress: "3121 Bottom Lane Gasport, NY 14067",
-        quantity: 1,
-        date: new Date("2024-20-03"),
-        shippingType: "Express",
+				orderNo: 124,
+				itemId: 265,
+				shippingAddress: "3121 Bottom Lane Gasport, NY 14067",
+				quantity: 1,
+				date: new Date("2024-20-03"),
+				shippingType: "Express",
       },
     ],
   },
   {
+		uid: 3,
     name: "Tammy",
     surname: "Scudder",
     address: "253 Michigan Avenue Connellsville, PA 15425",
@@ -45,15 +50,17 @@ const users = [
     balance: 1500,
     itemsPurchased: [
       {
-        itemId: 401,
-        shippingAddress: "253 Michigan Avenue Connellsville, PA 15425",
-        quantity: 3,
-        date: new Date("2024-21-03"),
-        shippingType: "Priority Mail",
+				orderNo: 125,
+				itemId: 401,
+				shippingAddress: "253 Michigan Avenue Connellsville, PA 15425",
+				quantity: 3,
+				date: new Date("2024-21-03"),
+				shippingType: "Priority Mail",
       },
     ],
   },
   {
+		uid: 4,
     name: "James",
     surname: "Lemus",
     address: "4985 Roane Avenue Beltsville, MD 20705",
@@ -62,6 +69,7 @@ const users = [
     balance: 2000,
     itemsPurchased: [
       {
+				orderNo: 126,
         itemId: 604,
         shippingAddress: "4985 Roane Avenue Beltsville, MD 20705",
         quantity: 1,
@@ -71,6 +79,7 @@ const users = [
     ],
   },
   {
+		uid: 5,
     name: "Jill",
     surname: "Bowden",
     address: "4648 Howard Street Grand Rapids, MI 49503",
@@ -79,123 +88,7 @@ const users = [
     balance: 2500,
     itemsPurchased: [
       {
-        itemId: 367,
-        shippingAddress: "4648 Howard Street Grand Rapids, MI 49503",
-        quantity: 4,
-        date: new Date("2024-23-03"),
-        shippingType: "Standard",
-      },
-    ],
-  },
-  { username: "admin1", password: "admin123" },
-  { username: "admin2", password: "admin123" },
-  { username: "admin3", password: "admin123" },
-  {
-    company: "companyA",
-    username: "seller1",
-    password: "seller123",
-    bankAccount: "accountA",
-  },
-  {
-    company: "companyB",
-    username: "seller2",
-    password: "seller123",
-    bankAccount: "accountB",
-  },
-  {
-    company: "companyC",
-    username: "seller3",
-    password: "seller123",
-    bankAccount: "accountC",
-  },
-  {
-    company: "companyC",
-    username: "seller4",
-    password: "seller123",
-    bankAccount: "accountD",
-  },
-  {
-    uid: 1,
-    name: "Sid",
-    surname: "Thomas",
-    address: "4073 Hayhurst Lane Southfield, MI 48075",
-    username: "sthomas",
-    password: "thomas123",
-    balance: 500,
-    itemsPurchased: [
-      {
-        itemId: 309,
-        shippingAddress: "4073 Hayhurst Lane Southfield, MI 48075",
-        quantity: 2,
-        date: new Date("2024-19-03"),
-        shippingType: "Standard",
-      },
-    ],
-  },
-  {
-    uid: 2,
-    name: "Lucy",
-    surname: "Batts",
-    address: "3121 Bottom Lane Gasport, NY 14067",
-    username: "lbatts",
-    password: "batts123",
-    balance: 1000,
-    itemsPurchased: [
-      {
-        itemId: 265,
-        shippingAddress: "3121 Bottom Lane Gasport, NY 14067",
-        quantity: 1,
-        date: new Date("2024-20-03"),
-        shippingType: "Express",
-      },
-    ],
-  },
-  {
-    uid: 3,
-    name: "Tammy",
-    surname: "Scudder",
-    address: "253 Michigan Avenue Connellsville, PA 15425",
-    username: "tscudder",
-    password: "scudder123",
-    balance: 1500,
-    itemsPurchased: [
-      {
-        itemId: 401,
-        shippingAddress: "253 Michigan Avenue Connellsville, PA 15425",
-        quantity: 3,
-        date: new Date("2024-21-03"),
-        shippingType: "Priority Mail",
-      },
-    ],
-  },
-  {
-    uid: 4,
-    name: "James",
-    surname: "Lemus",
-    address: "4985 Roane Avenue Beltsville, MD 20705",
-    username: "jlemus",
-    password: "lemus123",
-    balance: 2000,
-    itemsPurchased: [
-      {
-        itemId: 604,
-        shippingAddress: "4985 Roane Avenue Beltsville, MD 20705",
-        quantity: 1,
-        date: new Date("2024-22-03"),
-        shippingType: "Standard",
-      },
-    ],
-  },
-  {
-    uid: 5,
-    name: "Jill",
-    surname: "Bowden",
-    address: "4648 Howard Street Grand Rapids, MI 49503",
-    username: "jbowden",
-    password: "bowden123",
-    balance: 2500,
-    itemsPurchased: [
-      {
+				orderNo: 127,
         itemId: 367,
         shippingAddress: "4648 Howard Street Grand Rapids, MI 49503",
         quantity: 4,
@@ -211,6 +104,7 @@ const users = [
     company: "System76 Inc.",
     username: "system76",
     password: "system76123",
+		itemsOwned: [309, 265, 150, 401, 604, 367],
     bankAccount: {
       accountNumber: 91219092,
       balance: 25340,
@@ -220,6 +114,7 @@ const users = [
     company: "Framework",
     username: "framework",
     password: "framework123",
+		itemsOwned: [],
     bankAccount: {
       accountNumber: 82013290,
       balance: 2830,
@@ -229,6 +124,7 @@ const users = [
     company: "Tuxedo Computers",
     username: "tuxedo",
     password: "tuxedo123",
+		itemsOwned: [],
     bankAccount: {
       accountNumber: 61826742,
       balance: 8210,
@@ -326,6 +222,9 @@ const items = [
     price: 3299,
     quantity: 6,
     extra_details:
-      "Industry leaders need industry-leading power, and the Bonobo WS is System76’s most powerful laptop. Its kit includes a 24-core CPU, up to 96GB DDR5 RAM, NVIDIA RTX 4080 or 4090 graphics, PCIe 4.0 storage, fast USB 3.2 Gen 2 transfer speeds, and a 2K or 4K display. Are you ready for your conference talk? ",
+      "Industry leaders need industry-leading power, and the Bonobo WS is System76's most powerful laptop. Its kit includes a 24-core CPU, up to 96GB DDR5 RAM, NVIDIA RTX 4080 or 4090 graphics, PCIe 4.0 storage, fast USB 3.2 Gen 2 transfer speeds, and a 2K or 4K display. Are you ready for your conference talk? ",
   },
 ];
+
+fs.writeJson(path.join(process.cwd(), "js/data/users.json"), users);
+fs.writeJson(path.join(process.cwd(), "js/data/items.json"), items);

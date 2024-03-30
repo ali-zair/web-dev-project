@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", await showItems);
+window.addEventListener("load", async () => {
+	showItems();
+	window.handleBuyNow = handleBuyNow;
+})
 
 const loginBtn = document.querySelector("#loginBtn");
 const searchBox = document.querySelector("#searchBox");
@@ -58,17 +61,23 @@ let filteredItems = [];
 // ];
 
 let items = [];
+const data = await fetch("js/data/users.json");
+const users = await data.json();
 
-if (localStorage.isLoggedIn === "true") {
+// if (!localStorage.loggedInUser) {
+//   localStorage.loggedInUser = -1;
+// }
+
+if (users.some(user => user.uid === localStorage.getItem('loggedInUser'))) {
   loginBtn.textContent = "Logout";
 }
 
 loginBtn.addEventListener("click", () => {
-  if (localStorage.isLoggedIn === "true") {
-    localStorage.isLoggedIn = "false";
-    loginBtn.textContent = "Login";
-  } else {
+  if (localStorage.getItem('loggedInUser') == -1) {
     window.location.href = "/login-type.html";
+  } else {
+    localStorage.setItem('loggedInUser', -1);
+    loginBtn.textContent = "Login";
   }
 });
 
@@ -118,8 +127,19 @@ function itemToHTML(item) {
 					<p class="features">${item.features[3]}</p>
 					<p class="price">$${item.price}</p>
 					<button>Show Details</button>
-					<button>Buy Now!</button>
+					<button onclick="handleBuyNow(${item.id})">Buy Now!</button>
 			</section>`;
+}
+
+function handleBuyNow(id) {
+  const item = items.find(item => item.id === id);
+  if (users.some(user => user.uid !== undefined && user.uid == localStorage.getItem('loggedInUser'))) {
+    localStorage.itemID = item.id;
+    window.location.href = `/buy-now.html`;
+  } else {
+    confirm("Please login to buy items!");
+    window.location.href = "/login-type.html";
+  }
 }
 
 function addItem(title, note, features, extra_details, price) {

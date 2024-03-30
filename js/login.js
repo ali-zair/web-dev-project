@@ -103,8 +103,9 @@ document.querySelector("#loginForm").addEventListener("submit", (event) => {
   const user = users.find(
     (user) => user.username === username && user.password === password
   );
+  console.log(user);
   if (user) {
-    localStorage.isLoggedIn = user.id;
+    localStorage.loggedInUser = user.uid;
     confirm("Successfully Logged In!");
     window.location.href = "/home.html";
   } else {
