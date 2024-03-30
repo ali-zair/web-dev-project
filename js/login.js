@@ -12,7 +12,11 @@ document.querySelector("#loginForm").addEventListener("submit", (event) => {
   );
   console.log(user);
   if (user) {
-    localStorage.setItem('loggedInUser', user.uid);
+    if (user.uid) {
+      localStorage.setItem('loggedInUser', user.uid);
+    } else {
+      localStorage.setItem('loggedInUser', user.sid);
+    }
     confirm("Successfully Logged In!");
     window.location.href = "/home.html";
   } else {

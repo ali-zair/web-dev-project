@@ -8,6 +8,8 @@ let items = [];
 
 buyerDetailsForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  
+  // creating the purchase object
   const purchaseDetails = {
     orderNo: Math.floor(Math.random() * 1000000),
     itemId: parseInt(localStorage.getItem("itemID")),
@@ -17,13 +19,6 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
     shippingType: buyerDetailsForm.querySelector("#shippingType").value,
   };
 
-  if (!localStorage.users) {
-    const usersData = await fetch("js/data/users.json");
-    users = await usersData.json();
-  } else {
-    users = JSON.parse(localStorage.users);
-  }
-
   if (!localStorage.items) {
     const itemsData = await fetch("js/data/items.json");
     items = await itemsData.json();
@@ -31,21 +26,29 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
     items = JSON.parse(localStorage.items);
   }
 
-  // debugger;
+  // finding the item with the id  
   const item = items.find(
     (item) => item.id === parseInt(localStorage.getItem("itemID"))
   );
   const user = users.find(
     (user) => user.uid === parseInt(localStorage.getItem("loggedInUser"))
   );
+  
+  // saving the item price and quantity in variables
   const itemPrice = parseInt(item.price);
   const itemQuantity = parseInt(purchaseDetails.quantity);
+
+  // checking if the user's account has enough balance to buy the item
   if (itemPrice * itemQuantity > user.balance) {
     alert("Insufficient funds");
+    window.location.href = "/home.html";
   } else {
+    // checking if the item has enough stock
     if (itemQuantity > item.quantity) {
       alert("Insufficient stock");
+      window.location.href = "/home.html";
     } else {
+      // updating the item stock, user balance, and seller balance
       item.quantity -= itemQuantity;
       items.splice(
         items.findIndex(
@@ -77,17 +80,29 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
       console.log(items);
       console.log(users);
       alert("Order placed successfully");
-      // window.location.href = "/home.html";
+      window.location.href = "/home.html";
     }
   }
   console.log(purchaseDetails);
 });
 
 async function showBuyerDetailsForm() {
-  const itemsData = await fetch("js/data/items.json");
-  items = await itemsData.json();
-  const item = items.find((item) => item.id == localStorage.getItem("itemID"));
-  buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item);
+  debugger;
+  if (!localStorage.users) {
+    const usersData = await fetch("js/data/users.json");
+    users = await usersData.json();
+  } else {
+    users = JSON.parse(localStorage.users);
+  }
+  if (users.some(user => user.uid === parseInt(localStorage.getItem("loggedInUser")))) {
+    const itemsData = await fetch("js/data/items.json");
+    items = await itemsData.json();
+    const item = items.find((item) => item.id == localStorage.getItem("itemID"));
+    buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item);
+  } else {
+    confirm('Please login to buy items');
+    window.location.href = "/login-type.html";
+  }
 }
 
 function buyersDetailsFormToHTML(item) {
@@ -103,6 +118,6 @@ function buyersDetailsFormToHTML(item) {
             <option value="express">Express</option>
             <option value="priorityMail">Priority Mail</option>
           </select>
-          <label> Price of each: $${item.price}</label>
+          <label id="price">Price: $${item.price}</label>
           <button type="submit" id="addOrder">Place Order</button>`;
 }

@@ -9,10 +9,10 @@ async function displayDetails() {
   const items = await itemsData.json();
   const item1 = items.find((item) => item.id == localStorage.getItem("itemID"));
 
-  showDetails.innerHTML = ShowDetailsToHtml(item1);
+  showDetails.innerHTML = showDetailsToHtml(item1);
 }
 
-function ShowDetailsToHtml(item) {
+function showDetailsToHtml(item) {
   return `<div class="item" data-id="${item.id}" data-thumbnail="${
     item.thumbnail
   }" data-title="${item.title}" data-note="${

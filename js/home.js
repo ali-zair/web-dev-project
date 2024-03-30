@@ -18,9 +18,13 @@ if (!localStorage.loggedInUser) {
   localStorage.loggedInUser = -1;
 }
 
-if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')))) {
+debugger;
+if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')) || user.sid === parseInt(localStorage.getItem('loggedInUser')))) {
   loginBtn.textContent = "Logout";
-  document.querySelector("#purchaseLI").classList.toggle("hidden", false);
+  const user = users.find(user => user.uid === parseInt(localStorage.getItem('loggedInUser')));
+  if (user) {
+    document.querySelector("#purchaseLI").classList.toggle("hidden", false);
+  }
 }
 
 loginBtn.addEventListener("click", () => {
@@ -82,11 +86,13 @@ function itemToHTML(item) {
 					<button onclick="handleBuyNow(${item.id})">Buy Now!</button>
 			</section>`;
 }
+
 function handleShowDetails(id) {
   const item = items.find((item) => item.id === id);
   localStorage.itemID = item.id;
   window.location.href = "/show-details.html";
 }
+
 function handleBuyNow(id) {
   const item = items.find((item) => item.id === id);
   if (
@@ -99,7 +105,7 @@ function handleBuyNow(id) {
     localStorage.itemID = item.id;
     window.location.href = `/buy-now.html`;
   } else {
-    confirm("Please login to buy items!");
+    alert("Please login to buy items!");
     window.location.href = "/login-type.html";
   }
 }

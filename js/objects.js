@@ -1,12 +1,6 @@
 import path from "path";
 import fs from "fs-extra";
 
-// const date1 = new Date("2024-19-03");
-// const date2 = new Date("2024-20-03");
-// const date3 = new Date("2024-21-03");
-// const date4 = new Date("2024-22-03");
-// const date5 = new Date("2024-23-03");
-
 const date1 = new Date("2024-03-19");
 const date2 = new Date("2024-03-20");
 const date3 = new Date("2024-03-21");
@@ -16,7 +10,7 @@ const date5 = new Date("2024-03-23");
 
 const users = [
   {
-		uid: 1,
+		uid: 52,
     name: "Sid",
     surname: "Thomas",
     address: "4073 Hayhurst Lane Southfield, MI 48075",
@@ -35,7 +29,7 @@ const users = [
     ],
   },
   {
-		uid: 2,
+		uid: 28,
     name: "Lucy",
     surname: "Batts",
     address: "3121 Bottom Lane Gasport, NY 14067",
@@ -54,7 +48,7 @@ const users = [
     ],
   },
   {
-		uid: 3,
+		uid: 92,
     name: "Tammy",
     surname: "Scudder",
     address: "253 Michigan Avenue Connellsville, PA 15425",
@@ -73,7 +67,7 @@ const users = [
     ],
   },
   {
-		uid: 4,
+		uid: 18,
     name: "James",
     surname: "Lemus",
     address: "4985 Roane Avenue Beltsville, MD 20705",
@@ -92,7 +86,7 @@ const users = [
     ],
   },
   {
-		uid: 5,
+		uid: 64,
     name: "Jill",
     surname: "Bowden",
     address: "4648 Howard Street Grand Rapids, MI 49503",
@@ -114,6 +108,7 @@ const users = [
   { username: "admin2", password: "admin123" },
   { username: "admin3", password: "admin123" },
   {
+    sid: 123,
     company: "System76 Inc.",
     username: "system76",
     password: "system76123",
@@ -124,6 +119,7 @@ const users = [
     },
   },
   {
+    sid: 823,
     company: "Framework",
     username: "framework",
     password: "framework123",
@@ -134,6 +130,7 @@ const users = [
     },
   },
   {
+    sid: 136,
     company: "Tuxedo Computers",
     username: "tuxedo",
     password: "tuxedo123",
