@@ -100,7 +100,7 @@ async function showBuyerDetailsForm() {
     const item = items.find((item) => item.id == localStorage.getItem("itemID"));
     buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item);
   } else {
-    confirm('Please login to buy items');
+    alert('Please login to buy items');
     window.location.href = "/login-type.html";
   }
 }

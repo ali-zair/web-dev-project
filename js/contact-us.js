@@ -31,10 +31,10 @@ document.querySelector(".form-group").addEventListener("submit", (event) => {
   console.log(user);
   if (user) {
     localStorage.setItem("loggedInUser", user.uid);
-    confirm("Successfully Logged In!");
+    alert("Successfully Logged In!");
     window.location.href = "/home.html";
   } else {
-    confirm("Login Failed: Please try again");
+    alert("Login Failed: Please try again");
   }
 });
 form.addEventListener("submit", function (event) {

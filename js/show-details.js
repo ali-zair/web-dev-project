@@ -51,7 +51,7 @@ function handleBuyNow(id) {
     localStorage.itemID = item.id;
     window.location.href = `/buy-now.html`;
   } else {
-    confirm("Please login to buy items!");
+    alert("Please login to buy items!");
     window.location.href = "/login-type.html";
   }
 }

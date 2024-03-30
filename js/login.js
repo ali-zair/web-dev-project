@@ -17,9 +17,9 @@ document.querySelector("#loginForm").addEventListener("submit", (event) => {
     } else {
       localStorage.setItem('loggedInUser', user.sid);
     }
-    confirm("Successfully Logged In!");
+    alert("Successfully Logged In!");
     window.location.href = "/home.html";
   } else {
-    confirm("Login Failed: Please try again");
+    alert("Login Failed: Please try again");
   }
 });
