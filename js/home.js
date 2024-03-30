@@ -1,7 +1,7 @@
 window.addEventListener("load", async () => {
-	showItems();
-	window.handleBuyNow = handleBuyNow;
-})
+  showItems();
+  window.handleBuyNow = handleBuyNow;
+});
 
 const loginBtn = document.querySelector("#loginBtn");
 const searchBox = document.querySelector("#searchBox");
@@ -68,15 +68,15 @@ const users = await data.json();
 //   localStorage.loggedInUser = -1;
 // }
 
-if (users.some(user => user.uid === localStorage.getItem('loggedInUser'))) {
+if (users.some((user) => user.uid === localStorage.getItem("loggedInUser"))) {
   loginBtn.textContent = "Logout";
 }
 
 loginBtn.addEventListener("click", () => {
-  if (localStorage.getItem('loggedInUser') == -1) {
+  if (localStorage.getItem("loggedInUser") == -1) {
     window.location.href = "/login-type.html";
   } else {
-    localStorage.setItem('loggedInUser', -1);
+    localStorage.setItem("loggedInUser", -1);
     loginBtn.textContent = "Login";
   }
 });
@@ -126,14 +126,24 @@ function itemToHTML(item) {
 					<p class="features">${item.features[2]}</p>
 					<p class="features">${item.features[3]}</p>
 					<p class="price">$${item.price}</p>
-					<button>Show Details</button>
+					<button onclick="handleShowDetails(${item.id})">Show Details</button>
 					<button onclick="handleBuyNow(${item.id})">Buy Now!</button>
 			</section>`;
 }
-
+function handleShowDetails(id) {
+  const item = items.find((item) => item.id === id);
+  localStorage.itemID = item.id;
+  window.location.href = "/show-details.html";
+}
 function handleBuyNow(id) {
-  const item = items.find(item => item.id === id);
-  if (users.some(user => user.uid !== undefined && user.uid == localStorage.getItem('loggedInUser'))) {
+  const item = items.find((item) => item.id === id);
+  if (
+    users.some(
+      (user) =>
+        user.uid !== undefined &&
+        user.uid == localStorage.getItem("loggedInUser")
+    )
+  ) {
     localStorage.itemID = item.id;
     window.location.href = `/buy-now.html`;
   } else {
