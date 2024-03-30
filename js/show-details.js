@@ -1,7 +1,6 @@
-const showDetails = document.querySelector("#item-details");
+const showDetails = document.querySelector(".item-details");
 window.addEventListener("load", async () => {
   window.handleBuyNow = handleBuyNow;
-
 });
 document.addEventListener("DOMContentLoaded", displayDetails);
 
@@ -9,7 +8,7 @@ async function displayDetails() {
   const itemsData = await fetch("js/data/items.json");
   const items = await itemsData.json();
   const item1 = items.find((item) => item.id == localStorage.getItem("itemID"));
- 
+
   showDetails.innerHTML = ShowDetailsToHtml(item1);
 }
 
@@ -37,7 +36,6 @@ function ShowDetailsToHtml(item) {
             <p class="price">$${item.price}</p>
             <h3 class="extraDetails">Extra Details: </h3>
             <p class="extraDetails">${item.extra_details}</p>
-            <button onclick="handleBuyNow(${item.id})">Buy Now!</button>
         </div>`;
 }
 
