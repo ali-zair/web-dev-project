@@ -234,6 +234,33 @@ footer p {
 	text-align: center;
 	font-size: medium;
 }
+#item-details{
+	div .item{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		
+	}
+	figure{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+		padding: 0.8em;
+		font-size: 1.3rem;
+		border: 3px groove #ffb701  ;
+		border-radius: 25rem;
+		background-color: #f8da5b;
+	}
+	h2, h3{
+		text-align: center;
+		padding: 0.5em;
+		font-size: 1.5rem;
+
+	}
+	
+}
 
 @media screen and (min-width: 780px) {
 	
