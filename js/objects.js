@@ -1,6 +1,19 @@
 import path from "path";
 import fs from "fs-extra";
 
+// const date1 = new Date("2024-19-03");
+// const date2 = new Date("2024-20-03");
+// const date3 = new Date("2024-21-03");
+// const date4 = new Date("2024-22-03");
+// const date5 = new Date("2024-23-03");
+
+const date1 = new Date("2024-03-19");
+const date2 = new Date("2024-03-20");
+const date3 = new Date("2024-03-21");
+const date4 = new Date("2024-03-22");
+const date5 = new Date("2024-03-23");
+
+
 const users = [
   {
 		uid: 1,
@@ -12,11 +25,11 @@ const users = [
     balance: 5000,
     itemsPurchased: [
       {
-				orderNo: 123,
+				orderNo: 123123,
 				itemId: 309,
 				shippingAddress: "4073 Hayhurst Lane Southfield, MI 48075",
 				quantity: 2,
-				date: new Date("2024-19-03"),
+				date: date1.toISOString(),
 				shippingType: "Standard",
       },
     ],
@@ -31,12 +44,12 @@ const users = [
     balance: 1000,
     itemsPurchased: [
       {
-				orderNo: 124,
+				orderNo: 124124,
 				itemId: 265,
 				shippingAddress: "3121 Bottom Lane Gasport, NY 14067",
 				quantity: 1,
-				date: new Date("2024-20-03"),
-				shippingType: "Express",
+        date: date2,
+        shippingType: "Express",
       },
     ],
   },
@@ -50,11 +63,11 @@ const users = [
     balance: 1500,
     itemsPurchased: [
       {
-				orderNo: 125,
+				orderNo: 124124,
 				itemId: 401,
 				shippingAddress: "253 Michigan Avenue Connellsville, PA 15425",
 				quantity: 3,
-				date: new Date("2024-21-03"),
+				date: date3,
 				shippingType: "Priority Mail",
       },
     ],
@@ -69,11 +82,11 @@ const users = [
     balance: 2000,
     itemsPurchased: [
       {
-				orderNo: 126,
+				orderNo: 125125,
         itemId: 604,
         shippingAddress: "4985 Roane Avenue Beltsville, MD 20705",
         quantity: 1,
-        date: new Date("2024-22-03"),
+        date: date4,
         shippingType: "Standard",
       },
     ],
@@ -88,11 +101,11 @@ const users = [
     balance: 2500,
     itemsPurchased: [
       {
-				orderNo: 127,
+				orderNo: 126126,
         itemId: 367,
         shippingAddress: "4648 Howard Street Grand Rapids, MI 49503",
         quantity: 4,
-        date: new Date("2024-23-03"),
+        date: date5,
         shippingType: "Standard",
       },
     ],

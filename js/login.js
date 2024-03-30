@@ -105,7 +105,7 @@ document.querySelector("#loginForm").addEventListener("submit", (event) => {
   );
   console.log(user);
   if (user) {
-    localStorage.loggedInUser = user.uid;
+    localStorage.setItem('loggedInUser', user.uid);
     confirm("Successfully Logged In!");
     window.location.href = "/home.html";
   } else {
