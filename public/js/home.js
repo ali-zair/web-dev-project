@@ -1,3 +1,5 @@
+import customersRepo from './repo/customers-repo.js'
+
 window.addEventListener("load", async () => {
   showItems();
   window.handleBuyNow = handleBuyNow;
@@ -8,30 +10,31 @@ const loginBtn = document.querySelector("#loginBtn");
 const searchBox = document.querySelector("#searchBox");
 const main = document.querySelector("#main");
 
-let filteredItems = [];
+// let filteredItems = [];
+// let items = [];
+// const data = await fetch("js/data/customers.json");
+// const users = await data.json();
 
-let items = [];
-const data = await fetch("js/data/users.json");
-const users = await data.json();
+// if (!localStorage.loggedInUser) {
+//   localStorage.loggedInUser = -1;
+// }
 
-if (!localStorage.loggedInUser) {
-  localStorage.loggedInUser = -1;
-}
+/*
+  check if user is already logged in using the cookies
+*/
 
-debugger;
-if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')) || user.sid === parseInt(localStorage.getItem('loggedInUser')))) {
-  loginBtn.textContent = "Logout";
-  const user = users.find(user => user.uid === parseInt(localStorage.getItem('loggedInUser')));
-  if (user) {
-    document.querySelector("#purchaseLI").classList.toggle("hidden", false);
-  }
-}
+// if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')) || user.sid === parseInt(localStorage.getItem('loggedInUser')))) {
+//   loginBtn.textContent = "Logout";
+//   const user = users.find(user => user.uid === parseInt(localStorage.getItem('loggedInUser')));
+//   if (user) {
+//     document.querySelector("#purchaseLI").classList.toggle("hidden", false);
+//   }
+// }
 
 loginBtn.addEventListener("click", () => {
-  if (parseInt(localStorage.getItem('loggedInUser')) === -1) {
+  if (!customersRepo.isLoggedIn(localStorage.loginCookie)) {
     window.location.href = "/login-type.html";
   } else {
-    localStorage.setItem("loggedInUser", -1);
     loginBtn.textContent = "Login";
     document.querySelector("#purchaseLI").classList.toggle("hidden", true);
   }
@@ -52,13 +55,8 @@ function find() {
 
 async function showItems(isFiltered) {
   try {
-    if (localStorage.items) {
-      items = JSON.parse(localStorage.items);
-    } else {
-      const data = await fetch("js/data/items.json");
-      items = await data.json();
-      localStorage.items = JSON.stringify(items);
-    }
+    const data = await fetch("api/items");
+    items = await data.json();
     if (isFiltered === true) {
       main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
     } else {
@@ -95,13 +93,7 @@ function handleShowDetails(id) {
 
 function handleBuyNow(id) {
   const item = items.find((item) => item.id === id);
-  if (
-    users.some(
-      (user) =>
-        user.uid !== undefined &&
-        user.uid == localStorage.getItem("loggedInUser")
-    )
-  ) {
+  if (customersRepo.isLoggedIn(localStorage.loginCookie)) {
     localStorage.itemID = item.id;
     window.location.href = `/buy-now.html`;
   } else {

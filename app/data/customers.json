@@ -93,57 +93,5 @@
                 "shippingType": "Standard"
             }
         ]
-    },
-    {
-        "username": "admin1",
-        "password": "admin123"
-    },
-    {
-        "username": "admin2",
-        "password": "admin123"
-    },
-    {
-        "username": "admin3",
-        "password": "admin123"
-    },
-    {
-        "sid": 123,
-        "company": "System76 Inc.",
-        "username": "system76",
-        "password": "system76123",
-        "itemsOwned": [
-            309,
-            265,
-            150,
-            401,
-            604,
-            367
-        ],
-        "bankAccount": {
-            "accountNumber": 91219092,
-            "balance": 25340
-        }
-    },
-    {
-        "sid": 823,
-        "company": "Framework",
-        "username": "framework",
-        "password": "framework123",
-        "itemsOwned": [],
-        "bankAccount": {
-            "accountNumber": 82013290,
-            "balance": 2830
-        }
-    },
-    {
-        "sid": 136,
-        "company": "Tuxedo Computers",
-        "username": "tuxedo",
-        "password": "tuxedo123",
-        "itemsOwned": [],
-        "bankAccount": {
-            "accountNumber": 61826742,
-            "balance": 8210
-        }
     }
 ]

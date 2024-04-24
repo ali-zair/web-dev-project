@@ -1,10 +1,10 @@
 import fs from 'fs-extra'
 import path from 'path'
 
-class UsersRepo {
+class CustomersRepo {
     constructor() {
-        this.filePath = path.join(process.cwd(), 'app/data/users.json')
-        this.cookiesFile = path.join(process.cwd(), 'app/data/logged-in-users-cookies.json')
+        this.filePath = path.join(process.cwd(), 'app/data/customers.json')
+        this.cookiesFile = path.join(process.cwd(), 'app/data/logged-in-customers-cookies.json')
     }
 
     async getUsers() {
@@ -16,12 +16,24 @@ class UsersRepo {
         const users = await fs.readJson(this.filePath)
         const user = users.find(user => user.username == username && user.password == password)
         if (user) {
-            const cookie = this.generateCookie()
+            const cookie = user.id + ":" + this.generateCookie()
             await fs.writeJson(this.cookiesFile, cookie)
-            return true
+            return cookie
         } else {
-            return false
+            return undefined
         }
+    }
+
+    async logout(cookie) {
+        const cookies = await fs.readJson(this.cookiesFile)
+        const filteredCookies = cookies.filter(c => c != cookie)
+        await fs.writeJson(this.cookiesFile, filteredCookies)
+        return 'logged out successfully'
+    }
+
+    async isLoggedIn(cookie) {
+        const cookies = await fs.readJson(this.cookiesFile)
+        return cookies.includes(cookie)
     }
 
     generateCookie() {
@@ -36,13 +48,6 @@ class UsersRepo {
 
     async purchaseItem(uid) {
 
-    }
-
-    async logout(cookie) {
-        const cookies = await fs.readJson(this.cookiesFile)
-        const filteredCookies = cookies.filter(c => c != cookie)
-        await fs.writeJson(this.cookiesFile, filteredCookies)
-        return 'logged out successfully'
     }
 
     async getUser(uid) {
@@ -63,8 +68,10 @@ class UsersRepo {
         return user.totalSpent / user.itemsPurchased.length
     }
 
-    async numberOfBuyersPerLocation() {}
+    async numberOfBuyersPerLocation() {
+
+    }
     
 }
 
-export default new UsersRepo()
+export default new CustomersRepo()

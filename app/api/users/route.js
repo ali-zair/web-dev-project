@@ -1,6 +1,6 @@
-import usersRepo from "@/app/repo/users-repo"
+import customersRepo from "@/app/repo/customers-repo"
 
 export async function GET(request) {
-    const users = await usersRepo.getUsers()
+    const users = await customersRepo.getUsers()
     return Response.json(users)
 }
