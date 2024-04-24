@@ -1,0 +1,149 @@
+[
+    {
+        "uid": 52,
+        "name": "Sid",
+        "surname": "Thomas",
+        "address": "4073 Hayhurst Lane Southfield, MI 48075",
+        "username": "sthomas",
+        "password": "thomas123",
+        "balance": 5000,
+        "itemsPurchased": [
+            {
+                "orderNo": 123123,
+                "itemId": 309,
+                "shippingAddress": "4073 Hayhurst Lane Southfield, MI 48075",
+                "quantity": 2,
+                "date": "2024-03-19T00:00:00.000Z",
+                "shippingType": "Standard"
+            }
+        ]
+    },
+    {
+        "uid": 28,
+        "name": "Lucy",
+        "surname": "Batts",
+        "address": "3121 Bottom Lane Gasport, NY 14067",
+        "username": "lbatts",
+        "password": "batts123",
+        "balance": 1000,
+        "itemsPurchased": [
+            {
+                "orderNo": 124124,
+                "itemId": 265,
+                "shippingAddress": "3121 Bottom Lane Gasport, NY 14067",
+                "quantity": 1,
+                "date": "2024-03-20T00:00:00.000Z",
+                "shippingType": "Express"
+            }
+        ]
+    },
+    {
+        "uid": 92,
+        "name": "Tammy",
+        "surname": "Scudder",
+        "address": "253 Michigan Avenue Connellsville, PA 15425",
+        "username": "tscudder",
+        "password": "scudder123",
+        "balance": 1500,
+        "itemsPurchased": [
+            {
+                "orderNo": 124124,
+                "itemId": 401,
+                "shippingAddress": "253 Michigan Avenue Connellsville, PA 15425",
+                "quantity": 3,
+                "date": "2024-03-21T00:00:00.000Z",
+                "shippingType": "Priority Mail"
+            }
+        ]
+    },
+    {
+        "uid": 18,
+        "name": "James",
+        "surname": "Lemus",
+        "address": "4985 Roane Avenue Beltsville, MD 20705",
+        "username": "jlemus",
+        "password": "lemus123",
+        "balance": 2000,
+        "itemsPurchased": [
+            {
+                "orderNo": 125125,
+                "itemId": 604,
+                "shippingAddress": "4985 Roane Avenue Beltsville, MD 20705",
+                "quantity": 1,
+                "date": "2024-03-22T00:00:00.000Z",
+                "shippingType": "Standard"
+            }
+        ]
+    },
+    {
+        "uid": 64,
+        "name": "Jill",
+        "surname": "Bowden",
+        "address": "4648 Howard Street Grand Rapids, MI 49503",
+        "username": "jbowden",
+        "password": "bowden123",
+        "balance": 2500,
+        "itemsPurchased": [
+            {
+                "orderNo": 126126,
+                "itemId": 367,
+                "shippingAddress": "4648 Howard Street Grand Rapids, MI 49503",
+                "quantity": 4,
+                "date": "2024-03-23T00:00:00.000Z",
+                "shippingType": "Standard"
+            }
+        ]
+    },
+    {
+        "username": "admin1",
+        "password": "admin123"
+    },
+    {
+        "username": "admin2",
+        "password": "admin123"
+    },
+    {
+        "username": "admin3",
+        "password": "admin123"
+    },
+    {
+        "sid": 123,
+        "company": "System76 Inc.",
+        "username": "system76",
+        "password": "system76123",
+        "itemsOwned": [
+            309,
+            265,
+            150,
+            401,
+            604,
+            367
+        ],
+        "bankAccount": {
+            "accountNumber": 91219092,
+            "balance": 25340
+        }
+    },
+    {
+        "sid": 823,
+        "company": "Framework",
+        "username": "framework",
+        "password": "framework123",
+        "itemsOwned": [],
+        "bankAccount": {
+            "accountNumber": 82013290,
+            "balance": 2830
+        }
+    },
+    {
+        "sid": 136,
+        "company": "Tuxedo Computers",
+        "username": "tuxedo",
+        "password": "tuxedo123",
+        "itemsOwned": [],
+        "bankAccount": {
+            "accountNumber": 61826742,
+            "balance": 8210
+        }
+    }
+]
