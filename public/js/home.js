@@ -1,4 +1,4 @@
-import customersRepo from './repo/customers-repo.js'
+import customersRepo from "./repo/customers-repo.js";
 
 window.addEventListener("load", async () => {
   showItems();
@@ -56,7 +56,7 @@ function find() {
 async function showItems(isFiltered) {
   try {
     const data = await fetch("api/items");
-    items = await data.json();
+    const items = await data.json();
     if (isFiltered === true) {
       main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
     } else {

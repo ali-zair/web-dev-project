@@ -1,6 +1,6 @@
 [
     {
-        "uid": 52,
+        "id": 52,
         "name": "Sid",
         "surname": "Thomas",
         "address": "4073 Hayhurst Lane Southfield, MI 48075",
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "uid": 28,
+        "id": 28,
         "name": "Lucy",
         "surname": "Batts",
         "address": "3121 Bottom Lane Gasport, NY 14067",
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "uid": 92,
+        "id": 92,
         "name": "Tammy",
         "surname": "Scudder",
         "address": "253 Michigan Avenue Connellsville, PA 15425",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "uid": 18,
+        "id": 18,
         "name": "James",
         "surname": "Lemus",
         "address": "4985 Roane Avenue Beltsville, MD 20705",
@@ -76,7 +76,7 @@
         ]
     },
     {
-        "uid": 64,
+        "id": 64,
         "name": "Jill",
         "surname": "Bowden",
         "address": "4648 Howard Street Grand Rapids, MI 49503",

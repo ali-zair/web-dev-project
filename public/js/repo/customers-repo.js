@@ -1,23 +1,23 @@
-import fs from 'fs-extra'
-import path from 'path'
-
 class CustomersRepo {
     constructor() {
-        this.filePath = path.join(process.cwd(), 'app/data/customers.json')
-        this.cookiesFile = path.join(process.cwd(), 'app/data/logged-in-customers-cookies.json')
+        this.itemsURL = 'api/items'
+        this.customersURL = 'api/customers'
+        this.customerCookiesURL = 'api/customerCookies'
     }
 
-    async getUsers() {
-        const users = await fs.readJson(this.filePath)
-        return users
+    async getCustomers() {
+        const data = await fetch(this.customersURL)
+        const customers = await data.json()
+        return customers
     }
 
     async login(username, password) {
-        const users = await fs.readJson(this.filePath)
-        const user = users.find(user => user.username == username && user.password == password)
-        if (user) {
-            const cookie = user.id + ":" + this.generateCookie()
-            await fs.writeJson(this.cookiesFile, cookie)
+        const data = await fetch(this.customersURL)
+        const customers = await data.json()
+        const customer = customers.find(cust => cust.username == username && cust.password == password)
+        if (customer) {
+            const cookie = customer.id + ":" + this.generateCookie()
+            // await fs.writeJson(this.cookiesFile, cookie)
             return cookie
         } else {
             return undefined
@@ -25,14 +25,16 @@ class CustomersRepo {
     }
 
     async logout(cookie) {
-        const cookies = await fs.readJson(this.cookiesFile)
-        const filteredCookies = cookies.filter(c => c != cookie)
-        await fs.writeJson(this.cookiesFile, filteredCookies)
+        const data = await fetch(this.customerCookiesURL)
+        const cookies = await data.json()
+        const filteredCookies = data.filter(c => c != cookie)
+        // await fs.writeJson(this.customerCookiesURL, filteredCookies)
         return 'logged out successfully'
     }
 
     async isLoggedIn(cookie) {
-        const cookies = await fs.readJson(this.cookiesFile)
+        const data = await fetch(this.customerCookiesURL)
+        const cookies = await data.json()
         return cookies.includes(cookie)
     }
 
@@ -46,26 +48,29 @@ class CustomersRepo {
         return cookie;
     }
 
-    async purchaseItem(uid) {
+    async purchaseItem(id) {
 
     }
 
-    async getUser(uid) {
-        const user = await fs.readJson(this.filePath).find(user => user.uid == uid)
-        return user
+    async getCustomer(id) {
+        const data = await fetch(this.customersURL)
+        const customers = data.json()
+        const customer = customers.find(cust => cust.id === id)
+        return customer
     }
 
-    async deleteUser(uid) {
-        const users = await fs.readJson(this.filePath)
-        const filteredUsers = items.filter(user => user.uid != uid)
-        await fs.writeJson(this.filePath, filteredUsers)
-        return 'user deleted successfully'
-    }
+    // async deleteCustomer(id) {
+    //     const users = await fs.readJson(this.filePath)
+    //     const filteredUsers = items.filter(user => user.uid != uid)
+    //     await fs.writeJson(this.filePath, filteredUsers)
+    //     return 'user deleted successfully'
+    // }
 
-    async totalAmountSpentPerProduct(uid) {
-        const users = await fs.readJson(this.filePath)
-        const user = users.find(user => user.uid == uid)
-        return user.totalSpent / user.itemsPurchased.length
+    async totalAmountSpentPerProduct(id) {
+        const data = await fetch(this.customersURL)
+        const customers = data.json()
+        const customer = customer.find(cust => cust.id === id)
+        return customer.totalSpent / customer.itemsPurchased.length
     }
 
     async numberOfBuyersPerLocation() {
