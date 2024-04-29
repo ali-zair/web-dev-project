@@ -1,10 +1,5 @@
 import customersRepo from "./repo/customers-repo.js";
 
-const data = await fetch("");
-const users = await data.json();
-
-console.log(users);
-
 document.querySelector("#loginForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const username = document.querySelector("#username").value;

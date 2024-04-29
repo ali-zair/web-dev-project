@@ -5,47 +5,54 @@ class CustomersRepo {
         this.customerCookiesURL = 'api/customerCookies'
     }
 
-    async getCustomers() {
-        const data = await fetch(this.customersURL)
-        const customers = await data.json()
-        return customers
-    }
+    // async getCustomers() {
+    //     const data = await fetch(this.customersURL)
+    //     const customers = await data.json()
+    //     return customers
+    // }
 
     async login(username, password) {
-        const data = await fetch(this.customersURL)
-        const customers = await data.json()
-        const customer = customers.find(cust => cust.username == username && cust.password == password)
-        if (customer) {
-            const cookie = customer.id + ":" + this.generateCookie()
-            // await fs.writeJson(this.cookiesFile, cookie)
-            return cookie
-        } else {
-            return undefined
+        const customer = {
+            username: username,
+            password: password
         }
+        const response = await fetch(this.customersURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(customer)
+        });
+        if (response.ok) {
+            const cookie = await response.text()
+            return cookie
+        }
+        return undefined
     }
 
     async logout(cookie) {
         const data = await fetch(this.customerCookiesURL)
         const cookies = await data.json()
         const filteredCookies = data.filter(c => c != cookie)
-        // await fs.writeJson(this.customerCookiesURL, filteredCookies)
         return 'logged out successfully'
     }
 
     async isLoggedIn(cookie) {
-        const data = await fetch(this.customerCookiesURL)
-        const cookies = await data.json()
-        return cookies.includes(cookie)
-    }
-
-    generateCookie() {
-        let cookie = '';
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        const charactersLength = characters.length;
-        for (let i = 0; i < 60; i++) {
-          cookie += characters.charAt(Math.floor(Math.random() * charactersLength));
+        const loginCookie = {
+            cookie: cookie        
         }
-        return cookie;
+        const response = await fetch(this.customerCookiesURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginCookie)
+        });
+        if (response.ok) {
+            const cookie = await response.text()
+            return cookie
+        }
+        return undefined
     }
 
     async purchaseItem(id) {
