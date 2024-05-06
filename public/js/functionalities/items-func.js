@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import path from 'path'
 
-class ItemsRepo {
+class ItemsFunc {
     constructor() {
         this.filePath = path.join(process.cwd(), 'app/data/items.json')
     }
@@ -24,4 +24,4 @@ class ItemsRepo {
     }
 }
 
-export default new ItemsRepo()
+export default new ItemsFunc()

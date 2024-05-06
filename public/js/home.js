@@ -1,4 +1,4 @@
-import customersRepo from "./repo/customers-repo.js";
+import customersFunc from "./functionalities/customers-func.js";
 
 window.addEventListener("load", async () => {
   showItems();
@@ -10,10 +10,10 @@ const loginBtn = document.querySelector("#loginBtn");
 const searchBox = document.querySelector("#searchBox");
 const main = document.querySelector("#main");
 
-// let filteredItems = [];
-// let items = [];
-// const data = await fetch("js/data/customers.json");
-// const users = await data.json();
+let filteredItems = [];
+let items = [];
+const data = await fetch("http://localhost:3000/api/users.json");
+const users = await data.json();
 
 // if (!localStorage.loggedInUser) {
 //   localStorage.loggedInUser = -1;
@@ -31,8 +31,10 @@ const main = document.querySelector("#main");
 //   }
 // }
 
-loginBtn.addEventListener("click", () => {
-  if (!customersRepo.isLoggedIn(localStorage.loginCookie)) {
+localStorage.loginCookie = localStorage.loginCookie || "-1";
+
+loginBtn.addEventListener("click", async () => {
+  if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
     window.location.href = "/login-type.html";
   } else {
     loginBtn.textContent = "Login";
@@ -55,8 +57,8 @@ function find() {
 
 async function showItems(isFiltered) {
   try {
-    const data = await fetch("api/items");
-    const items = await data.json();
+    const data = await fetch("/api/items");
+    items = await data.json();
     if (isFiltered === true) {
       main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
     } else {
@@ -93,7 +95,7 @@ function handleShowDetails(id) {
 
 function handleBuyNow(id) {
   const item = items.find((item) => item.id === id);
-  if (customersRepo.isLoggedIn(localStorage.loginCookie)) {
+  if (customersFunc.isLoggedIn(localStorage.loginCookie)) {
     localStorage.itemID = item.id;
     window.location.href = `/buy-now.html`;
   } else {

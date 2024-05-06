@@ -1,8 +1,8 @@
-class CustomersRepo {
+class CustomersFunc {
     constructor() {
-        this.itemsURL = 'api/items'
-        this.customersURL = 'api/customers'
-        this.customerCookiesURL = 'api/customerCookies'
+        this.itemsURL = '/api/items'
+        this.customersURL = '/api/customers'
+        this.customerCookiesURL = '/api/customerCookies'
     }
 
     // async getCustomers() {
@@ -11,10 +11,11 @@ class CustomersRepo {
     //     return customers
     // }
 
-    async login(username, password) {
+    async login(usernameVal, passwordVal) {
+        debugger
         const customer = {
-            username: username,
-            password: password
+            username: usernameVal,
+            password: passwordVal
         }
         const response = await fetch(this.customersURL, {
             method: 'POST',
@@ -24,7 +25,8 @@ class CustomersRepo {
             body: JSON.stringify(customer)
         });
         if (response.ok) {
-            const cookie = await response.text()
+            const { cookie } = await response.json()
+            localStorage.setItem('loginCookie', cookie)
             return cookie
         }
         return undefined
@@ -37,9 +39,9 @@ class CustomersRepo {
         return 'logged out successfully'
     }
 
-    async isLoggedIn(cookie) {
+    async isLoggedIn(cookieVal) {
         const loginCookie = {
-            cookie: cookie        
+            cookie: cookieVal
         }
         const response = await fetch(this.customerCookiesURL, {
             method: 'POST',
@@ -49,10 +51,9 @@ class CustomersRepo {
             body: JSON.stringify(loginCookie)
         });
         if (response.ok) {
-            const cookie = await response.text()
-            return cookie
+            return true
         }
-        return undefined
+        return false
     }
 
     async purchaseItem(id) {
@@ -83,7 +84,7 @@ class CustomersRepo {
     async numberOfBuyersPerLocation() {
 
     }
-    
+
 }
 
-export default new CustomersRepo()
+export default new CustomersFunc()

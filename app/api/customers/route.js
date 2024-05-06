@@ -10,9 +10,9 @@ export async function POST(request) {
     try {
         const cookie = await customersRepo.login(username, password);
         if (cookie) {
-            return Response.json({ cookie: cookie }, { status: 200 });
+            return Response.json(cookie, { status: 200 });
         } else {
-            return Response.json({ message: "Invalid username or password"}, {status: 401})
+            return Response.json({ message: "Invalid username or password" }, { status: 401 })
         }
     } catch (error) {
         return Response.json({ message: error.message }, { status: 500 });

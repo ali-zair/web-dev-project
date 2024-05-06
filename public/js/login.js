@@ -1,12 +1,12 @@
-import customersRepo from "./repo/customers-repo.js";
+import customersFunc from "./functionalities/customers-func.js";
 
-document.querySelector("#loginForm").addEventListener("submit", (event) => {
+document.querySelector("#loginForm").addEventListener("submit", async (event) => {
   event.preventDefault();
   const username = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
-  const cookie = customersRepo.login(username, password);
+  const cookie = await customersFunc.login(username, password);
   if (cookie) {
-    localStorage.cookie = cookie
+    localStorage.setItem('loginCookie', cookie)
     alert("Logged in successfully");
     window.location.href = "/home.html";
   } else {

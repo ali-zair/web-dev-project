@@ -16,8 +16,12 @@ class CustomersRepo {
         const users = await fs.readJson(this.filePath)
         const user = users.find(user => user.username == username && user.password == password)
         if (user) {
-            const cookie = user.id + ":" + this.generateCookie()
-            await fs.writeJson(this.cookiesFile, cookie)
+            const cookie = {
+                cookie: user.id + ":" + this.generateCookie()
+            }
+            const cookies = await fs.readJson(this.cookiesFile)
+            codokies.push(cookie)
+            await fs.writeJson(this.cookiesFile, cookies)
             return cookie
         } else {
             return undefined
@@ -32,8 +36,8 @@ class CustomersRepo {
     }
 
     async isLoggedIn(cookie) {
-        const cookies = await fs.readJson(this.cookiesFile)
-        return cookies.includes(cookie)
+        const cookies = await fs.readJson(this.cookiesFile);
+        return cookies.find(c => c.cookie === cookie);
     }
 
     generateCookie() {
@@ -41,7 +45,7 @@ class CustomersRepo {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const charactersLength = characters.length;
         for (let i = 0; i < 60; i++) {
-          cookie += characters.charAt(Math.floor(Math.random() * charactersLength));
+            cookie += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return cookie;
     }
@@ -71,7 +75,7 @@ class CustomersRepo {
     async numberOfBuyersPerLocation() {
 
     }
-    
+
 }
 
 export default new CustomersRepo()
