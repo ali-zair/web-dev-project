@@ -2,20 +2,20 @@ import customersFunc from "./functionalities/customers-func.js";
 
 const showDetails = document.querySelector(".item-details");
 window.addEventListener("load", () => {
-  window.handleBuyNow = handleBuyNow;
+	window.handleBuyNow = handleBuyNow;
 });
 
 document.addEventListener("DOMContentLoaded", displayDetails);
 
 async function displayDetails() {
-  const itemsData = await fetch("/api/items");
-  const items = await itemsData.json();
-  const item = items.find(item => item.id === parseInt(localStorage.itemID));
-  showDetails.innerHTML = showDetailsToHtml(item);
+	const itemsData = await fetch("/api/items");
+	const items = await itemsData.json();
+	const item = items.find(item => item.id === parseInt(localStorage.itemID));
+	showDetails.innerHTML = showDetailsToHtml(item);
 }
 
 function showDetailsToHtml(item) {
-  return `<div class="item" data-id="${item.id}" data-thumbnail="${item.thumbnail}" 
+	return `<div class="item" data-id="${item.id}" data-thumbnail="${item.thumbnail}" 
           data-title="${item.title}" data-note="${item.note}" 
           data-features="${JSON.stringify(item.features)}" data-price="${item.price}" 
           data-quantity="${item.quantity}" data-extra-details="${item.extra_details}">
@@ -37,11 +37,11 @@ function showDetailsToHtml(item) {
 }
 
 async function handleBuyNow(id) {
-  if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
-    localStorage.itemID = id
-    window.location.href = "/buy-now.html"
-  } else {
-    alert("Please login to buy items!");
-    window.location.href = "/login-type.html";
-  }
+	if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+		localStorage.itemID = id
+		window.location.href = "/buy-now.html"
+	} else {
+		alert("Please login to buy items!");
+		window.location.href = "/login-type.html";
+	}
 }

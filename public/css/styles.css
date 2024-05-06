@@ -79,7 +79,6 @@ body {
   }
 
   .navbar {
-
     a {
       color: black;
     }
@@ -379,7 +378,7 @@ footer p {
       border-radius: 5rem;
       background-color: #f8da5b;
     }
-    
+
     h2,
     h3 {
       text-align: center;

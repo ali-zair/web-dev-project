@@ -1,51 +1,53 @@
 .main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	justify-self: center;
-	height: 100vh;
-	margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  height: 100vh;
+  margin: 0 auto;
 
-	form {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: left;
-			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-			padding: 2rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem;
 
-			h1 {
-				font-family: 'Montserrat', 'sans-serif';
-				font-size: large;
-			}
+    h1 {
+      font-family: "Montserrat", "sans-serif";
+      font-size: large;
+    }
 
-			input {
-					min-width: 100%;
-					padding: 0.1rem;
-			}
+    input {
+      min-width: 100%;
+      padding: 0.1rem;
+    }
 
-			label, button, p {
-					font-family: 'Montserrat', 'sans-serif';
-					min-width: 100%;
-					margin-top: 1rem;
-			}
-	}
+    label,
+    button,
+    p {
+      font-family: "Montserrat", "sans-serif";
+      min-width: 100%;
+      margin-top: 1rem;
+    }
+  }
 }
 
 @media screen and (min-width: 780px) {
-	
-	.main form {
+  .main form {
+    padding: 2rem;
 
-		padding: 2rem;
+    h1 {
+      font-size: x-large;
+    }
 
-		h1 {
-				font-size: x-large;
-		}
-
-		label, button, p, input {
-			font-family: 'Montserrat', 'sans-serif';
-			font-size: medium;
-		}
-
-	}
+    label,
+    button,
+    p,
+    input {
+      font-family: "Montserrat", "sans-serif";
+      font-size: medium;
+    }
+  }
 }
