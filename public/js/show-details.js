@@ -1,7 +1,7 @@
-import customersFunc from "./functionalities/customers-func";
+import customersFunc from "./functionalities/customers-func.js";
 
 const showDetails = document.querySelector(".item-details");
-window.addEventListener("load", async () => {
+window.addEventListener("load", () => {
   window.handleBuyNow = handleBuyNow;
 });
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", displayDetails);
 async function displayDetails() {
   const itemsData = await fetch("/api/items");
   const items = await itemsData.json();
-  const item = items.find((item) => item.id == localStorage.getItem("itemID"));
+  const item = items.find(item => item.id === parseInt(localStorage.itemID));
   showDetails.innerHTML = showDetailsToHtml(item);
 }
 
@@ -38,22 +38,10 @@ function showDetailsToHtml(item) {
 
 async function handleBuyNow(id) {
   if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+    localStorage.itemID = id
     window.location.href = "/buy-now.html"
   } else {
     alert("Please login to buy items!");
     window.location.href = "/login-type.html";
   }
-  // if (
-  //   users.some(
-  //     (user) =>
-  //       user.uid !== undefined &&
-  //       user.uid == localStorage.getItem("loggedInUser")
-  //   )
-  // ) {
-  //   localStorage.itemID = item.id;
-  //   window.location.href = `/buy-now.html`;
-  // } else {
-  //   alert("Please login to buy items!");
-  //   window.location.href = "/login-type.html";
-  // }
 }

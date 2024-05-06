@@ -1,7 +1,10 @@
+import itemsRepo from './items-repo.js'
+import sellersRepo from './sellers-repo.js'
 import fs from 'fs-extra'
 import path from 'path'
 
 class CustomersRepo {
+
     constructor() {
         this.filePath = path.join(process.cwd(), 'app/data/customers.json')
         this.cookiesFile = path.join(process.cwd(), 'app/data/logged-in-customers-cookies.json')
@@ -10,6 +13,12 @@ class CustomersRepo {
     async getCustomers() {
         const customers = await fs.readJson(this.filePath)
         return customers
+    }
+
+    async getCustomer(id) {
+        const customers = await fs.readJson(this.filePath)
+        const customer = customers.find(cust => cust.id === id)
+        return customer
     }
 
     async login(username, password) {
@@ -23,9 +32,8 @@ class CustomersRepo {
             cookies.push(cookie)
             await fs.writeJson(this.cookiesFile, cookies)
             return cookie
-        } else {
-            return undefined
         }
+        return
     }
 
     // function to remove a cookie from the database when a user logs out
@@ -55,32 +63,41 @@ class CustomersRepo {
         return cookie;
     }
 
-    async purchaseItem(uid) {
-
+    async updateCustomers(customer) {
+        const customers = await this.getCustomers()
+        const customerIndex = customers.findIndex(cust => cust.id === customer.id)
+        customers.splice(customerIndex, 1, customer)
+        await fs.writeJson(this.filePath, customers)
     }
 
-    async getCustomer(uid) {
-        const customer = await fs.readJson(this.filePath).find(user => user.uid == uid)
-        return customer
+    async getPurchases(custId) {
+        const customer = await this.getCustomer(custId)
+        return customer.itemsPurchased
     }
 
-    async deleteUser(uid) {
-        const users = await fs.readJson(this.filePath)
-        const filteredUsers = items.filter(user => user.uid != uid)
-        await fs.writeJson(this.filePath, filteredUsers)
-        return 'user deleted successfully'
+    async purchaseItem(custId, itemId, quantity, purchaseDetails) {
+        const customer = await this.getCustomer(custId)
+        const item = await itemsRepo.getItem(itemId)
+        if (customer.balance >= (item.price * quantity)) {
+            if (item.quantity >= quantity) {
+                // decreasing the quantity of the item
+                item.quantity -= quantity
+                itemsRepo.updateItem(itemId, item)
+                // calculating the total amount of the purchase
+                const amount = item.price * quantity
+                // reducing the amount from the balance of the customer
+                customer.balance -= amount
+                // adding the purchase details object to the customer
+                customer.itemsPurchased.push(purchaseDetails)
+                await this.updateCustomers(customer)
+                // updating the sellers balance
+                sellersRepo.updateSellerBalance(itemId, amount)
+                return 'item updated successfully'
+            }
+            return 'not enough stock for this item'
+        }
+        return 'customer has insufficient balance'
     }
-
-    async totalAmountSpentPerProduct(uid) {
-        const users = await fs.readJson(this.filePath)
-        const user = users.find(user => user.uid == uid)
-        return user.totalSpent / user.itemsPurchased.length
-    }
-
-    async numberOfBuyersPerLocation() {
-
-    }
-
 }
 
 export default new CustomersRepo()

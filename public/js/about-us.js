@@ -3,9 +3,7 @@ import customersFunc from "./functionalities/customers-func.js";
 const loginBtn = document.querySelector("#loginBtn");
 
 window.addEventListener("load", async () => {
-    console.log("checking now");
     if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
-        console.log("inside the if");
         loginBtn.textContent = "Logout";
         document.querySelector("#purchaseLI").classList.toggle("hidden", false);
     }

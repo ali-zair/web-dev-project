@@ -23,6 +23,7 @@ if ((await customersFunc.isLoggedIn(localStorage.loginCookie))) {
 localStorage.loginCookie = localStorage.loginCookie || "-1";
 
 loginBtn.addEventListener("click", async () => {
+  // if user is logging in
   if (loginBtn.textContent === "Login") {
     if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
       window.location.href = "/login-type.html";
@@ -30,8 +31,11 @@ loginBtn.addEventListener("click", async () => {
       loginBtn.textContent = "Login";
       document.querySelector("#purchaseLI").classList.toggle("hidden", true);
     }
-  } else {
+  }
+  // if user is logging out
+  else {
     customersFunc.logout(localStorage.loginCookie);
+    alert("You have successfully logged out")
     loginBtn.textContent = "Login";
     document.querySelector("#purchaseLI").classList.toggle("hidden", true);
   }

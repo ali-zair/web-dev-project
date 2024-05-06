@@ -1,9 +1,6 @@
-import fs from 'fs-extra'
-import path from 'path'
-
 class ItemsFunc {
     constructor() {
-        this.filePath = path.join(process.cwd(), 'app/data/items.json')
+        this.itemsURL = '/api/items'
     }
 
     async getItems() {
@@ -16,11 +13,19 @@ class ItemsFunc {
         return item
     }
 
-    async deleteItem(id) {
-        const items = await fs.readJson(this.filePath)
-        const filteredItems = items.filter(item => item.id != id)
-        await fs.writeJson(this.filePath, filteredItems)
-        return 'item deleted successfully'
+    async updateItem(itemID, item) {
+        const url = `${this.itemsURL}/${itemID}`
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        });
+        if (response.ok) {
+            return 'item updated successfully'
+        }
+        return 'item could not be updated'
     }
 }
 

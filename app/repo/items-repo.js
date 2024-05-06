@@ -12,15 +12,21 @@ class ItemsRepo {
     }
 
     async getItem(id) {
-        const item = await fs.readJson(this.filePath).find(item => item.id == id)
+        const items = await fs.readJson(this.filePath)
+        const item = items.find(item => item.id === id)
         return item
     }
 
-    async deleteItem(id) {
+    async updateItem(itemId, item) {
         const items = await fs.readJson(this.filePath)
-        const filteredItems = items.filter(item => item.id != id)
-        await fs.writeJson(this.filePath, filteredItems)
-        return 'item deleted successfully'
+        const itemIndex = items.findIndex(item => item.id === itemId)
+        if (items[itemIndex]) {
+            items.splice(itemIndex, 1, item)
+            await fs.writeJson(this.filePath, items)
+        } else {
+            return 'item not found'
+        }
+        return 'item updated successfully'
     }
 }
 

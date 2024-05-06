@@ -1,15 +1,8 @@
 class CustomersFunc {
     constructor() {
-        this.itemsURL = '/api/items'
         this.customersURL = '/api/customers'
         this.customerCookiesURL = '/api/customerCookies'
     }
-
-    // async getCustomers() {
-    //     const data = await fetch(this.customersURL)
-    //     const customers = await data.json()
-    //     return customers
-    // }
 
     async login(usernameVal, passwordVal) {
         const customer = {
@@ -28,7 +21,7 @@ class CustomersFunc {
             localStorage.setItem('loginCookie', cookie)
             return cookie
         }
-        return undefined
+        return
     }
 
     async logout(cookieVal) {
@@ -64,35 +57,25 @@ class CustomersFunc {
         return false
     }
 
-    async purchaseItem(id) {
-
+    async purchaseItem(custId, itemId, quantity, purchaseDetails) {
+        const url = `${this.customersURL}?custId=${custId}&itemId=${itemId}&quantity=${quantity}`
+        const response = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(purchaseDetails)
+        });
+        const { message } = await response.json()
+        return message
     }
 
     async getCustomer(id) {
-        const data = await fetch(this.customersURL)
-        const customers = data.json()
-        const customer = customers.find(cust => cust.id === id)
+        const url = `${this.customersURL}?id=${id}`
+        const data = await fetch(url)
+        const customer = data.json()
         return customer
     }
-
-    // async deleteCustomer(id) {
-    //     const users = await fs.readJson(this.filePath)
-    //     const filteredUsers = items.filter(user => user.uid != uid)
-    //     await fs.writeJson(this.filePath, filteredUsers)
-    //     return 'user deleted successfully'
-    // }
-
-    async totalAmountSpentPerProduct(id) {
-        const data = await fetch(this.customersURL)
-        const customers = data.json()
-        const customer = customer.find(cust => cust.id === id)
-        return customer.totalSpent / customer.itemsPurchased.length
-    }
-
-    async numberOfBuyersPerLocation() {
-
-    }
-
 }
 
 export default new CustomersFunc()
