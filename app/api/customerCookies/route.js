@@ -13,3 +13,13 @@ export async function POST(request) {
         return Response.json({ message: error.message }, { status: 500 });
     }
 }
+
+export async function DELETE(request) {
+    const { cookie } = await request.json()
+    try {
+        const message = await customersRepo.logout(cookie);
+        return Response.json({ message: message }, { status: 200 });
+    } catch (error) {
+        return Response.json({ message: error.message }, { status: 500 });
+    }
+}

@@ -20,7 +20,7 @@ class CustomersRepo {
                 cookie: user.id + ":" + this.generateCookie()
             }
             const cookies = await fs.readJson(this.cookiesFile)
-            codokies.push(cookie)
+            cookies.push(cookie)
             await fs.writeJson(this.cookiesFile, cookies)
             return cookie
         } else {

@@ -6,6 +6,7 @@ import customersRepo from "@/app/repo/customers-repo"
 // }
 
 export async function POST(request) {
+    debugger
     const { username, password } = await request.json()
     try {
         const cookie = await customersRepo.login(username, password);

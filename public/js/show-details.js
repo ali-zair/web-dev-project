@@ -2,26 +2,21 @@ const showDetails = document.querySelector(".item-details");
 window.addEventListener("load", async () => {
   window.handleBuyNow = handleBuyNow;
 });
+
 document.addEventListener("DOMContentLoaded", displayDetails);
 
 async function displayDetails() {
-  const itemsData = await fetch("js/data/items.json");
+  const itemsData = await fetch("/api/items");
   const items = await itemsData.json();
-  const item1 = items.find((item) => item.id == localStorage.getItem("itemID"));
-
-  showDetails.innerHTML = showDetailsToHtml(item1);
+  const item = items.find((item) => item.id == localStorage.getItem("itemID"));
+  showDetails.innerHTML = showDetailsToHtml(item);
 }
 
 function showDetailsToHtml(item) {
-  return `<div class="item" data-id="${item.id}" data-thumbnail="${
-    item.thumbnail
-  }" data-title="${item.title}" data-note="${
-    item.note
-  }" data-features="${JSON.stringify(item.features)}" data-price="${
-    item.price
-  }" data-quantity="${item.quantity}" data-extra-details="${
-    item.extra_details
-  }">
+  return `<div class="item" data-id="${item.id}" data-thumbnail="${item.thumbnail}" 
+          data-title="${item.title}" data-note="${item.note}" 
+          data-features="${JSON.stringify(item.features)}" data-price="${item.price}" 
+          data-quantity="${item.quantity}" data-extra-details="${item.extra_details}">
             <figure>
               <img src="${item.thumbnail}" alt="Image of ${item.title} Laptop">
             </figure>

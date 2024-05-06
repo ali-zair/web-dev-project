@@ -23,20 +23,23 @@ const users = await data.json();
   check if user is already logged in using the cookies
 */
 
-// if (users.some(user => user.uid === parseInt(localStorage.getItem('loggedInUser')) || user.sid === parseInt(localStorage.getItem('loggedInUser')))) {
-//   loginBtn.textContent = "Logout";
-//   const user = users.find(user => user.uid === parseInt(localStorage.getItem('loggedInUser')));
-//   if (user) {
-//     document.querySelector("#purchaseLI").classList.toggle("hidden", false);
-//   }
-// }
+if ((await customersFunc.isLoggedIn(localStorage.loginCookie))) {
+  loginBtn.textContent = "Logout";
+  document.querySelector("#purchaseLI").classList.toggle("hidden", false);
+}
 
 localStorage.loginCookie = localStorage.loginCookie || "-1";
 
 loginBtn.addEventListener("click", async () => {
-  if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
-    window.location.href = "/login-type.html";
+  if (loginBtn.textContent === "Login") {
+    if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
+      window.location.href = "/login-type.html";
+    } else {
+      loginBtn.textContent = "Login";
+      document.querySelector("#purchaseLI").classList.toggle("hidden", true);
+    }
   } else {
+    customersFunc.logout(localStorage.loginCookie);
     loginBtn.textContent = "Login";
     document.querySelector("#purchaseLI").classList.toggle("hidden", true);
   }

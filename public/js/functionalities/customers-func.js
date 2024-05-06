@@ -32,11 +32,20 @@ class CustomersFunc {
         return undefined
     }
 
-    async logout(cookie) {
-        const data = await fetch(this.customerCookiesURL)
-        const cookies = await data.json()
-        const filteredCookies = data.filter(c => c != cookie)
-        return 'logged out successfully'
+    async logout(cookieVal) {
+        const loginCookie = {
+            cookie: cookieVal
+        }
+        const response = await fetch(this.customerCookiesURL, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginCookie)
+        });
+        if (response.ok) {
+            localStorage.setItem('loginCookie', -1)
+        }
     }
 
     async isLoggedIn(cookieVal) {
