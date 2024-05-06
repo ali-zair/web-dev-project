@@ -28,11 +28,16 @@ class CustomersRepo {
         }
     }
 
+    // function to remove a cookie from the database when a user logs out
     async logout(cookie) {
         const cookies = await fs.readJson(this.cookiesFile)
-        const filteredCookies = cookies.filter(c => c != cookie)
-        await fs.writeJson(this.cookiesFile, filteredCookies)
-        return 'logged out successfully'
+        const cookieFound = cookies.find(c => c.cookie === cookie)
+        if (cookieFound) {
+            const filteredCookies = cookies.filter(c => c.cookie !== cookie)
+            await fs.writeJson(this.cookiesFile, filteredCookies)
+            return 'logged out successfully'
+        }
+        return 'the server was unable to log you out'
     }
 
     async isLoggedIn(cookie) {

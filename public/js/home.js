@@ -12,22 +12,14 @@ const main = document.querySelector("#main");
 
 let filteredItems = [];
 let items = [];
-const data = await fetch("http://localhost:3000/api/users.json");
-const users = await data.json();
 
-// if (!localStorage.loggedInUser) {
-//   localStorage.loggedInUser = -1;
-// }
-
-/*
-  check if user is already logged in using the cookies
-*/
-
+// check if the user is logged in using the login cookie stored in the local storage
 if ((await customersFunc.isLoggedIn(localStorage.loginCookie))) {
   loginBtn.textContent = "Logout";
   document.querySelector("#purchaseLI").classList.toggle("hidden", false);
 }
 
+// if the user is not logged in, set the login cookie to -1
 localStorage.loginCookie = localStorage.loginCookie || "-1";
 
 loginBtn.addEventListener("click", async () => {

@@ -1,3 +1,5 @@
+import customersFunc from "./functionalities/customers-func";
+
 const showDetails = document.querySelector(".item-details");
 window.addEventListener("load", async () => {
   window.handleBuyNow = handleBuyNow;
@@ -34,19 +36,24 @@ function showDetailsToHtml(item) {
         </div>`;
 }
 
-function handleBuyNow(id) {
-  const item = items.find((item) => item.id === id);
-  if (
-    users.some(
-      (user) =>
-        user.uid !== undefined &&
-        user.uid == localStorage.getItem("loggedInUser")
-    )
-  ) {
-    localStorage.itemID = item.id;
-    window.location.href = `/buy-now.html`;
+async function handleBuyNow(id) {
+  if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+    window.location.href = "/buy-now.html"
   } else {
     alert("Please login to buy items!");
     window.location.href = "/login-type.html";
   }
+  // if (
+  //   users.some(
+  //     (user) =>
+  //       user.uid !== undefined &&
+  //       user.uid == localStorage.getItem("loggedInUser")
+  //   )
+  // ) {
+  //   localStorage.itemID = item.id;
+  //   window.location.href = `/buy-now.html`;
+  // } else {
+  //   alert("Please login to buy items!");
+  //   window.location.href = "/login-type.html";
+  // }
 }

@@ -12,7 +12,6 @@ class CustomersFunc {
     // }
 
     async login(usernameVal, passwordVal) {
-        debugger
         const customer = {
             username: usernameVal,
             password: passwordVal
@@ -44,7 +43,7 @@ class CustomersFunc {
             body: JSON.stringify(loginCookie)
         });
         if (response.ok) {
-            localStorage.setItem('loginCookie', -1)
+            localStorage.setItem('loginCookie', "-1")
         }
     }
 
