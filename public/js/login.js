@@ -6,7 +6,7 @@ document.querySelector("#loginForm").addEventListener("submit", async (event) =>
 	const password = document.querySelector("#password").value;
 	const cookie = await customersFunc.login(username, password);
 	if (cookie) {
-		localStorage.setItem('loginCookie', cookie)
+		localStorage.setItem("loginCookie", cookie);
 		alert("Logged in successfully");
 		window.location.href = "/home.html";
 	} else {

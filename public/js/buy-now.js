@@ -19,23 +19,23 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 		shippingType: buyerDetailsForm.querySelector("#shippingType").value,
 	};
 
-	const quantity = parseInt(buyerDetailsForm.querySelector("#quantity").value)
-	const customerId = parseInt(localStorage.loginCookie.split(':')[0])
-	const itemId = parseInt(localStorage.itemID)
-	const result = await customersFunc.purchaseItem(customerId, itemId, quantity, purchaseDetails)
+	const quantity = parseInt(buyerDetailsForm.querySelector("#quantity").value);
+	const customerId = parseInt(localStorage.loginCookie.split(":")[0]);
+	const itemId = parseInt(localStorage.itemID);
+	const result = await customersFunc.purchaseItem(customerId, itemId, quantity, purchaseDetails);
 
 	switch (result) {
-		case 'item purchased successfully':
+		case "item purchased successfully":
 			alert("Order placed successfully");
 			window.location.href = "/home.html";
 			break;
-		case 'item is currently unavailable':
+		case "item is currently unavailable":
 			alert("Item is currently unavailable, please try again later");
 			break;
-		case 'customer has insufficient balance':
+		case "customer has insufficient balance":
 			alert("Insufficient balance, please try again later");
 			break;
-		case 'there was an error purchasing this item':
+		case "there was an error purchasing this item":
 			alert("There was an error purchasing this item");
 			break;
 	}
@@ -44,11 +44,11 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 async function showBuyerDetailsForm() {
 	// if the customer is logged in
 	if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
-		const itemData = await fetch(`/api/items?id=${localStorage.itemID}`)
-		const item = await itemData.json()
-		buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item)
+		const itemData = await fetch(`/api/items?id=${localStorage.itemID}`);
+		const item = await itemData.json();
+		buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item);
 	} else {
-		alert('Please login to buy items');
+		alert("Please login to buy items");
 		window.location.href = "/login-type.html";
 	}
 }

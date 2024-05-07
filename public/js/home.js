@@ -14,7 +14,7 @@ let filteredItems = [];
 let items = [];
 
 // check if the user is logged in using the login cookie stored in the local storage
-if ((await customersFunc.isLoggedIn(localStorage.loginCookie))) {
+if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
 	loginBtn.textContent = "Logout";
 	document.querySelector("#purchaseLI").classList.toggle("hidden", false);
 }
@@ -35,7 +35,7 @@ loginBtn.addEventListener("click", async () => {
 	// if user is logging out
 	else {
 		customersFunc.logout(localStorage.loginCookie);
-		alert("You have successfully logged out")
+		alert("You have successfully logged out");
 		loginBtn.textContent = "Login";
 		document.querySelector("#purchaseLI").classList.toggle("hidden", true);
 	}

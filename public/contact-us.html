@@ -1,117 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyberian Store Contact us</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-    />
-  </head>
-  <body>
-    <header>
-      <header class="header">
-        <h1 class="title">Cyberian Store</h1>
-        <button class="login-btn" id="loginBtn">Login</button>
-      </header>
-      <nav class="navbar">
-        <div class="menu">
-          <ul>
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/about-us.html">About Us</a></li>
-            <li><a href="/contact-us.html">Contact Us</a></li>
-            <li class="hidden" id="purchaseLI">
-              <a href="/purchase-history.html">Purchase History</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberian Store Contact us</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+</head>
+
+<body>
+  <header>
+    <header class="header">
+      <h1 class="title">Cyberian Store</h1>
+      <button class="login-btn" id="loginBtn">Login</button>
     </header>
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="john doe"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="phone_number">Phone Number</label>
-          <input
-            id="phone_number"
-            type="tel"
-            name="phone_number"
-            placeholder="974-123-1234"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="john@email.com"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value="message"
-            placeholder="type...."
-            required
-          ></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit">Submit</button>
-        </div>
-        <div class="form-group">
-          <button type="reset">Reset</button>
-        </div>
-      </form>
-    </div>
-    <footer>
-      <div class="socials">
+    <nav class="navbar">
+      <div class="menu">
         <ul>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-facebook.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-instagram.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="https://example.com"><img src="./icons/brand-x.svg" /></a>
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-reddit.svg"
-            /></a>
-          </li>
-          <li>
-            <a href="https://example.com"
-              ><img src="./icons/brand-discord.svg"
-            /></a>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/contact-us.html">Contact Us</a></li>
+          <li class="hidden" id="purchaseLI">
+            <a href="/purchase-history.html">Purchase History</a>
           </li>
         </ul>
       </div>
-      <p>&copy; Cyberian Store</p>
-    </footer>
-    <!-- linking the about us script file to change the login button to logout depending on the user cookie stored -->
-    <!-- also will add the purchase history option in the nav bar -->
-    <script src="js/about-us.js" type="module"></script>
-  </body>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="john doe" required />
+      </div>
+      <div class="form-group">
+        <label for="phone_number">Phone Number</label>
+        <input id="phone_number" type="tel" name="phone_number" placeholder="974-123-1234" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="john@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" value="message" placeholder="type...." required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+      <div class="form-group">
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="socials">
+      <ul>
+        <li>
+          <a href="https://example.com"><img src="./icons/brand-facebook.svg" /></a>
+        </li>
+        <li>
+          <a href="https://example.com"><img src="./icons/brand-instagram.svg" /></a>
+        </li>
+        <li>
+          <a href="https://example.com"><img src="./icons/brand-x.svg" /></a>
+        </li>
+        <li>
+          <a href="https://example.com"><img src="./icons/brand-reddit.svg" /></a>
+        </li>
+        <li>
+          <a href="https://example.com"><img src="./icons/brand-discord.svg" /></a>
+        </li>
+      </ul>
+    </div>
+    <p>&copy; Cyberian Store</p>
+  </footer>
+  <!-- linking the about us script file to change the login button to logout depending on the user cookie stored -->
+  <!-- also will add the purchase history option in the nav bar -->
+  <script src="js/about-us.js" type="module"></script>
+</body>
+
 </html>
