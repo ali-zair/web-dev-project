@@ -1,47 +1,23 @@
 import sellersFunc from "./functionalities/sellers-func.js";
 
-window.addEventListener("load", async () => {
-	showItems();
-	window.handleBuyNow = handleBuyNow;
-	window.handleShowDetails = handleShowDetails;
-});
+document.addEventListener('DOMContentLoaded', showItems(false))
 
-const loginBtn = document.querySelector("#loginBtn");
+const logoutBtn = document.querySelector("#logoutBtn");
 const searchBox = document.querySelector("#searchBox");
 const main = document.querySelector("#main");
 
-let filteredItems = [];
+let filteredItems = []
 let items = [];
 
-// check if the user is logged in using the login cookie stored in the local storage
-if (await sellersFunc.isLoggedIn(localStorage.sellerCookie)) {
-	loginBtn.textContent = "Logout";
-	document.querySelector("#stats").classList.toggle("hidden", false);
-} else {
+// if the user is not logged in as a seller then redirect
+if (!(await sellersFunc.isLoggedIn(localStorage.sellerCookie))) {
 	window.location.href = "/home.html"
 }
 
-// if the user is not logged in, set the login cookie to -1
-localStorage.sellerCookie = localStorage.sellerCookie || "-1";
-
-loginBtn.addEventListener("click", async () => {
-	// if user is logging in
-	if (loginBtn.textContent === "Login") {
-		if (!(await sellersFunc.isLoggedIn(localStorage.sellerCookie))) {
-			window.location.href = "/login-type.html";
-		} else {
-			loginBtn.textContent = "Login";
-			document.querySelector("#stats").classList.toggle("hidden", true);
-		}
-	}
-	// if user is logging out
-	else {
-		sellersFunc.logout(localStorage.sellerCookie);
-		alert("You have successfully logged out");
-		loginBtn.textContent = "Login";
-		document.querySelector("#stats").classList.toggle("hidden", true);
-		window.location.href = "/home.html"
-	}
+logoutBtn.addEventListener("click", async () => {
+	sellersFunc.logout(localStorage.sellerCookie);
+	alert("You have successfully logged out");
+	window.location.href = "/home.html"
 });
 
 searchBox.addEventListener("input", find);
@@ -60,8 +36,7 @@ function find() {
 async function showItems(isFiltered) {
 	try {
 		const sellerId = localStorage.sellerCookie.split(":")[0]
-		const items = await sellersFunc.getSellerItems(sellerId)
-		console.log(items);
+		items = await sellersFunc.getSellerItems(sellerId)
 		if (isFiltered === true) {
 			main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
 		} else {
@@ -85,24 +60,5 @@ function itemToHTML(item) {
 					<p class="features">${item.features[2]}</p>
 					<p class="features">${item.features[3]}</p>
 					<p class="price">$${item.price}</p>
-					<button onclick="handleShowDetails(${item.id})">Show Details</button>
-					<button onclick="handleBuyNow(${item.id})">Buy Now!</button>
 			</section>`;
-}
-
-function handleShowDetails(id) {
-	const item = items.find((item) => item.id === id);
-	localStorage.itemID = item.id;
-	window.location.href = "/show-details.html";
-}
-
-function handleBuyNow(id) {
-	const item = items.find((item) => item.id === id);
-	if (sellersFunc.isLoggedIn(localStorage.sellerCookie)) {
-		localStorage.itemID = item.id;
-		window.location.href = `/buy-now.html`;
-	} else {
-		alert("Please login as a customer to buy items!");
-		window.location.href = "/login-type.html";
-	}
 }
