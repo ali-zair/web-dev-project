@@ -1,92 +1,1502 @@
 [
 	{
-		"id": 309,
-		"thumbnail": "img/lemur-pro.png",
-		"title": "System76 Lemur Pro",
-		"note": "Best everyday laptop!",
+		"id": 1,
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
 		"features": [
-			"Lightest, thinnest laptop",
-			"16:10 screen ratio (1200p)",
-			"Opens to 180°",
-			"Intel Core Ultra (Series 1)"
+			"Modular design for easy repair and upgrades",
+			"Privacy-respecting hardware and firmware",
+			"Open-source schematics and documentation",
+			"Customizable configuration options"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability."
+	},
+	{
+		"id": 2,
+		"thumbnail": "img/tuxedo-computer.png",
+		"title": "Tuxedo Computers InfinityBook Pro",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers InfinityBook Pro is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 3,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
 		],
 		"price": 1399,
 		"quantity": 2,
-		"extra_details": "Set out into the world with the 2.2-pound Lemur Pro — the lightest in its class. A 180° hinge and up to 14 hours of battery life make for a flexible schedule. When the lid is closed, this laptop sits well under 1 inch tall and will easily fit in most bags."
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
 	},
 	{
-		"id": 265,
-		"thumbnail": "img/pangolin.png",
-		"title": "System76 Pangolin",
-		"note": "Best graphics!",
+		"id": 4,
+		"thumbnail": "img/system76-galago-pro.png",
+		"title": "System76 Galago Pro",
+		"note": "Compact and powerful, built for privacy and performance.",
 		"features": [
-			"Fast AMD CPU",
-			"Best integrated graphics",
-			"Camera privacy switch",
-			"Quick storage access"
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"High-performance components",
+			"Customizable configurations"
 		],
-		"price": 1299,
-		"quantity": 10,
-		"extra_details": "Sleek magnesium alloy build, beautiful 16-inch display, and up to 10 hours of battery life round out the Pangolin’s portfolio. Pursue ambition with a fast AMD chip and 32GB RAM, or kick back with your favorite game on integrated Radeon graphics. With all eyes on your System76 laptop, you’re bound to meet new allies along the way"
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Galago Pro packs a punch in a compact form factor. With a focus on privacy and performance, it's perfect for professionals and enthusiasts alike."
 	},
 	{
-		"id": 150,
-		"thumbnail": "img/darter-pro.png",
-		"title": "System76 Darter Pro",
-		"note": "Most premium build!",
+		"id": 5,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
 		"features": [
-			"Compact 15\"",
-			"12-Core CPU",
-			"DDR5 RAM (96GB max)",
-			"Most ports including microSD reader"
-		],
-		"price": 1500,
-		"quantity": 5,
-		"extra_details": "The Darter Pro is small for its 15” size. A short depth and thin bezel make this a highly portable laptop. With the lid, top case, and bottom case all made of a black magnesium alloy, the Darter Pro is also one of our most durable.Prepare yourself in the field with a wide variety of ports, glare-resistant 1080p display, up to 9 hours of battery life, and up to 8TB of storage."
-	},
-	{
-		"id": 401,
-		"thumbnail": "img/adder-ws.png",
-		"title": "System76 Adder WS",
-		"note": "Most affordable high-end performance!",
-		"features": [
-			"24-core CPU",
-			"NVIDIA 40-Series",
-			"DDR5 RAM",
-			"PCIe 4.0 SSDs"
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
 		],
 		"price": 1699,
-		"quantity": 9,
-		"extra_details": "Whether you're at the lab, in the studio, or exploring a virtual world, accelerate progress with a machine as powerful as your ambition. System76 powerful laptops are built with the high-end components you need to make your vision a reality."
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
 	},
 	{
-		"id": 604,
-		"thumbnail": "img/serval-ws.png",
-		"title": "System76 Serval WS",
-		"note": "Most affordable 4K display!",
+		"id": 6,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
 		"features": [
-			"Fast USB speeds",
-			"Premium build",
-			"165Hz refresh rate (15\")",
-			"2K or 4K display (17\")"
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
 		],
-		"price": 2099,
-		"quantity": 4,
-		"extra_details": "AI has rendered society an ever-changing landscape. How will you change it for the better? With an HX-class CPU, NVIDIA 40 Series graphics, the Serval WS is professional-grade power. Use it to fulfill your creative and research goals before your competition.Serval WS laptop opened front view with a protein render in the screen. "
+		"price": 1299,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
 	},
 	{
-		"id": 367,
-		"thumbnail": "img/bonobo-ws.png",
-		"title": "System76 Bonobo WS",
-		"note": "Most powerful!",
+		"id": 7,
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
 		"features": [
-			"24-core Intel i9 processor",
-			"NVIDIA RTX 4080 or 4090",
-			"2K 240Hz or 4K 144Hz display",
-			"Massive trackpad"
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"Long battery life",
+			"High-resolution display"
 		],
-		"price": 3299,
-		"quantity": 6,
-		"extra_details": "Industry leaders need industry-leading power, and the Bonobo WS is System76's most powerful laptop. Its kit includes a 24-core CPU, up to 96GB DDR5 RAM, NVIDIA RTX 4080 or 4090 graphics, PCIe 4.0 storage, fast USB 3.2 Gen 2 transfer speeds, and a 2K or 4K display. Are you ready for your conference talk? "
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go."
+	},
+	{
+		"id": 8,
+		"thumbnail": "img/pinebook-pro.png",
+		"title": "PINEBOOK Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINEBOOK Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 9,
+		"thumbnail": "img/system76-oryp5.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 10,
+		"thumbnail": "img/purism-librem-15.png",
+		"title": "Purism Librem 15",
+		"note": "A versatile laptop designed with privacy and security in mind.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1899,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 15 is a powerhouse laptop that prioritizes security and privacy. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 11,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 12,
+		"thumbnail": "img/thinkpenguin-sparrow-x200.png",
+		"title": "ThinkPenguin Sparrow X200",
+		"note": "A refurbished laptop with a focus on privacy and performance.",
+		"features": [
+			"Fully librebooted firmware",
+			"Preinstalled with a privacy-focused Linux distribution",
+			"High-quality refurbished components",
+			"Supports open-source software"
+		],
+		"price": 499,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Sparrow X200 offers privacy and performance at an affordable price. With fully librebooted firmware and a preinstalled privacy-focused Linux distribution, it's a great option for those on a budget."
+	},
+	{
+		"id": 13,
+		"thumbnail": "img/pinebook-pro.png",
+		"title": "PINEBOOK Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINEBOOK Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 14,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 15,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 16,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 17,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
+	},
+	{
+		"id": 18,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 19,
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
+		"features": [
+			"Modular design for easy repair and upgrades",
+			"Privacy-respecting hardware and firmware",
+			"Open-source schematics and documentation",
+			"Customizable configuration options"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability."
+	},
+	{
+		"id": 20,
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
+		"features": [
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go."
+	},
+	{
+		"id": 21,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 22,
+		"thumbnail": "img/purism-librem-15.png",
+		"title": "Purism Librem 15",
+		"note": "A versatile laptop designed with privacy and security in mind.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1899,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 15 is a powerhouse laptop that prioritizes security and privacy. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 23,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 24,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
+	},
+	{
+		"id": 25,
+		"thumbnail": "img/system76-galago-pro.png",
+		"title": "System76 Galago Pro",
+		"note": "Compact and powerful, built for privacy and performance.",
+		"features": [
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"High-performance components",
+			"Customizable configurations"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Galago Pro packs a punch in a compact form factor. With a focus on privacy and performance, it's perfect for professionals and enthusiasts alike."
+	},
+	{
+		"id": 26,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 27,
+		"thumbnail": "img/thinkpenguin-sparrow-x200.png",
+		"title": "ThinkPenguin Sparrow X200",
+		"note": "A refurbished laptop with a focus on privacy and performance.",
+		"features": [
+			"Fully librebooted firmware",
+			"Preinstalled with a privacy-focused Linux distribution",
+			"High-quality refurbished components",
+			"Supports open-source software"
+		],
+		"price": 499,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Sparrow X200 offers privacy and performance at an affordable price. With fully librebooted firmware and a preinstalled privacy-focused Linux distribution, it's a great option for those on a budget."
+	},
+	{
+		"id": 28,
+		"thumbnail": "img/pinebook-pro.png",
+		"title": "PINEBOOK Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINEBOOK Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 29,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 30,
+		"thumbnail": "img/system76-oryp5.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 31,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 32,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
+	},
+	{
+		"id": 33,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 34,
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
+		"features": [
+			"Modular design for easy repair and upgrades",
+			"Privacy-respecting hardware and firmware",
+			"Open-source schematics and documentation",
+			"Customizable configuration options"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability."
+	},
+	{
+		"id": 35,
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
+		"features": [
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go."
+	},
+	{
+		"id": 36,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 37,
+		"thumbnail": "img/purism-librem-15.png",
+		"title": "Purism Librem 15",
+		"note": "A versatile laptop designed with privacy and security in mind.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1899,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 15 is a powerhouse laptop that prioritizes security and privacy. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 38,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 39,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
+	},
+	{
+		"id": 40,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 41,
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
+		"features": [
+			"Modular design for easy repair and upgrades",
+			"Privacy-respecting hardware and firmware",
+			"Open-source schematics and documentation",
+			"Customizable configuration options"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability."
+	},
+	{
+		"id": 42,
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
+		"features": [
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go."
+	},
+	{
+		"id": 43,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 44,
+		"thumbnail": "img/purism-librem-15.png",
+		"title": "Purism Librem 15",
+		"note": "A versatile laptop designed with privacy and security in mind.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1899,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 15 is a powerhouse laptop that prioritizes security and privacy. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 45,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 46,
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": [
+			"Lightweight and portable design",
+			"Privacy-focused firmware and drivers",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1499,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals."
+	},
+	{
+		"id": 47,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 48,
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
+		"features": [
+			"Modular design for easy repair and upgrades",
+			"Privacy-respecting hardware and firmware",
+			"Open-source schematics and documentation",
+			"Customizable configuration options"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability."
+	},
+	{
+		"id": 49,
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
+		"features": [
+			"Thin and lightweight design",
+			"Privacy-focused hardware and firmware",
+			"Long battery life",
+			"High-resolution display"
+		],
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go."
+	},
+	{
+		"id": 50,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 51,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 52,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 53,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 54,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 55,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 56,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 57,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 58,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 59,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 60,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 61,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 62,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 63,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 64,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 65,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 66,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 67,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 68,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 69,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 70,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 71,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 72,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 73,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 74,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 75,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 76,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 77,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 78,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 79,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 80,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 81,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 82,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 83,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 84,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 85,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 86,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 87,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 88,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 89,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 90,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 91,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 92,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 93,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
+	},
+	{
+		"id": 94,
+		"thumbnail": "img/system76-oryx-pro.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": [
+			"High-performance components",
+			"Privacy-focused hardware and firmware",
+			"Customizable configurations",
+			"Robust build quality"
+		],
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike."
+	},
+	{
+		"id": 95,
+		"thumbnail": "img/system76-thelio-mira.png",
+		"title": "System76 Thelio Mira",
+		"note": "A sleek and powerful desktop designed for creators.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2999,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio Mira is a masterpiece of design and performance. With customizable configurations and a focus on sustainability, it's the perfect desktop for artists, designers, and creators."
+	},
+	{
+		"id": 96,
+		"thumbnail": "img/system76-thelio.png",
+		"title": "System76 Thelio",
+		"note": "A premium desktop designed with performance and sustainability in mind.",
+		"features": [
+			"Customizable configurations",
+			"Sustainably sourced materials",
+			"High-performance components",
+			"Privacy-focused design"
+		],
+		"price": 2499,
+		"quantity": 2,
+		"extra_details": "The System76 Thelio is a work of art that combines performance with sustainability. With customizable configurations and a focus on privacy, it's the ultimate desktop for those who care about their impact on the planet."
+	},
+	{
+		"id": 97,
+		"thumbnail": "img/tuxedo-computer-nimbus.png",
+		"title": "Tuxedo Computers Nimbus",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": [
+			"Linux-friendly hardware and drivers",
+			"Privacy-focused design and firmware",
+			"High-performance components",
+			"Sleek aluminum chassis"
+		],
+		"price": 1799,
+		"quantity": 2,
+		"extra_details": "The Tuxedo Computers Nimbus is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users."
+	},
+	{
+		"id": 98,
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": [
+			"Hardware kill switches for camera and microphone",
+			"Encrypted storage and communications",
+			"Libreboot and Coreboot firmware",
+			"Fully free and open-source software"
+		],
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users."
+	},
+	{
+		"id": 99,
+		"thumbnail": "img/pine64-pinebook-pro.png",
+		"title": "PINE64 Pinebook Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": [
+			"Affordable price point",
+			"Community-driven development",
+			"Open-source hardware and software",
+			"Lightweight and portable design"
+		],
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINE64 Pinebook Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration."
+	},
+	{
+		"id": 100,
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": [
+			"Preinstalled with a privacy-focused Linux distribution",
+			"Hardware compatibility with free software",
+			"High-quality components",
+			"Supports open-source firmware"
+		],
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom."
 	}
 ]

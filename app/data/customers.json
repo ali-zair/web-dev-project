@@ -1,12 +1,12 @@
 [
 	{
-		"id": 52,
-		"name": "Sid",
-		"surname": "Thomas",
-		"address": "4073 Hayhurst Lane Southfield, MI 48075",
-		"username": "sthomas",
-		"password": "thomas123",
-		"balance": 10000,
+		"id": 1,
+		"name": "John",
+		"surname": "Doe",
+		"address": "123 Main St, Anytown, USA",
+		"username": "johndoe",
+		"password": "password123",
+		"balance": 5000,
 		"itemsPurchased": [
 			{
 				"orderNo": 123123,
@@ -15,17 +15,44 @@
 				"quantity": 2,
 				"date": "2024-03-19T00:00:00.000Z",
 				"shippingType": "Standard"
+			},
+			{
+				"orderNo": 125125,
+				"itemId": 604,
+				"shippingAddress": "4985 Roane Avenue Beltsville, MD 20705",
+				"quantity": 1,
+				"date": "2024-03-22T00:00:00.000Z",
+				"shippingType": "Standard"
 			}
 		]
 	},
 	{
-		"id": 28,
-		"name": "Lucy",
-		"surname": "Batts",
-		"address": "3121 Bottom Lane Gasport, NY 14067",
-		"username": "lbatts",
-		"password": "batts123",
-		"balance": 1000,
+		"id": 2,
+		"name": "Jane",
+		"surname": "Smith",
+		"address": "456 Elm St, Smallville, USA",
+		"username": "janesmith",
+		"password": "letmein",
+		"balance": 7500,
+		"itemsPurchased": [
+			{
+				"orderNo": 126126,
+				"itemId": 367,
+				"shippingAddress": "4648 Howard Street Grand Rapids, MI 49503",
+				"quantity": 4,
+				"date": "2024-03-23T00:00:00.000Z",
+				"shippingType": "Standard"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Alice",
+		"surname": "Johnson",
+		"address": "789 Oak St, Metropolis, USA",
+		"username": "alicej",
+		"password": "password123",
+		"balance": 3000,
 		"itemsPurchased": [
 			{
 				"orderNo": 124124,
@@ -38,13 +65,13 @@
 		]
 	},
 	{
-		"id": 92,
-		"name": "Tammy",
-		"surname": "Scudder",
-		"address": "253 Michigan Avenue Connellsville, PA 15425",
-		"username": "tscudder",
-		"password": "scudder123",
-		"balance": 1500,
+		"id": 4,
+		"name": "Michael",
+		"surname": "Williams",
+		"address": "101 Maple St, Springfield, USA",
+		"username": "mwilliams",
+		"password": "abc123",
+		"balance": 10000,
 		"itemsPurchased": [
 			{
 				"orderNo": 124124,
@@ -57,41 +84,963 @@
 		]
 	},
 	{
-		"id": 18,
+		"id": 5,
+		"name": "Emily",
+		"surname": "Brown",
+		"address": "222 Pine St, Gotham City, USA",
+		"username": "emilyb",
+		"password": "qwerty",
+		"balance": 6000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 6,
+		"name": "David",
+		"surname": "Taylor",
+		"address": "789 Oak St, Smalltown, USA",
+		"username": "dtaylor",
+		"password": "david123",
+		"balance": 4000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 7,
+		"name": "Sarah",
+		"surname": "Martinez",
+		"address": "987 Cedar St, Rivertown, USA",
+		"username": "sarahm",
+		"password": "sarah123",
+		"balance": 8500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 8,
+		"name": "Christopher",
+		"surname": "Anderson",
+		"address": "567 Birch St, Laketown, USA",
+		"username": "chrisa",
+		"password": "anderson",
+		"balance": 5500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 9,
+		"name": "Jessica",
+		"surname": "Garcia",
+		"address": "345 Oak St, Hilltown, USA",
+		"username": "jessicag",
+		"password": "jessica123",
+		"balance": 7000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 10,
+		"name": "Daniel",
+		"surname": "Hernandez",
+		"address": "789 Pine St, Mountainville, USA",
+		"username": "danielh",
+		"password": "dhernandez",
+		"balance": 6200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 11,
+		"name": "Ashley",
+		"surname": "Lopez",
+		"address": "908 Maple St, Lakeside, USA",
+		"username": "ashleyl",
+		"password": "ashley123",
+		"balance": 4800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 12,
+		"name": "Matthew",
+		"surname": "Gonzalez",
+		"address": "765 Cedar St, Sunnyside, USA",
+		"username": "matthewg",
+		"password": "matt123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 13,
+		"name": "Amanda",
+		"surname": "Wilson",
+		"address": "234 Birch St, Hillside, USA",
+		"username": "amandaw",
+		"password": "amanda123",
+		"balance": 6900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 14,
 		"name": "James",
-		"surname": "Lemus",
-		"address": "4985 Roane Avenue Beltsville, MD 20705",
-		"username": "jlemus",
-		"password": "lemus123",
-		"balance": 2000,
-		"itemsPurchased": [
-			{
-				"orderNo": 125125,
-				"itemId": 604,
-				"shippingAddress": "4985 Roane Avenue Beltsville, MD 20705",
-				"quantity": 1,
-				"date": "2024-03-22T00:00:00.000Z",
-				"shippingType": "Standard"
-			}
-		]
+		"surname": "Lee",
+		"address": "345 Oak St, Northville, USA",
+		"username": "jamesl",
+		"password": "lee123",
+		"balance": 4500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 15,
+		"name": "Jennifer",
+		"surname": "Clark",
+		"address": "789 Elm St, Greenvale, USA",
+		"username": "jenniferc",
+		"password": "jennifer123",
+		"balance": 6100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 16,
+		"name": "Ryan",
+		"surname": "Rodriguez",
+		"address": "123 Pine St, Hillcrest, USA",
+		"username": "ryanr",
+		"password": "ryan123",
+		"balance": 7400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 17,
+		"name": "Michelle",
+		"surname": "Lewis",
+		"address": "456 Cedar St, Riverdale, USA",
+		"username": "michellel",
+		"password": "michelle123",
+		"balance": 5700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 18,
+		"name": "David",
+		"surname": "Walker",
+		"address": "789 Oak St, Hilltown, USA",
+		"username": "davidw",
+		"password": "walker123",
+		"balance": 4900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 19,
+		"name": "Kimberly",
+		"surname": "Perez",
+		"address": "101 Elm St, Brookside, USA",
+		"username": "kimberlyp",
+		"password": "kimberly123",
+		"balance": 6700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 20,
+		"name": "William",
+		"surname": "Hall",
+		"address": "222 Pine St, Oakville, USA",
+		"username": "williamh",
+		"password": "william123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 21,
+		"name": "Emma",
+		"surname": "Young",
+		"address": "333 Maple St, Forestville, USA",
+		"username": "emmay",
+		"password": "emma123",
+		"balance": 6200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 22,
+		"name": "Kevin",
+		"surname": "Scott",
+		"address": "444 Elm St, Hillcrest, USA",
+		"username": "kevins",
+		"password": "scott123",
+		"balance": 7000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 23,
+		"name": "Lauren",
+		"surname": "Green",
+		"address": "555 Pine St, Lakewood, USA",
+		"username": "laureng",
+		"password": "lauren123",
+		"balance": 4800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 24,
+		"name": "Brandon",
+		"surname": "Evans",
+		"address": "666 Oak St, Parkside, USA",
+		"username": "brandone",
+		"password": "evans123",
+		"balance": 5600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 25,
+		"name": "Megan",
+		"surname": "King",
+		"address": "777 Cedar St, Riverside, USA",
+		"username": "megank",
+		"password": "megan123",
+		"balance": 6700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 26,
+		"name": "Justin",
+		"surname": "Baker",
+		"address": "888 Birch St, Hillcrest, USA",
+		"username": "justinb",
+		"password": "justin123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 27,
+		"name": "Stephanie",
+		"surname": "Wright",
+		"address": "999 Elm St, Hillside, USA",
+		"username": "stephaniew",
+		"password": "stephanie123",
+		"balance": 7400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 28,
+		"name": "Andrew",
+		"surname": "Lopez",
+		"address": "111 Oak St, Lakeview, USA",
+		"username": "andrewl",
+		"password": "lopez123",
+		"balance": 5700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 29,
+		"name": "Rachel",
+		"surname": "Hill",
+		"address": "222 Cedar St, Mountainview, USA",
+		"username": "rachelh",
+		"password": "hill123",
+		"balance": 4900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 30,
+		"name": "Jason",
+		"surname": "Allen",
+		"address": "333 Pine St, Riverbank, USA",
+		"username": "jasona",
+		"password": "allen123",
+		"balance": 6700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 31,
+		"name": "Heather",
+		"surname": "Scott",
+		"address": "444 Oak St, Hillcrest, USA",
+		"username": "heathers",
+		"password": "scott123",
+		"balance": 7100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 32,
+		"name": "Tyler",
+		"surname": "Ward",
+		"address": "555 Elm St, Hillside, USA",
+		"username": "tylerw",
+		"password": "ward123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 33,
+		"name": "Brittany",
+		"surname": "Cook",
+		"address": "666 Pine St, Lakewood, USA",
+		"username": "brittanyc",
+		"password": "cook123",
+		"balance": 4800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 34,
+		"name": "Kyle",
+		"surname": "Bailey",
+		"address": "777 Cedar St, Riverside, USA",
+		"username": "kyleb",
+		"password": "bailey123",
+		"balance": 6400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 35,
+		"name": "Samantha",
+		"surname": "Perry",
+		"address": "888 Birch St, Hillcrest, USA",
+		"username": "samanthap",
+		"password": "perry123",
+		"balance": 5900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 36,
+		"name": "Jacob",
+		"surname": "Nelson",
+		"address": "999 Elm St, Hillside, USA",
+		"username": "jacobn",
+		"password": "nelson123",
+		"balance": 7200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 37,
+		"name": "Nicole",
+		"surname": "Coleman",
+		"address": "111 Oak St, Lakeview, USA",
+		"username": "nicolec",
+		"password": "coleman123",
+		"balance": 5500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 38,
+		"name": "Cody",
+		"surname": "Ford",
+		"address": "222 Cedar St, Mountainview, USA",
+		"username": "codyf",
+		"password": "ford123",
+		"balance": 5100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 39,
+		"name": "Kayla",
+		"surname": "Sullivan",
+		"address": "333 Pine St, Riverbank, USA",
+		"username": "kaylas",
+		"password": "sullivan123",
+		"balance": 6600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 40,
+		"name": "Zachary",
+		"surname": "Barnes",
+		"address": "444 Oak St, Hillcrest, USA",
+		"username": "zacharyb",
+		"password": "barnes123",
+		"balance": 7300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 41,
+		"name": "Hannah",
+		"surname": "Evans",
+		"address": "555 Elm St, Hillside, USA",
+		"username": "hannahe",
+		"password": "evans123",
+		"balance": 5200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 42,
+		"name": "Alex",
+		"surname": "Howard",
+		"address": "666 Pine St, Lakewood, USA",
+		"username": "alexh",
+		"password": "howard123",
+		"balance": 6800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 43,
+		"name": "Morgan",
+		"surname": "Ward",
+		"address": "777 Cedar St, Riverside, USA",
+		"username": "morganw",
+		"password": "ward123",
+		"balance": 5400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 44,
+		"name": "Jordan",
+		"surname": "Bryant",
+		"address": "888 Birch St, Hillcrest, USA",
+		"username": "jordanb",
+		"password": "bryant123",
+		"balance": 6900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 45,
+		"name": "Chelsea",
+		"surname": "Gonzalez",
+		"address": "999 Elm St, Hillside, USA",
+		"username": "chelseag",
+		"password": "gonzalez123",
+		"balance": 5800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 46,
+		"name": "Cameron",
+		"surname": "Robinson",
+		"address": "111 Oak St, Lakeview, USA",
+		"username": "cameronr",
+		"password": "robinson123",
+		"balance": 6500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 47,
+		"name": "Lindsey",
+		"surname": "Carter",
+		"address": "222 Cedar St, Mountainview, USA",
+		"username": "lindseyc",
+		"password": "carter123",
+		"balance": 7400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 48,
+		"name": "Evan",
+		"surname": "Phillips",
+		"address": "333 Pine St, Riverbank, USA",
+		"username": "evanp",
+		"password": "phillips123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 49,
+		"name": "Courtney",
+		"surname": "Mitchell",
+		"address": "444 Oak St, Hillcrest, USA",
+		"username": "courtneym",
+		"password": "mitchell123",
+		"balance": 6100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 50,
+		"name": "Patrick",
+		"surname": "Cox",
+		"address": "555 Elm St, Hillside, USA",
+		"username": "patrickc",
+		"password": "cox123",
+		"balance": 5600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 51,
+		"name": "Olivia",
+		"surname": "Mitchell",
+		"address": "101 Pine St, Riverdale, USA",
+		"username": "oliviam",
+		"password": "mitchell123",
+		"balance": 5900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 52,
+		"name": "Nathan",
+		"surname": "Gray",
+		"address": "202 Cedar St, Lakeside, USA",
+		"username": "nathang",
+		"password": "gray123",
+		"balance": 6400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 53,
+		"name": "Avery",
+		"surname": "Baker",
+		"address": "303 Elm St, Forestville, USA",
+		"username": "averyb",
+		"password": "baker123",
+		"balance": 7000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 54,
+		"name": "Evelyn",
+		"surname": "Ward",
+		"address": "404 Birch St, Oakville, USA",
+		"username": "evelynw",
+		"password": "ward123",
+		"balance": 5500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 55,
+		"name": "Leo",
+		"surname": "Foster",
+		"address": "505 Pine St, Hillside, USA",
+		"username": "leof",
+		"password": "foster123",
+		"balance": 6200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 56,
+		"name": "Ella",
+		"surname": "Powell",
+		"address": "606 Cedar St, Mountainville, USA",
+		"username": "ellap",
+		"password": "powell123",
+		"balance": 5700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 57,
+		"name": "Aaron",
+		"surname": "Long",
+		"address": "707 Elm St, Parkside, USA",
+		"username": "aaronl",
+		"password": "long123",
+		"balance": 6600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 58,
+		"name": "Addison",
+		"surname": "Ross",
+		"address": "808 Maple St, Rivertown, USA",
+		"username": "addisonr",
+		"password": "ross123",
+		"balance": 5100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 59,
+		"name": "Elijah",
+		"surname": "Mitchell",
+		"address": "909 Oak St, Hilltown, USA",
+		"username": "elijahm",
+		"password": "mitchell123",
+		"balance": 6800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 60,
+		"name": "Mia",
+		"surname": "Gray",
+		"address": "1011 Pine St, Oakville, USA",
+		"username": "miag",
+		"password": "gray123",
+		"balance": 5400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 61,
+		"name": "Liam",
+		"surname": "Baker",
+		"address": "1212 Cedar St, Mountainville, USA",
+		"username": "liamb",
+		"password": "baker123",
+		"balance": 7100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 62,
+		"name": "Charlotte",
+		"surname": "Ward",
+		"address": "1313 Elm St, Parkside, USA",
+		"username": "charlottew",
+		"password": "ward123",
+		"balance": 5600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 63,
+		"name": "Jackson",
+		"surname": "Foster",
+		"address": "1414 Birch St, Hillside, USA",
+		"username": "jacksonf",
+		"password": "foster123",
+		"balance": 6400,
+		"itemsPurchased": []
 	},
 	{
 		"id": 64,
-		"name": "Jill",
-		"surname": "Bowden",
-		"address": "4648 Howard Street Grand Rapids, MI 49503",
-		"username": "jbowden",
-		"password": "bowden123",
+		"name": "Amelia",
+		"surname": "Powell",
+		"address": "1515 Pine St, Mountainview, USA",
+		"username": "ameliap",
+		"password": "powell123",
+		"balance": 5800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 65,
+		"name": "Logan",
+		"surname": "Long",
+		"address": "1616 Cedar St, Riverbank, USA",
+		"username": "loganl",
+		"password": "long123",
+		"balance": 6700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 66,
+		"name": "Aubrey",
+		"surname": "Ross",
+		"address": "1717 Elm St, Hilltown, USA",
+		"username": "aubreyr",
+		"password": "ross123",
+		"balance": 5900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 67,
+		"name": "Luke",
+		"surname": "Mitchell",
+		"address": "1818 Pine St, Oakville, USA",
+		"username": "lukem",
+		"password": "mitchell123",
+		"balance": 6900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 68,
+		"name": "Luna",
+		"surname": "Gray",
+		"address": "1919 Cedar St, Mountainville, USA",
+		"username": "lunag",
+		"password": "gray123",
+		"balance": 5200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 69,
+		"name": "Carter",
+		"surname": "Baker",
+		"address": "2020 Elm St, Parkside, USA",
+		"username": "carterb",
+		"password": "baker123",
+		"balance": 7000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 70,
+		"name": "Grace",
+		"surname": "Ward",
+		"address": "2121 Pine St, Hilltown, USA",
+		"username": "gracew",
+		"password": "ward123",
+		"balance": 5300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 71,
+		"name": "Jack",
+		"surname": "Foster",
+		"address": "2222 Cedar St, Oakville, USA",
+		"username": "jackf",
+		"password": "foster123",
+		"balance": 7100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 72,
+		"name": "Sophia",
+		"surname": "Powell",
+		"address": "2323 Elm St, Mountainville, USA",
+		"username": "sophiap",
+		"password": "powell123",
+		"balance": 5400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 73,
+		"name": "Owen",
+		"surname": "Long",
+		"address": "2424 Pine St, Parkside, USA",
+		"username": "owenl",
+		"password": "long123",
+		"balance": 7200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 74,
+		"name": "Madison",
+		"surname": "Ross",
+		"address": "2525 Cedar St, Hilltown, USA",
+		"username": "madisonr",
+		"password": "ross123",
+		"balance": 5500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 75,
+		"name": "Grayson",
+		"surname": "Mitchell",
+		"address": "2626 Elm St, Oakville, USA",
+		"username": "graysonm",
+		"password": "mitchell123",
+		"balance": 7300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 76,
+		"name": "Zoe",
+		"surname": "Gray",
+		"address": "2727 Pine St, Mountainville, USA",
+		"username": "zoeg",
+		"password": "gray123",
+		"balance": 5600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 77,
+		"name": "Wyatt",
+		"surname": "Baker",
+		"address": "2828 Cedar St, Parkside, USA",
+		"username": "wyattb",
+		"password": "baker123",
+		"balance": 7400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 78,
+		"name": "Scarlett",
+		"surname": "Ward",
+		"address": "2929 Elm St, Hilltown, USA",
+		"username": "scarlettw",
+		"password": "ward123",
+		"balance": 5700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 79,
+		"name": "Caleb",
+		"surname": "Foster",
+		"address": "3030 Pine St, Oakville, USA",
+		"username": "calebf",
+		"password": "foster123",
+		"balance": 7500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 80,
+		"name": "Aria",
+		"surname": "Powell",
+		"address": "3131 Cedar St, Mountainville, USA",
+		"username": "ariap",
+		"password": "powell123",
+		"balance": 5800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 81,
+		"name": "Ezra",
+		"surname": "Long",
+		"address": "3232 Elm St, Parkside, USA",
+		"username": "ezral",
+		"password": "long123",
+		"balance": 7600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 82,
+		"name": "Hazel",
+		"surname": "Ross",
+		"address": "3333 Pine St, Hilltown, USA",
+		"username": "hazelr",
+		"password": "ross123",
+		"balance": 5900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 83,
+		"name": "Eli",
+		"surname": "Mitchell",
+		"address": "3434 Cedar St, Oakville, USA",
+		"username": "elim",
+		"password": "mitchell123",
+		"balance": 7700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 84,
+		"name": "Violet",
+		"surname": "Gray",
+		"address": "3535 Elm St, Mountainville, USA",
+		"username": "violetg",
+		"password": "gray123",
+		"balance": 6000,
+		"itemsPurchased": []
+	},
+	{
+		"id": 85,
+		"name": "Sawyer",
+		"surname": "Baker",
+		"address": "3636 Pine St, Parkside, USA",
+		"username": "sawyerb",
+		"password": "baker123",
+		"balance": 7800,
+		"itemsPurchased": []
+	},
+	{
+		"id": 86,
+		"name": "Lily",
+		"surname": "Ward",
+		"address": "3737 Cedar St, Hilltown, USA",
+		"username": "lilyw",
+		"password": "ward123",
+		"balance": 6100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 87,
+		"name": "Theodore",
+		"surname": "Foster",
+		"address": "3838 Elm St, Oakville, USA",
+		"username": "theodoref",
+		"password": "foster123",
+		"balance": 7900,
+		"itemsPurchased": []
+	},
+	{
+		"id": 88,
+		"name": "Isabella",
+		"surname": "Powell",
+		"address": "3939 Pine St, Mountainville, USA",
+		"username": "isabellap",
+		"password": "powell123",
+		"balance": 6200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 89,
+		"name": "Henry",
+		"surname": "Long",
+		"address": "4040 Cedar St, Parkside, USA",
+		"username": "henryl",
+		"password": "long123",
 		"balance": 8000,
-		"itemsPurchased": [
-			{
-				"orderNo": 126126,
-				"itemId": 367,
-				"shippingAddress": "4648 Howard Street Grand Rapids, MI 49503",
-				"quantity": 4,
-				"date": "2024-03-23T00:00:00.000Z",
-				"shippingType": "Standard"
-			}
-		]
+		"itemsPurchased": []
+	},
+	{
+		"id": 90,
+		"name": "Nora",
+		"surname": "Ross",
+		"address": "4141 Elm St, Hilltown, USA",
+		"username": "norar",
+		"password": "ross123",
+		"balance": 6300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 91,
+		"name": "Ethan",
+		"surname": "Mitchell",
+		"address": "4242 Pine St, Oakville, USA",
+		"username": "ethanm",
+		"password": "mitchell123",
+		"balance": 8100,
+		"itemsPurchased": []
+	},
+	{
+		"id": 92,
+		"name": "Sophie",
+		"surname": "Gray",
+		"address": "4343 Cedar St, Mountainville, USA",
+		"username": "sophieg",
+		"password": "gray123",
+		"balance": 6400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 93,
+		"name": "Gabriel",
+		"surname": "Baker",
+		"address": "4444 Pine St, Parkside, USA",
+		"username": "gabrielb",
+		"password": "baker123",
+		"balance": 8200,
+		"itemsPurchased": []
+	},
+	{
+		"id": 94,
+		"name": "Mila",
+		"surname": "Ward",
+		"address": "4545 Cedar St, Hilltown, USA",
+		"username": "milaw",
+		"password": "ward123",
+		"balance": 6500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 95,
+		"name": "Jackson",
+		"surname": "Foster",
+		"address": "4646 Elm St, Oakville, USA",
+		"username": "jacksonf",
+		"password": "foster123",
+		"balance": 8300,
+		"itemsPurchased": []
+	},
+	{
+		"id": 96,
+		"name": "Isla",
+		"surname": "Powell",
+		"address": "4747 Pine St, Mountainville, USA",
+		"username": "islap",
+		"password": "powell123",
+		"balance": 6600,
+		"itemsPurchased": []
+	},
+	{
+		"id": 97,
+		"name": "Mason",
+		"surname": "Long",
+		"address": "4848 Cedar St, Parkside, USA",
+		"username": "masonl",
+		"password": "long123",
+		"balance": 8400,
+		"itemsPurchased": []
+	},
+	{
+		"id": 98,
+		"name": "Emilia",
+		"surname": "Ross",
+		"address": "4949 Elm St, Hilltown, USA",
+		"username": "emiliar",
+		"password": "ross123",
+		"balance": 6700,
+		"itemsPurchased": []
+	},
+	{
+		"id": 99,
+		"name": "Oscar",
+		"surname": "Mitchell",
+		"address": "5050 Pine St, Oakville, USA",
+		"username": "oscarm",
+		"password": "mitchell123",
+		"balance": 8500,
+		"itemsPurchased": []
+	},
+	{
+		"id": 100,
+		"name": "Aurora",
+		"surname": "Gray",
+		"address": "5151 Cedar St, Mountainville, USA",
+		"username": "aurorag",
+		"password": "gray123",
+		"balance": 6800,
+		"itemsPurchased": []
 	}
 ]
