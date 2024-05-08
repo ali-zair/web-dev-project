@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cyberian Store</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="title">Cyberian Store</h1>
+		<button class="login-btn" id="loginBtn">Login</button>
+	</header>
+	<nav class="navbar">
+		<div class="menu">
+			<ul>
+				<li><a href="/home.html">Home</a></li>
+				<li><a href="/about-us.html">About Us</a></li>
+				<li><a href="/contact-us.html">Contact Us</a></li>
+				<li class="hidden" id="stats">
+					<a href="/sellers/stats">Statistics</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="search-bar">
+		<input type="text" id="searchBox" placeholder="Search products..." />
+		<button><i class="fa fa-search"></i></button>
+	</div>
+	<main class="main" id="main">
+		<!-- Items will be inserted by DOM Manipulation -->
+	</main>
+	<footer>
+		<div class="socials">
+			<ul>
+				<li>
+					<a href="https://example.com"><img src="./icons/brand-facebook.svg" /></a>
+				</li>
+				<li>
+					<a href="https://example.com"><img src="./icons/brand-instagram.svg" /></a>
+				</li>
+				<li>
+					<a href="https://example.com"><img src="./icons/brand-x.svg" /></a>
+				</li>
+				<li>
+					<a href="https://example.com"><img src="./icons/brand-reddit.svg" /></a>
+				</li>
+				<li>
+					<a href="https://example.com"><img src="./icons/brand-discord.svg" /></a>
+				</li>
+			</ul>
+		</div>
+		<p>&copy; Cyberian Store</p>
+	</footer>
+	<script type="module" src="js/my-items.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 import customersRepo from "@/app/repo/customers-repo"
 
+// POST request to verify a cookie of a customer
 export async function POST(request) {
 	try {
 		const { cookie } = await request.json()
@@ -13,6 +14,7 @@ export async function POST(request) {
 	}
 }
 
+// DELETE request to delete the cookies of the customers who log out
 export async function DELETE(request) {
 	try {
 		const { cookie } = await request.json()

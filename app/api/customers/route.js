@@ -1,5 +1,6 @@
 import customersRepo from "@/app/repo/customers-repo"
 
+// GET request to return the purchase details of a specific user
 export async function GET(request) {
 	try {
 		const { searchParams } = new URL(request.url)
@@ -14,6 +15,7 @@ export async function GET(request) {
 	}
 }
 
+// POST request for verifying the login of a customer
 export async function POST(request) {
 	try {
 		const { username, password } = await request.json()
@@ -27,6 +29,7 @@ export async function POST(request) {
 	}
 }
 
+// PATCH request that allows a custoemr to purchase an item  
 export async function PATCH(request) {
 	try {
 		const { searchParams } = new URL(request.url)

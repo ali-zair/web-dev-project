@@ -1,5 +1,6 @@
 import itemsRepo from "@/app/repo/items-repo"
 
+// GET request to get all the items in the database
 export async function GET(request) {
 	try {
 		const { searchParams } = new URL(request.url)
@@ -18,6 +19,7 @@ export async function GET(request) {
 	}
 }
 
+// PUT request to update an item in the database
 export async function PUT(request) {
 	try {
 		const { searchParams } = new URL(request.url)
@@ -33,11 +35,13 @@ export async function PUT(request) {
 	}
 }
 
+// POST request to create an item and save it in the database
 export async function POST(request) {
 	try {
-		const { searchParams } = parseInt(searchParams.get('sellerId'))
+		const { searchParams } = new URL(request.url)
+		const sellerId = parseInt(searchParams.get('sellerId'))
 		const item = await request.json()
-		const result = await itemsRepo.createItem(sellerId, item)
+		const { result } = await itemsRepo.createItem(sellerId, item)
 		if (result === 'item created successfully') {
 			return Response.json(result, { status: 201 })
 		}

@@ -1,4 +1,5 @@
 import customersRepo from "./customers-repo.js"
+import sellersRepo from "./sellers-repo.js";
 
 async function testPurchaseItem() {
 	const custId = 52;
@@ -29,4 +30,29 @@ async function testPurchaseItem() {
 	}
 }
 
-testPurchaseItem();
+async function testAddItemToSeller() {
+	const sellerId = 123;
+	const item = {
+		thumbnail: 'https://via.placeholder.com/150',
+		title: 'Item 1',
+		note: 'This is a note',
+		features: ['feature 1', 'feature 2'],
+		price: 100,
+		quantity: 10,
+		extra_details: 'extra details'
+	};
+
+	const result = await sellersRepo.addItemToSeller(item, sellerId);
+
+	switch (result) {
+		case 'item added successfully':
+			console.log('Item added successfully');
+			break;
+		case 'item could not be added':
+			console.log('There was an error adding the item. Please try again later.');
+			break;
+	}
+}
+
+// testPurchaseItem();
+testAddItemToSeller();

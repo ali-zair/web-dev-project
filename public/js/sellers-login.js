@@ -9,7 +9,7 @@ document.querySelector("#loginForm").addEventListener("submit", async (event) =>
 		localStorage.sellerCookie = cookie;
 		localStorage.custCookie = "-1";
 		alert("Logged in successfully");
-		window.location.href = "/add-item.html";
+		window.location.href = "/my-items.html";
 	} else {
 		alert("Invalid username or password");
 	}

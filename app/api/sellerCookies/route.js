@@ -1,5 +1,6 @@
 import sellersRepo from "@/app/repo/sellers-repo";
 
+// POST request to verify the cookie of a seller
 export async function POST(request) {
 	try {
 		const { cookie } = await request.json()
@@ -13,6 +14,7 @@ export async function POST(request) {
 	}
 }
 
+// DELETE request to delete the cookies of the sellers that instantiate a log out
 export async function DELETE(request) {
 	try {
 		const { cookie } = await request.json()

@@ -1,6 +1,7 @@
 import fs from 'fs-extra'
 import path from 'path'
-import customersRepo from '@/app/repo/customers-repo'
+// import customersRepo from '@/app/repo/customers-repo'
+import customersRepo from './customers-repo.js'
 
 class SellersRepo {
 
@@ -16,8 +17,13 @@ class SellersRepo {
 
 	async getSeller(id) {
 		const sellers = await fs.readJson(this.filePath)
-		const seller = sellers.find(cust => cust.id === id)
+		const seller = sellers.find(s => s.id === id)
 		return seller
+	}
+
+	async getSellerItems(id) {
+		const seller = await this.getSeller(id)
+		return seller.itemsOwned
 	}
 
 	async login(username, password) {
@@ -60,7 +66,7 @@ class SellersRepo {
 	}
 
 	async addItemToSeller(sellerId, itemId) {
-		const seller = this.getSeller(sellerId)
+		const seller = await this.getSeller(sellerId)
 		seller.itemsOwned.push(itemId)
 		this.updateSellers(seller)
 	}
@@ -70,16 +76,6 @@ class SellersRepo {
 		const sellerIndex = sellers.findIndex(s => s.itemsOwned.find(id => id === itemId))
 		const seller = sellers[sellerIndex]
 		seller.bankAccount.balance += amount
-		sellers.splice(sellerIndex, 1, seller)
-		await fs.writeJson(this.filePath, sellers)
-		return seller
-	}
-
-	async addItemToSeller(itemId, sellerId) {
-		const sellers = await fs.readJson(this.filePath)
-		const sellerIndex = sellers.findIndex(s => s.id === sellerId)
-		const seller = sellers[sellerIndex]
-		seller.itemsOwned.push(itemId)
 		sellers.splice(sellerIndex, 1, seller)
 		await fs.writeJson(this.filePath, sellers)
 		return seller

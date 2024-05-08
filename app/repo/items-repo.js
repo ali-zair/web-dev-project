@@ -1,8 +1,10 @@
 import fs from 'fs-extra'
 import path from 'path'
-import sellersRepo from '@/app/repo/sellers-repo'
+// import sellersRepo from '@/app/repo/sellers-repo'
+import sellersRepo from './sellers-repo.js'
 
 class ItemsRepo {
+
 	constructor() {
 		this.filePath = path.join(process.cwd(), 'app/data/items.json')
 	}
@@ -32,14 +34,13 @@ class ItemsRepo {
 
 	async createItem(sellerId, item) {
 		const items = await fs.readJson(this.filePath)
-		const itemIndex = items.findIndex(i => i.id === item.id)
+		const itemIndex = items.findIndex(i => i.title.toLowerCase() === item.title.toLowerCase())
 		if (itemIndex === -1) {
-			const itemId = Math.floor(Math.random() * 1000)
-			item.id = itemId
-			items.push(item)
+			const id = Math.floor(Math.random() * 1000000000)
+			items.push({ id, ...item })
 			await fs.writeJson(this.filePath, items)
-			await sellersRepo.addItemToSeller(sellerId, itemId)
-			return { result: 'item created successfully', itemId: itemId }
+			await sellersRepo.addItemToSeller(sellerId, id)
+			return { result: 'item created successfully', itemId: id }
 		}
 		return { result: 'item already exists' }
 	}
