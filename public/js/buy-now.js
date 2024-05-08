@@ -20,7 +20,7 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 	};
 
 	const quantity = parseInt(buyerDetailsForm.querySelector("#quantity").value);
-	const customerId = parseInt(localStorage.loginCookie.split(":")[0]);
+	const customerId = parseInt(localStorage.custCookie.split(":")[0]);
 	const itemId = parseInt(localStorage.itemID);
 	const result = await customersFunc.purchaseItem(customerId, itemId, quantity, purchaseDetails);
 
@@ -29,8 +29,8 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 			alert("Order placed successfully");
 			window.location.href = "/home.html";
 			break;
-		case "item is currently unavailable":
-			alert("Item is currently unavailable, please try again later");
+		case "not enough stock for this item":
+			alert("Not enough stock for this item, please try again later");
 			break;
 		case "customer has insufficient balance":
 			alert("Insufficient balance, please try again later");
@@ -43,13 +43,13 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 
 async function showBuyerDetailsForm() {
 	// if the customer is logged in
-	if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+	if (await customersFunc.isLoggedIn(localStorage.custCookie)) {
 		const itemData = await fetch(`/api/items?id=${localStorage.itemID}`);
 		const item = await itemData.json();
 		buyerDetailsForm.innerHTML = buyersDetailsFormToHTML(item);
 	} else {
 		alert("Please login to buy items");
-		window.location.href = "/login-type.html";
+		window.location.href = "/customers-login.html";
 	}
 }
 

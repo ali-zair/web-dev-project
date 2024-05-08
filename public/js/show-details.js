@@ -37,7 +37,7 @@ function showDetailsToHtml(item) {
 }
 
 async function handleBuyNow(id) {
-	if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+	if (await customersFunc.isLoggedIn(localStorage.custCookie)) {
 		localStorage.itemID = id
 		window.location.href = "/buy-now.html"
 	} else {

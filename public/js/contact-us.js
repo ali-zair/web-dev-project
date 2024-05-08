@@ -6,7 +6,7 @@ const loginBtn = document.querySelector("#loginBtn");
 const form = document.querySelector("form");
 
 window.addEventListener("load", async () => {
-	if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+	if (await customersFunc.isLoggedIn(localStorage.custCookie)) {
 		loginBtn.textContent = "Logout";
 		document.querySelector("#purchaseLI").classList.toggle("hidden", false);
 	}
@@ -14,14 +14,14 @@ window.addEventListener("load", async () => {
 
 loginBtn.addEventListener("click", async () => {
 	if (loginBtn.textContent === "Login") {
-		if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
+		if (!(await customersFunc.isLoggedIn(localStorage.custCookie))) {
 			window.location.href = "/login-type.html";
 		} else {
 			loginBtn.textContent = "Login";
 			document.querySelector("#purchaseLI").classList.toggle("hidden", true);
 		}
 	} else {
-		customersFunc.logout(localStorage.loginCookie);
+		customersFunc.logout(localStorage.custCookie);
 		loginBtn.textContent = "Login";
 		document.querySelector("#purchaseLI").classList.toggle("hidden", true);
 	}

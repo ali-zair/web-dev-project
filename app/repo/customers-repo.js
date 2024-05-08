@@ -22,11 +22,11 @@ class CustomersRepo {
 	}
 
 	async login(username, password) {
-		const users = await fs.readJson(this.filePath)
-		const user = users.find(user => user.username == username && user.password == password)
-		if (user) {
+		const customers = await fs.readJson(this.filePath)
+		const customer = customers.find(c => c.username === username && c.password === password)
+		if (customer) {
 			const cookie = {
-				cookie: user.id + ":" + this.generateCookie()
+				cookie: customer.id + ":" + this.generateCookie()
 			}
 			const cookies = await fs.readJson(this.cookiesFile)
 			cookies.push(cookie)
@@ -98,6 +98,7 @@ class CustomersRepo {
 		}
 		return 'customer has insufficient balance'
 	}
+
 }
 
 export default new CustomersRepo()

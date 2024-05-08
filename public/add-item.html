@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Cyberian Store Login</title>
+	<title>Cyberian Store Buy Now!</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<link rel="stylesheet" href="css/login.css" />
@@ -13,13 +13,30 @@
 <body>
 	<header></header>
 	<main class="main">
-		<form id="loginForm">
-			<h1>Customer's Login</h1>
-			<label for="username">Username: </label>
-			<input type="text" id="username" required />
-			<label for="password">Password: </label>
-			<input type="password" id="password" required />
-			<button type="submit" id="loginBtn">Login</button>
+		<form id="addItemForm">
+			<h1>Add Item!</h1>
+			<label for="title">Title:</label><br>
+			<input type="text" id="title" name="title" required><br>
+
+			<label for="thumbnail">Thumbnail: </label><br>
+			<input type="text" id="thumbnail" name="thumbnail" required><br>
+
+			<label for="note">A Hook / Eye-catching Satement:</label><br>
+			<input type="text" id="note" name="note"><br>
+
+			<label for="features">Features:</label><br>
+			<textarea id="features" name="features" required></textarea><br>
+
+			<label for="price">Price:</label><br>
+			<input type="number" id="price" name="price" required><br>
+
+			<label for="quantity">Quantity:</label><br>
+			<input type="number" id="quantity" name="quantity" required><br>
+
+			<label for="extraDetails">Extra Details:</label><br>
+			<textarea id="extraDetails" name="extraDetails" required></textarea><br>
+
+			<button type="submit">Submit</button>
 		</form>
 	</main>
 	<footer>
@@ -44,7 +61,7 @@
 		</div>
 		<p>&copy; Cyberian Store</p>
 	</footer>
-	<script src="js/customers-login.js" type="module"></script>
+	<script src="js/about-us.js" type="module"></script>
 </body>
 
 </html>

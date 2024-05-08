@@ -1,6 +1,6 @@
 [
 	{
-		"sid": 123,
+		"id": 123,
 		"company": "System76 Inc.",
 		"username": "system76",
 		"password": "system76123",
@@ -18,7 +18,7 @@
 		}
 	},
 	{
-		"sid": 823,
+		"id": 823,
 		"company": "Framework",
 		"username": "framework",
 		"password": "framework123",
@@ -29,7 +29,7 @@
 		}
 	},
 	{
-		"sid": 136,
+		"id": 136,
 		"company": "Tuxedo Computers",
 		"username": "tuxedo",
 		"password": "tuxedo123",

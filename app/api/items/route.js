@@ -32,3 +32,17 @@ export async function PUT(request) {
 		return Response.json({ message: error.message }, { status: 500 });
 	}
 }
+
+export async function POST(request) {
+	try {
+		const { searchParams } = parseInt(searchParams.get('sellerId'))
+		const item = await request.json()
+		const result = await itemsRepo.createItem(sellerId, item)
+		if (result === 'item created successfully') {
+			return Response.json(result, { status: 201 })
+		}
+		return Response.json(result, { status: 400 })
+	} catch (error) {
+		return Response.json({ message: error.message }, { status: 500 });
+	}
+}

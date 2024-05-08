@@ -14,18 +14,18 @@ let filteredItems = [];
 let items = [];
 
 // check if the user is logged in using the login cookie stored in the local storage
-if (await customersFunc.isLoggedIn(localStorage.loginCookie)) {
+if (await customersFunc.isLoggedIn(localStorage.custCookie)) {
 	loginBtn.textContent = "Logout";
 	document.querySelector("#purchaseLI").classList.toggle("hidden", false);
 }
 
 // if the user is not logged in, set the login cookie to -1
-localStorage.loginCookie = localStorage.loginCookie || "-1";
+localStorage.custCookie = localStorage.custCookie || "-1";
 
 loginBtn.addEventListener("click", async () => {
 	// if user is logging in
 	if (loginBtn.textContent === "Login") {
-		if (!(await customersFunc.isLoggedIn(localStorage.loginCookie))) {
+		if (!(await customersFunc.isLoggedIn(localStorage.custCookie))) {
 			window.location.href = "/login-type.html";
 		} else {
 			loginBtn.textContent = "Login";
@@ -34,7 +34,7 @@ loginBtn.addEventListener("click", async () => {
 	}
 	// if user is logging out
 	else {
-		customersFunc.logout(localStorage.loginCookie);
+		customersFunc.logout(localStorage.custCookie);
 		alert("You have successfully logged out");
 		loginBtn.textContent = "Login";
 		document.querySelector("#purchaseLI").classList.toggle("hidden", true);
@@ -94,7 +94,7 @@ function handleShowDetails(id) {
 
 function handleBuyNow(id) {
 	const item = items.find((item) => item.id === id);
-	if (customersFunc.isLoggedIn(localStorage.loginCookie)) {
+	if (customersFunc.isLoggedIn(localStorage.custCookie)) {
 		localStorage.itemID = item.id;
 		window.location.href = `/buy-now.html`;
 	} else {

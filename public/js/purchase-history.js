@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', showPurchaseHistory);
 
 async function showPurchaseHistory() {
 	debugger
-	const custId = localStorage.loginCookie.split(':')[0]
+	const custId = localStorage.custCookie.split(':')[0]
 	const url = `/api/customers?custId=${custId}`
 	const itemsPurchasedData = await fetch(url)
 	const itemsPurchased = await itemsPurchasedData.json()

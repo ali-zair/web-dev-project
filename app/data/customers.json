@@ -6,7 +6,7 @@
 		"address": "4073 Hayhurst Lane Southfield, MI 48075",
 		"username": "sthomas",
 		"password": "thomas123",
-		"balance": 5000,
+		"balance": 10000,
 		"itemsPurchased": [
 			{
 				"orderNo": 123123,
@@ -82,7 +82,7 @@
 		"address": "4648 Howard Street Grand Rapids, MI 49503",
 		"username": "jbowden",
 		"password": "bowden123",
-		"balance": 2500,
+		"balance": 8000,
 		"itemsPurchased": [
 			{
 				"orderNo": 126126,

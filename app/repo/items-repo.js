@@ -1,5 +1,6 @@
 import fs from 'fs-extra'
 import path from 'path'
+import sellersRepo from '@/app/repo/sellers-repo'
 
 class ItemsRepo {
 	constructor() {
@@ -28,6 +29,21 @@ class ItemsRepo {
 		}
 		return 'item updated successfully'
 	}
+
+	async createItem(sellerId, item) {
+		const items = await fs.readJson(this.filePath)
+		const itemIndex = items.findIndex(i => i.id === item.id)
+		if (itemIndex === -1) {
+			const itemId = Math.floor(Math.random() * 1000)
+			item.id = itemId
+			items.push(item)
+			await fs.writeJson(this.filePath, items)
+			await sellersRepo.addItemToSeller(sellerId, itemId)
+			return { result: 'item created successfully', itemId: itemId }
+		}
+		return { result: 'item already exists' }
+	}
+
 }
 
 export default new ItemsRepo()

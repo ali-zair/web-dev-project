@@ -18,14 +18,14 @@ class CustomersFunc {
 		});
 		if (response.ok) {
 			const { cookie } = await response.json()
-			localStorage.setItem('loginCookie', cookie)
+			localStorage.custCookie = cookie
 			return cookie
 		}
 		return
 	}
 
 	async logout(cookieVal) {
-		const loginCookie = {
+		const custCookie = {
 			cookie: cookieVal
 		}
 		const response = await fetch(this.customerCookiesURL, {
@@ -33,15 +33,15 @@ class CustomersFunc {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(loginCookie)
+			body: JSON.stringify(custCookie)
 		});
 		if (response.ok) {
-			localStorage.setItem('loginCookie', "-1")
+			localStorage.custCookie = '-1'
 		}
 	}
 
 	async isLoggedIn(cookieVal) {
-		const loginCookie = {
+		const custCookie = {
 			cookie: cookieVal
 		}
 		const response = await fetch(this.customerCookiesURL, {
@@ -49,7 +49,7 @@ class CustomersFunc {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(loginCookie)
+			body: JSON.stringify(custCookie)
 		});
 		if (response.ok) {
 			return true

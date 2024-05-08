@@ -1,20 +1,20 @@
 .about-us {
-  margin: 1rem;
+	margin: 1rem;
 
-  h1 {
-    margin-top: 2rem;
-    background-color: #f8da5b;
-    color: black;
-    text-align: center;
-    font-size: xx-large;
-  }
+	h1 {
+		margin-top: 2rem;
+		background-color: #f8da5b;
+		color: black;
+		text-align: center;
+		font-size: xx-large;
+	}
 
-  h2 {
-    margin-top: 1rem;
-    font-size: x-large;
-  }
+	h2 {
+		margin-top: 1rem;
+		font-size: x-large;
+	}
 
-  p {
-    font-size: large;
-  }
+	p {
+		font-size: large;
+	}
 }

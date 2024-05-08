@@ -40,7 +40,7 @@ export async function PATCH(request) {
 				case 'item updated successfully':
 					return Response.json({ message: 'item purchased successfully' }, { status: 200 });
 				case 'not enough stock for this item':
-					return Response.json({ message: 'item is currently unavailable' }, { status: 200 });
+					return Response.json({ message: 'not enough stock for this item' }, { status: 200 });
 				case 'customer has insufficient balance':
 					return Response.json({ message: 'customer has insufficient balance' }, { status: 200 });
 			}
