@@ -62,9 +62,9 @@ function buyersDetailsFormToHTML(item) {
           <input type="number" name="quantity" id="quantity" required/>
           <label for="shippingType">Shipping Type: </label>
           <select name="shippingType" id="shippingType">
-            <option value="standard">Standard</option>
-            <option value="express">Express</option>
-            <option value="priorityMail">Priority Mail</option>
+            <option value="Standard">Standard</option>
+            <option value="Express">Express</option>
+            <option value="Priority Mail">Priority Mail</option>
           </select>
           <label id="price">Price: $${item.price}</label>
           <button type="submit" id="addOrder">Place Order</button>`;

@@ -58,6 +58,7 @@ async function showItems(isFiltered) {
 	try {
 		const data = await fetch("/api/items");
 		items = await data.json();
+		console.log(items);
 		if (isFiltered === true) {
 			main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
 		} else {

@@ -6,11 +6,11 @@
 		"address": "123 Main St, Anytown, USA",
 		"username": "johndoe",
 		"password": "password123",
-		"balance": 5000,
+		"balance": 303,
 		"itemsPurchased": [
 			{
 				"orderNo": 123123,
-				"itemId": 309,
+				"itemId": 2,
 				"shippingAddress": "4073 Hayhurst Lane Southfield, MI 48075",
 				"quantity": 2,
 				"date": "2024-03-19T00:00:00.000Z",
@@ -18,7 +18,7 @@
 			},
 			{
 				"orderNo": 125125,
-				"itemId": 604,
+				"itemId": 3,
 				"shippingAddress": "4985 Roane Avenue Beltsville, MD 20705",
 				"quantity": 1,
 				"date": "2024-03-22T00:00:00.000Z",
@@ -37,7 +37,7 @@
 		"itemsPurchased": [
 			{
 				"orderNo": 126126,
-				"itemId": 367,
+				"itemId": 2,
 				"shippingAddress": "4648 Howard Street Grand Rapids, MI 49503",
 				"quantity": 4,
 				"date": "2024-03-23T00:00:00.000Z",
@@ -56,7 +56,7 @@
 		"itemsPurchased": [
 			{
 				"orderNo": 124124,
-				"itemId": 265,
+				"itemId": 4,
 				"shippingAddress": "3121 Bottom Lane Gasport, NY 14067",
 				"quantity": 1,
 				"date": "2024-03-20T00:00:00.000Z",
@@ -75,7 +75,7 @@
 		"itemsPurchased": [
 			{
 				"orderNo": 124124,
-				"itemId": 401,
+				"itemId": 2,
 				"shippingAddress": "253 Michigan Avenue Connellsville, PA 15425",
 				"quantity": 3,
 				"date": "2024-03-21T00:00:00.000Z",
