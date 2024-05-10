@@ -1,5 +1,6 @@
 import customersRepo from "./customers-repo.js"
 import sellersRepo from "./sellers-repo.js";
+import statsRepo from "./stats-repo.js";
 
 async function testPurchaseItem() {
 	const custId = 52;
@@ -70,6 +71,14 @@ async function testUpateSellerBalance() {
 	}
 }
 
+async function testBuyersPerLocation() {
+	const sellerId = 1;
+	const customers = await statsRepo.buyersPerLocation(sellerId);
+	console.log(customers);
+}
+
 // testPurchaseItem();
 // testAddItemToSeller();
-testUpateSellerBalance();
+// testUpateSellerBalance();
+
+testBuyersPerLocation();

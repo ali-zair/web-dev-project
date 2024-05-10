@@ -26,5 +26,6 @@ function purchasesToHTML(purchase, item) {
 				<p>Item Quantity: ${purchase.quantity}</p>
 				<p>Date of Purchase: ${purchase.date.split('T')[0]}</p>
 				<p>Shipping Type: ${purchase.shippingType}</p>
+				<p>Amount: $${purchase.amount}</p>
 			</section>`
 }

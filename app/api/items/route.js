@@ -49,7 +49,8 @@ export async function POST(request) {
 		const { searchParams } = new URL(request.url)
 		const sellerId = parseInt(searchParams.get('sellerId'))
 		const item = await request.json()
-		const { result } = await itemsRepo.createItem(sellerId, item)
+		console.log(item);
+		const { result } = await itemsRepo.createItem(sellerId, item);
 		if (result === 'item created successfully') {
 			return Response.json(result, { status: 201 })
 		}

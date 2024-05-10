@@ -84,10 +84,15 @@ class CustomersRepo {
 				item.quantity -= quantity
 				await itemsRepo.updateItem(itemId, item)
 				// calculating the total amount of the purchase
-				const amount = item.price * quantity
+				const amount = parseFloat(item.price) * parseFloat(quantity)
 				// reducing the amount from the balance of the customer
 				customer.balance -= amount
 				// adding the purchase details object to the customer
+				// const { orderNo, shippingAddress, date, shippingType, customerId } = purchaseDetails
+				// const purchase = {
+				// 	orderNo, itemId, shippingAddress, quantity, date, shippingType, amount, customerId
+				// }
+				purchaseDetails.amount = amount
 				await prisma.purchase.create({ data: purchaseDetails })
 				await this.updateCustomers(customer.id, customer)
 				// updating the sellers balance

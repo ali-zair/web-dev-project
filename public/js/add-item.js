@@ -10,10 +10,10 @@ addItemForm.addEventListener("submit", async (e) => {
 		thumbnail: formData.get("thumbnail"),
 		title: formData.get("title"),
 		note: formData.get("note"),
-		features: formData.get("features").split(", "),
-		price: formData.get("price"),
-		quantity: formData.get("quantity"),
-		extra_details: formData.get("extra_details")
+		features: formData.get("features"),
+		price: parseFloat(formData.get("price")),
+		quantity: parseInt(formData.get("quantity")),
+		extra_details: formData.get("extraDetails")
 	};
 
 	const sellerId = localStorage.sellerCookie.split(":")[0];

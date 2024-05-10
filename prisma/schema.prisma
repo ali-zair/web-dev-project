@@ -12,9 +12,11 @@ datasource db {
 
 model Customer {
   id             Int              @id @default(autoincrement())
-  name           String
-  surname        String
-  address        String
+  firstName      String
+  lastName       String
+  streetAddress  String
+  city           String
+  country        String
   username       String           @unique
   password       String
   balance        Decimal
@@ -29,6 +31,7 @@ model Purchase {
   quantity        Int
   date            DateTime
   shippingType    String
+  amount          Decimal
   Customer        Customer @relation(fields: [customerId], references: [id])
   customerId      Int
 }

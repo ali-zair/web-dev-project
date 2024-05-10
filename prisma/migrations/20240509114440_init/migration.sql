@@ -35,7 +35,7 @@ CREATE TABLE "BankAccount" (
     "accountNo" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "balance" DECIMAL NOT NULL,
     "sellerId" INTEGER NOT NULL,
-    CONSTRAINT "BankAccount_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "Seller" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT "BankAccount_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "Seller" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -49,25 +49,8 @@ CREATE TABLE "Item" (
     "quantity" INTEGER NOT NULL,
     "extra_details" TEXT NOT NULL,
     "sellerId" INTEGER NOT NULL,
-    CONSTRAINT "Item_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "Seller" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
-
--- CreateTable
-CREATE TABLE "CustomerCookie" (
-    "cookie" TEXT NOT NULL PRIMARY KEY,
-    "customerId" INTEGER NOT NULL,
-    CONSTRAINT "CustomerCookie_customerId_fkey" FOREIGN KEY ("customerId") REFERENCES "Customer" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
-
--- CreateTable
-CREATE TABLE "SellerCookie" (
-    "cookie" TEXT NOT NULL PRIMARY KEY,
-    "sellerId" INTEGER NOT NULL,
-    CONSTRAINT "SellerCookie_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "Seller" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT "Item_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "Seller" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Customer_username_key" ON "Customer"("username");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Seller_username_key" ON "Seller"("username");

@@ -6,6 +6,7 @@
 		"quantity": 2,
 		"date": "2024-03-19T00:00:00.000Z",
 		"shippingType": "Standard",
+		"amount": 3398,
 		"customerId": 1
 	},
 	{
@@ -15,6 +16,7 @@
 		"quantity": 1,
 		"date": "2024-03-22T00:00:00.000Z",
 		"shippingType": "Standard",
+		"amount": 1399,
 		"customerId": 1
 	},
 	{
@@ -24,6 +26,7 @@
 		"quantity": 4,
 		"date": "2024-03-23T00:00:00.000Z",
 		"shippingType": "Standard",
+		"amount": 6796,
 		"customerId": 2
 	},
 	{
@@ -33,6 +36,7 @@
 		"quantity": 1,
 		"date": "2024-03-20T00:00:00.000Z",
 		"shippingType": "Express",
+		"amount": 1599,
 		"customerId": 3
 	},
 	{
@@ -42,6 +46,7 @@
 		"quantity": 3,
 		"date": "2024-03-21T00:00:00.000Z",
 		"shippingType": "Priority Mail",
+		"amount": 5097,
 		"customerId": 1
 	}
 ]
