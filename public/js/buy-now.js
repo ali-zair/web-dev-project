@@ -17,12 +17,14 @@ buyerDetailsForm.addEventListener("submit", async (event) => {
 		quantity: parseInt(buyerDetailsForm.querySelector("#quantity").value),
 		date: new Date(Date.now()).toISOString(),
 		shippingType: buyerDetailsForm.querySelector("#shippingType").value,
+		customerId: parseInt(localStorage.custCookie.split(":")[0])
 	};
 
 	const quantity = parseInt(buyerDetailsForm.querySelector("#quantity").value);
 	const customerId = parseInt(localStorage.custCookie.split(":")[0]);
 	const itemId = parseInt(localStorage.itemID);
 	const result = await customersFunc.purchaseItem(customerId, itemId, quantity, purchaseDetails);
+	console.log(result);
 
 	switch (result) {
 		case "item purchased successfully":

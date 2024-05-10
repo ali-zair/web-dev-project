@@ -4,14 +4,16 @@ const main = document.querySelector("#main");
 document.addEventListener('DOMContentLoaded', showPurchaseHistory);
 
 async function showPurchaseHistory() {
-	debugger
 	const custId = localStorage.custCookie.split(':')[0]
 	const url = `/api/customers?custId=${custId}`
 	const itemsPurchasedData = await fetch(url)
-	const itemsPurchased = await itemsPurchasedData.json()
+	const { itemsPurchased } = await itemsPurchasedData.json()
+	console.log(itemsPurchased);
 	const itemsData = await fetch('/api/items')
 	const items = await itemsData.json()
+	console.log(items);
 	if (itemsPurchased && itemsPurchased.length > 0) {
+		console.log("inside if");
 		main.innerHTML = itemsPurchased.map(purchase => purchasesToHTML(purchase, items.find(item => item.id === purchase.itemId))).join("");
 	}
 }

@@ -73,14 +73,11 @@ class SellersFunc {
 	}
 
 	async getSellerItems(sellerId) {
-		const itemsData = await fetch('/api/items')
-		let items = await itemsData.json()
 		const url = `/api/sellers?sellerId=${sellerId}`
 		const response = await fetch(url);
 		if (response.ok) {
 			const itemsOwned = await response.json()
-			items = items.filter(item => itemsOwned.includes(item.id))
-			return items
+			return itemsOwned
 		}
 		return null
 	}

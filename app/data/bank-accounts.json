@@ -1,0 +1,37 @@
+[
+	{
+		"accountNo": 81937462,
+		"balance": 100000.0,
+		"sellerId": 1
+	},
+	{
+		"accountNo": 73592467,
+		"balance": 5000.0,
+		"sellerId": 2
+	},
+	{
+		"accountNo": 62871439,
+		"balance": 8000.0,
+		"sellerId": 3
+	},
+	{
+		"accountNo": 43672918,
+		"balance": 2000.0,
+		"sellerId": 4
+	},
+	{
+		"accountNo": 93502312,
+		"balance": 10000.0,
+		"sellerId": 5
+	},
+	{
+		"accountNo": 93528714,
+		"balance": 50000.0,
+		"sellerId": 6
+	},
+	{
+		"accountNo": 68291437,
+		"balance": 2000.0,
+		"sellerId": 7
+	}
+]

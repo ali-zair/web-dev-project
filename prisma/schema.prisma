@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id             Int              @id @default(autoincrement())
+  name           String
+  surname        String
+  address        String
+  username       String           @unique
+  password       String
+  balance        Decimal
+  itemsPurchased Purchase[]
+  cookies        CustomerCookie[]
+}
+
+model Purchase {
+  orderNo         Int      @id @default(autoincrement())
+  itemId          Int
+  shippingAddress String
+  quantity        Int
+  date            DateTime
+  shippingType    String
+  Customer        Customer @relation(fields: [customerId], references: [id])
+  customerId      Int
+}
+
+model Seller {
+  id            Int            @id @default(autoincrement())
+  company       String
+  username      String         @unique
+  password      String
+  itemsOwned    Item[]
+  bankAccountNo Int
+  BankAccount   BankAccount[]
+  cookies       SellerCookie[]
+}
+
+model BankAccount {
+  accountNo Int     @id
+  balance   Decimal
+  Seller    Seller  @relation(fields: [sellerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sellerId  Int
+}
+
+model Item {
+  id            Int     @id @default(autoincrement())
+  thumbnail     String
+  title         String
+  note          String
+  features      String
+  price         Decimal
+  quantity      Int
+  extra_details String
+  Seller        Seller  @relation(fields: [sellerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sellerId      Int
+}
+
+model CustomerCookie {
+  cookie     String   @id
+  Customer   Customer @relation(fields: [customerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  customerId Int
+}
+
+model SellerCookie {
+  cookie   String @id
+  Seller   Seller @relation(fields: [sellerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sellerId Int
+}

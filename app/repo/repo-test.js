@@ -54,5 +54,22 @@ async function testAddItemToSeller() {
 	}
 }
 
+async function testUpateSellerBalance() {
+	const sellerId = 1;
+	const amount = 2131;
+
+	const result = await sellersRepo.updateSellerBalance(sellerId, amount);
+
+	switch (result) {
+		case 'seller balance updated successfully':
+			console.log('Seller balance updated successfully');
+			break;
+		case 'seller balance could not be updated':
+			console.log('There was an error updating the seller balance. Please try again later.');
+			break;
+	}
+}
+
 // testPurchaseItem();
-testAddItemToSeller();
+// testAddItemToSeller();
+testUpateSellerBalance();

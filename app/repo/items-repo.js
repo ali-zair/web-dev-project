@@ -1,48 +1,41 @@
-import fs from 'fs-extra'
-import path from 'path'
-// import sellersRepo from '@/app/repo/sellers-repo'
-import sellersRepo from './sellers-repo.js'
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
 
 class ItemsRepo {
 
-	constructor() {
-		this.filePath = path.join(process.cwd(), 'app/data/items.json')
-	}
-
 	async getItems() {
-		const items = await fs.readJson(this.filePath)
-		return items
+		try {
+			return prisma.item.findMany()
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
 	async getItem(id) {
-		const items = await fs.readJson(this.filePath)
-		const item = items.find(item => item.id === id)
-		return item
+		try {
+			return prisma.item.findUnique({ where: { id } })
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
 	async updateItem(itemId, item) {
-		const items = await fs.readJson(this.filePath)
-		const itemIndex = items.findIndex(item => item.id === itemId)
-		if (items[itemIndex]) {
-			items.splice(itemIndex, 1, item)
-			await fs.writeJson(this.filePath, items)
-		} else {
-			return 'item not found'
+		try {
+			return prisma.item.update({
+				where: { id: itemId },
+				data: item
+			})
+		} catch (error) {
+			return { error: error.message }
 		}
-		return 'item updated successfully'
 	}
 
-	async createItem(sellerId, item) {
-		const items = await fs.readJson(this.filePath)
-		const itemIndex = items.findIndex(i => i.title.toLowerCase() === item.title.toLowerCase())
-		if (itemIndex === -1) {
-			const id = Math.floor(Math.random() * 1000000000)
-			items.push({ id, ...item })
-			await fs.writeJson(this.filePath, items)
-			await sellersRepo.addItemToSeller(sellerId, id)
-			return { result: 'item created successfully', itemId: id }
+	async createItem(item) {
+		try {
+			return prisma.item.create({ data: item })
+		} catch (error) {
+			return { error: error.message }
 		}
-		return { result: 'item already exists' }
 	}
 
 }

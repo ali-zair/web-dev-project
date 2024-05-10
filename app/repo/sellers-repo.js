@@ -1,84 +1,109 @@
-import fs from 'fs-extra'
-import path from 'path'
-// import customersRepo from '@/app/repo/customers-repo'
-import customersRepo from './customers-repo.js'
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
 
 class SellersRepo {
 
-	constructor() {
-		this.filePath = path.join(process.cwd(), 'app/data/sellers.json')
-		this.cookiesFile = path.join(process.cwd(), 'app/data/logged-in-sellers-cookies.json')
-	}
-
 	async getSellers() {
-		const sellers = await fs.readJson(this.filePath)
-		return sellers
+		try {
+			return prisma.seller.findMany()
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
-	async getSeller(id) {
-		const sellers = await fs.readJson(this.filePath)
-		const seller = sellers.find(s => s.id === id)
-		return seller
+	async getSeller(sellerId) {
+		try {
+			return prisma.seller.findUnique({ where: { id: sellerId } })
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
-	async getSellerItems(id) {
-		const seller = await this.getSeller(id)
-		return seller.itemsOwned
+	async getSellerItems(sellerId) {
+		try {
+			return prisma.seller.findUnique({
+				where: { id: sellerId },
+				select: { itemsOwned: true }
+			})
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
 	async login(username, password) {
-		const sellers = await fs.readJson(this.filePath)
-		const seller = sellers.find(s => s.username === username && s.password === password)
-		if (seller) {
+		try {
+			const seller = await prisma.seller.findUnique({
+				where: { username, password }
+			})
 			const cookie = {
-				cookie: seller.id + ":" + customersRepo.generateCookie()
+				cookie: seller.id + ":" + this.generateCookie(),
+				sellerId: seller.id
 			}
-			const cookies = await fs.readJson(this.cookiesFile)
-			cookies.push(cookie)
-			await fs.writeJson(this.cookiesFile, cookies)
-			return cookie
+			return prisma.sellerCookie.create({ data: cookie })
+		} catch (error) {
+			return { error: error.message }
 		}
-		return
 	}
 
 	// function to remove a cookie from the database when a seller logs out
 	async logout(cookie) {
-		const cookies = await fs.readJson(this.cookiesFile)
-		const cookieFound = cookies.find(c => c.cookie === cookie)
-		if (cookieFound) {
-			const filteredCookies = cookies.filter(c => c.cookie !== cookie)
-			await fs.writeJson(this.cookiesFile, filteredCookies)
-			return 'logged out successfully'
+		try {
+			return prisma.sellerCookie.delete({ where: { cookie } })
+		} catch (error) {
+			return { error: error.message }
 		}
-		return 'the server was unable to log you out'
 	}
 
 	async isLoggedIn(cookie) {
-		const cookies = await fs.readJson(this.cookiesFile);
-		return cookies.find(c => c.cookie === cookie);
+		try {
+			return prisma.sellerCookie.findUnique({ where: { cookie } })
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
-	async updateSellers(seller) {
-		const sellers = await this.getSellers()
-		const sellerIndex = sellers.findIndex(s => s.id === seller.id)
-		sellers.splice(sellerIndex, 1, seller)
-		await fs.writeJson(this.filePath, sellers)
+	generateCookie() {
+		let cookie = '';
+		const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		const charactersLength = characters.length;
+		for (let i = 0; i < 60; i++) {
+			cookie += characters.charAt(Math.floor(Math.random() * charactersLength));
+		}
+		return cookie;
 	}
 
-	async addItemToSeller(sellerId, itemId) {
-		const seller = await this.getSeller(sellerId)
-		seller.itemsOwned.push(itemId)
-		this.updateSellers(seller)
+	async addItemToSeller(sellerId, item) {
+		try {
+			const seller = await prisma.seller.findUnique({ where: { id: sellerId } })
+			seller.itemsOwned.push(item)
+			return prisma.seller.update({
+				where: { id },
+				data: seller
+			})
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
 	async updateSellerBalance(itemId, amount) {
-		const sellers = await fs.readJson(this.filePath)
-		const sellerIndex = sellers.findIndex(s => s.itemsOwned.find(id => id === itemId))
-		const seller = sellers[sellerIndex]
-		seller.bankAccount.balance += amount
-		sellers.splice(sellerIndex, 1, seller)
-		await fs.writeJson(this.filePath, sellers)
-		return seller
+		try {
+			const item = await prisma.item.findUnique({ where: { id: itemId } })
+			const seller = await prisma.seller.findFirst({
+				where: {
+					itemsOwned: {
+						some: { id: item.id }
+					}
+				}
+			})
+			const bankAccount = await prisma.bankAccount.findUnique({ where: { accountNo: seller.bankAccountNo } })
+			const newBalance = parseFloat(bankAccount.balance) + parseFloat(amount);
+			return prisma.bankAccount.update({
+				where: { accountNo: seller.bankAccountNo },
+				data: { balance: newBalance }
+			})
+		} catch (error) {
+			return { error: error.message }
+		}
 	}
 
 }

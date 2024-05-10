@@ -1,0 +1,94 @@
+[
+	{
+		"thumbnail": "img/framework-laptop.png",
+		"title": "Framework Laptop",
+		"note": "Fully modular, repairable, and designed for the privacy-conscious.",
+		"features": "Modular design for easy repair and upgrades, Privacy-respecting hardware and firmware, Open-source schematics and documentation, Customizable configuration options",
+		"price": 1499,
+		"quantity": 0,
+		"extra_details": "The Framework Laptop empowers users with full control over their hardware. With a modular design and open-source approach, it's perfect for those who prioritize privacy and sustainability.",
+		"sellerId": 1
+	},
+	{
+		"thumbnail": "img/tuxedo-computer.png",
+		"title": "Tuxedo Computers InfinityBook Pro",
+		"note": "A powerful, privacy-friendly laptop designed for Linux enthusiasts.",
+		"features": "Linux-friendly hardware and drivers; Privacy-focused design and firmware; High-performance components; Sleek aluminum chassis",
+		"price": 1699,
+		"quantity": 1,
+		"extra_details": "The Tuxedo Computers InfinityBook Pro is built with privacy in mind. Featuring robust Linux support and a focus on user control, it's a reliable choice for privacy-conscious users.",
+		"sellerId": 10
+	},
+	{
+		"thumbnail": "img/system76-lemp10.png",
+		"title": "System76 Lemur Pro",
+		"note": "Designed for performance, portability, and privacy.",
+		"features": "Lightweight and portable design; Privacy-focused firmware and drivers; Long battery life; High-resolution display",
+		"price": 1399,
+		"quantity": 2,
+		"extra_details": "The System76 Lemur Pro is engineered with privacy and performance in mind. With a focus on user control and long battery life, it's an ideal choice for on-the-go professionals.",
+		"sellerId": 15
+	},
+	{
+		"thumbnail": "img/system76-galago-pro.png",
+		"title": "System76 Galago Pro",
+		"note": "Compact and powerful, built for privacy and performance.",
+		"features": "Thin and lightweight design; Privacy-focused hardware and firmware; High-performance components; Customizable configurations",
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Galago Pro packs a punch in a compact form factor. With a focus on privacy and performance, it's perfect for professionals and enthusiasts alike.",
+		"sellerId": 10
+	},
+	{
+		"thumbnail": "img/purism-librem-14.png",
+		"title": "Purism Librem 14",
+		"note": "A privacy-focused laptop that puts security first.",
+		"features": "Hardware kill switches for camera and microphone; Encrypted storage and communications; Libreboot and Coreboot firmware; Fully free and open-source software",
+		"price": 1699,
+		"quantity": 2,
+		"extra_details": "The Purism Librem 14 prioritizes security and privacy above all else. With hardware kill switches and open-source firmware, it provides peace of mind for privacy-conscious users.",
+		"sellerId": 5
+	},
+	{
+		"thumbnail": "img/thinkpenguin-tetris.png",
+		"title": "ThinkPenguin Tetris",
+		"note": "A Linux-friendly laptop designed with freedom in mind.",
+		"features": "Preinstalled with a privacy-focused Linux distribution; Hardware compatibility with free software; High-quality components; Supports open-source firmware",
+		"price": 1299,
+		"quantity": 2,
+		"extra_details": "The ThinkPenguin Tetris is a true open-source laptop, supporting a variety of free software options. With Linux preinstalled and open-source firmware, it's a great choice for those who value software freedom.",
+		"sellerId": 18
+	},
+	{
+		"thumbnail": "img/system76-darter-pro.png",
+		"title": "System76 Darter Pro",
+		"note": "Sleek and powerful, designed for productivity and privacy.",
+		"features": "Thin and lightweight design; Privacy-focused hardware and firmware; Long battery life; High-resolution display",
+		"price": 1599,
+		"quantity": 2,
+		"extra_details": "The System76 Darter Pro combines style with substance, offering a sleek design and privacy-focused features. With long battery life and a high-resolution display, it's perfect for productivity on the go.",
+		"sellerId": 3
+	},
+	{
+		"id": 8,
+		"thumbnail": "img/pinebook-pro.png",
+		"title": "PINEBOOK Pro",
+		"note": "An affordable, community-driven laptop powered by open-source software.",
+		"features": "Affordable price point; Community-driven development; Open-source hardware and software; Lightweight and portable design",
+		"price": 199,
+		"quantity": 2,
+		"extra_details": "The PINEBOOK Pro is a testament to the power of community-driven development. With open-source hardware and software, it offers an affordable option for those who value transparency and collaboration.",
+		"sellerId": 20
+	},
+	{
+		"id": 9,
+		"thumbnail": "img/system76-oryp5.png",
+		"title": "System76 Oryx Pro",
+		"note": "A powerhouse laptop built for performance and privacy.",
+		"features": "High-performance components; Privacy-focused hardware and firmware; Customizable configurations; Robust build quality",
+		"price": 1999,
+		"quantity": 2,
+		"extra_details": "The System76 Oryx Pro is engineered for power users who demand both performance and privacy. With top-of-the-line components and privacy-focused features, it's perfect for professionals and gamers alike.",
+		"sellerId": 13
+	}
+]

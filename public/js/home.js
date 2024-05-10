@@ -70,6 +70,7 @@ async function showItems(isFiltered) {
 }
 
 function itemToHTML(item) {
+	const features = item.features.split("; ")
 	return `<section class="item">
 					<figure>
 							<img src="${item.thumbnail}" alt="Image of ${item.title} Laptop">
@@ -77,25 +78,27 @@ function itemToHTML(item) {
 					<p>${item.title}</p>
 					<p class="best-for">${item.note}</p>
 					<p class="note">Notable Features: </p>
-					<p class="features">${item.features[0]}</p>
-					<p class="features">${item.features[1]}</p>
-					<p class="features">${item.features[2]}</p>
-					<p class="features">${item.features[3]}</p>
+					<p class="features">${features[0]}</p>
+					<p class="features">${features[1]}</p>
+					<p class="features">${features[2]}</p>
+					<p class="features">${features[3]}</p>
 					<p class="price">$${item.price}</p>
 					<button onclick="handleShowDetails(${item.id})">Show Details</button>
 					<button onclick="handleBuyNow(${item.id})">Buy Now!</button>
 			</section>`;
 }
 
-function handleShowDetails(id) {
-	const item = items.find((item) => item.id === id);
+async function handleShowDetails(id) {
+	const itemData = await fetch(`/api/items?id=${id}`);
+	const item = await itemData.json()
 	localStorage.itemID = item.id;
 	window.location.href = "/show-details.html";
 }
 
-function handleBuyNow(id) {
-	const item = items.find((item) => item.id === id);
-	if (customersFunc.isLoggedIn(localStorage.custCookie)) {
+async function handleBuyNow(id) {
+	const itemData = await fetch(`/api/items?id=${id}`);
+	const item = await itemData.json()
+	if (await customersFunc.isLoggedIn(localStorage.custCookie)) {
 		localStorage.itemID = item.id;
 		window.location.href = `/buy-now.html`;
 	} else {

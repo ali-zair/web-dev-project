@@ -15,7 +15,7 @@ if (!(await sellersFunc.isLoggedIn(localStorage.sellerCookie))) {
 }
 
 logoutBtn.addEventListener("click", async () => {
-	sellersFunc.logout(localStorage.sellerCookie);
+	await sellersFunc.logout(localStorage.sellerCookie);
 	alert("You have successfully logged out");
 	window.location.href = "/home.html"
 });
@@ -37,6 +37,7 @@ async function showItems(isFiltered) {
 	try {
 		const sellerId = localStorage.sellerCookie.split(":")[0]
 		items = await sellersFunc.getSellerItems(sellerId)
+		console.log(items);
 		if (isFiltered === true) {
 			main.innerHTML = filteredItems.map((item) => itemToHTML(item)).join("");
 		} else {
@@ -48,6 +49,7 @@ async function showItems(isFiltered) {
 }
 
 function itemToHTML(item) {
+	const features = item.features.split("; ")
 	return `<section class="item">
 					<figure>
 							<img src="${item.thumbnail}" alt="Image of ${item.title} Laptop">
@@ -55,10 +57,10 @@ function itemToHTML(item) {
 					<p>${item.title}</p>
 					<p class="best-for">${item.note}</p>
 					<p class="note">Notable Features: </p>
-					<p class="features">${item.features[0]}</p>
-					<p class="features">${item.features[1]}</p>
-					<p class="features">${item.features[2]}</p>
-					<p class="features">${item.features[3]}</p>
+					<p class="features">${features[0]}</p>
+					<p class="features">${features[1]}</p>
+					<p class="features">${features[2]}</p>
+					<p class="features">${features[3]}</p>
 					<p class="price">$${item.price}</p>
 			</section>`;
 }

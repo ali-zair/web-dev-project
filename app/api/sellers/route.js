@@ -5,7 +5,7 @@ export async function GET(request) {
 	try {
 		const { searchParams } = new URL(request.url)
 		const sellerId = parseInt(searchParams.get('sellerId'))
-		const itemsOwned = await sellersRepo.getSellerItems(sellerId)
+		const { itemsOwned } = await sellersRepo.getSellerItems(sellerId)
 		if (itemsOwned.length > 0) {
 			return Response.json(itemsOwned, { status: 200 })
 		}

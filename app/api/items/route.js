@@ -5,6 +5,14 @@ export async function GET(request) {
 	try {
 		const { searchParams } = new URL(request.url)
 		const id = parseInt(searchParams.get('id'))
+		// const features = searchParams.get('features')
+		// if (features) {
+		// 	const items = await itemsRepo.getItems()
+		// 	const filteredItems = items.filter((item) =>
+		// 		item.title.toLowerCase().includes(features.toLowerCase())
+		// 	)
+		// 	return Response.json(filteredItems, { status: 200 })
+		// }
 		if (id) {
 			const item = await itemsRepo.getItem(id)
 			if (item) {
