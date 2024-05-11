@@ -1,7 +1,8 @@
-import React from 'react'
+'use client'
+import App from './App'
 
 export default function page() {
 	return (
-		<div>Statistics Web Page</div>
+		<App />
 	)
 }

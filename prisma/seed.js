@@ -14,34 +14,38 @@ async function main() {
 	await prisma.customer.deleteMany({})
 	await prisma.bankAccount.deleteMany({})
 
+	const countries = ['Qatar', 'United Arab Emirates', 'Saudi Arabia', 'Kuwait', 'Bahrain', 'Oman'];
+
 	// Generate and insert 100 sellers
-	for (let i = 1; i <= 100; i++) {
-		const seller = generateSeller(i, i - 1 + 1000000000);
+	for (let i = 1; i <= 20; i++) {
+		const seller = generateSeller(i);
 		await prisma.seller.create({ data: seller });
 	}
 
 	// Generate and insert 500 customers
-	for (let i = 1; i <= 500; i++) {
-		const customer = generateCustomer(i);
+	for (let i = 1; i <= 50; i++) {
+		const country = faker.helpers.arrayElement(countries);
+		const customer = generateCustomer(i, country);
 		await prisma.customer.create({ data: customer });
 	}
 
 	// Generate and insert 100 purchases
-	for (let i = 1; i <= 100; i++) {
-		const cCounter = faker.number.int({ min: 1, max: 500 });
-		const purchase = generatePurchase(i, cCounter);
+	for (let i = 1; i <= 500; i++) {
+		const cCounter = faker.number.int({ min: 1, max: 50 });
+		const purchase = generatePurchase(i % 50 + 1, cCounter);
 		await prisma.purchase.create({ data: purchase });
 	}
 
 	// Generate and insert 100 bank accounts
-	for (let i = 1; i <= 100; i++) {
+	for (let i = 1; i <= 20; i++) {
 		const bankAccount = generateBankAccount(i);
 		await prisma.bankAccount.create({ data: bankAccount });
 	}
 
 	// Generate and insert 1000 items
-	for (let i = 1; i <= 1000; i++) {
-		const item = generateItem(i, i % 100 + 1);
+	for (let i = 1; i <= 100; i++) {
+		const sCounter = faker.number.int({ min: 1, max: 20 });
+		const item = generateItem(i, sCounter);
 		await prisma.item.create({ data: item });
 	}
 
@@ -49,13 +53,12 @@ async function main() {
 
 }
 
-function generateSeller(sCounter, bCount) {
+function generateSeller(sCounter) {
 	return {
 		id: sCounter,
 		company: faker.company.name(),
 		username: faker.internet.userName(),
 		password: faker.internet.password(),
-		bankAccountNo: bCount
 	};
 };
 
@@ -64,7 +67,7 @@ function generatePurchase(iCounter, cCounter) {
 	return {
 		orderNo: faker.number.int({ max: 9999999 }),
 		itemId: iCounter,
-		shippingAddress: faker.location.streetAddress(),
+		shippingAddress: faker.location.streetAddress(true),
 		quantity: faker.number.int({ max: 10 }),
 		date: faker.date.past(),
 		shippingType: faker.helpers.arrayElement(['Standard', 'Express']),
@@ -89,17 +92,17 @@ function generateItem(iCounter, sCounter) {
 };
 
 // Function to generate a fake customer object
-function generateCustomer(cCounter) {
+function generateCustomer(cCounter, country) {
 	return {
 		id: cCounter,
 		firstName: faker.person.firstName(),
 		lastName: faker.person.lastName(),
-		streetAddress: faker.location.streetAddress(),
-		city: faker.location.city(),
-		country: faker.location.country(),
+		streetAddress: faker.location.streetAddress(true),
+		city: faker.location.city({ country: country }),
+		country: country,
 		username: faker.internet.userName(),
 		password: faker.internet.password(),
-		balance: faker.finance.amount()
+		balance: faker.finance.amount({ min: 5000, max: 10000 })
 	};
 };
 

@@ -49,7 +49,6 @@ async function showItems(isFiltered) {
 }
 
 function itemToHTML(item) {
-	const features = item.features.split("; ")
 	return `<section class="item">
 					<figure>
 							<img src="${item.thumbnail}" alt="Image of ${item.title} Laptop">
@@ -57,10 +56,7 @@ function itemToHTML(item) {
 					<p>${item.title}</p>
 					<p class="best-for">${item.note}</p>
 					<p class="note">Notable Features: </p>
-					<p class="features">${features[0]}</p>
-					<p class="features">${features[1]}</p>
-					<p class="features">${features[2]}</p>
-					<p class="features">${features[3]}</p>
-					<p class="price">$${item.price}</p>
+					<p class="features">${item.features}</p>
+					<p class="price">Price: $${item.price}</p>
 			</section>`;
 }

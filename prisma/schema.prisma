@@ -5,6 +5,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
@@ -37,14 +41,13 @@ model Purchase {
 }
 
 model Seller {
-  id            Int            @id @default(autoincrement())
-  company       String
-  username      String         @unique
-  password      String
-  itemsOwned    Item[]
-  bankAccountNo Int
-  BankAccount   BankAccount[]
-  cookies       SellerCookie[]
+  id          Int            @id @default(autoincrement())
+  company     String
+  username    String         @unique
+  password    String
+  itemsOwned  Item[]
+  BankAccount BankAccount[]
+  cookies     SellerCookie[]
 }
 
 model BankAccount {

@@ -72,13 +72,22 @@ async function testUpateSellerBalance() {
 }
 
 async function testBuyersPerLocation() {
-	const sellerId = 1;
-	const customers = await statsRepo.buyersPerLocation(sellerId);
-	console.log(customers);
+	console.log(await statsRepo.totalNumberOfBuyersPerLocation());
+}
+
+async function testTopThreeProducts() {
+	const topThreeProducts = await statsRepo.topThreeProductsBought();
+	console.log(topThreeProducts);
+}
+
+async function testProductsNeverPurchased() {
+	const productsNeverPurchased = await statsRepo.productsNeverPurchased();
+	console.log(productsNeverPurchased);
 }
 
 // testPurchaseItem();
 // testAddItemToSeller();
 // testUpateSellerBalance();
-
 testBuyersPerLocation();
+// testTopThreeProducts();
+// testProductsNeverPurchased();

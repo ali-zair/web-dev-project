@@ -1,0 +1,81 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Customer {
+  id Int [pk, increment]
+  firstName String [not null]
+  lastName String [not null]
+  streetAddress String [not null]
+  city String [not null]
+  country String [not null]
+  username String [unique, not null]
+  password String [not null]
+  balance Decimal [not null]
+  itemsPurchased Purchase [not null]
+  cookies CustomerCookie [not null]
+}
+
+Table Purchase {
+  orderNo Int [pk, increment]
+  itemId Int [not null]
+  shippingAddress String [not null]
+  quantity Int [not null]
+  date DateTime [not null]
+  shippingType String [not null]
+  amount Decimal [not null]
+  Customer Customer [not null]
+  customerId Int [not null]
+}
+
+Table Seller {
+  id Int [pk, increment]
+  company String [not null]
+  username String [unique, not null]
+  password String [not null]
+  itemsOwned Item [not null]
+  BankAccount BankAccount [not null]
+  cookies SellerCookie [not null]
+}
+
+Table BankAccount {
+  accountNo Int [pk]
+  balance Decimal [not null]
+  Seller Seller [not null]
+  sellerId Int [not null]
+}
+
+Table Item {
+  id Int [pk, increment]
+  thumbnail String [not null]
+  title String [not null]
+  note String [not null]
+  features String [not null]
+  price Decimal [not null]
+  quantity Int [not null]
+  extra_details String [not null]
+  Seller Seller [not null]
+  sellerId Int [not null]
+}
+
+Table CustomerCookie {
+  cookie String [pk]
+  Customer Customer [not null]
+  customerId Int [not null]
+}
+
+Table SellerCookie {
+  cookie String [pk]
+  Seller Seller [not null]
+  sellerId Int [not null]
+}
+
+Ref: Purchase.customerId > Customer.id
+
+Ref: BankAccount.sellerId > Seller.id [delete: Cascade]
+
+Ref: Item.sellerId > Seller.id [delete: Cascade]
+
+Ref: CustomerCookie.customerId > Customer.id [delete: Cascade]
+
+Ref: SellerCookie.sellerId > Seller.id [delete: Cascade]

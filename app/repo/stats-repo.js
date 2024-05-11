@@ -33,16 +33,47 @@ class StatsRepo {
 		}
 	}
 
-	async buyersPerLocation(sellerId) {
-		const purchases = await this.getItemsPurchasedForSeller(sellerId);
-		const customerIds = purchases.map(purchase => purchase.customerId);
-		const customers = await prisma.customer.findMany({
-			where: { id: { in: customerIds } },
-			select: { city: true, country: true }
+	async totalNumberOfBuyersPerLocation() {
+		// const purcshases = await this.getItemsPurchasedForSeller(sellerId);
+		// const customerIds = purchases.map(purchase => purchase.customerId);
+		const buyersByLocation = await prisma.customer.groupBy({
+			by: ['country'],
+			_count: {
+				id: true
+			}
 		});
 
-
+		// const buyersByLocation = await prisma.customer.groupBy({
+		// 	by: ['city', 'country'],
+		// 	_count: {
+		// 		customerId: true
+		// 	},
+		// 	where: {
+		// 		id: {
+		// 			in: customerIds
+		// 		}
+		// 	}
+		// });
+		return buyersByLocation;
 	}
+
+	async topThreeProductsBought() {
+		return prisma.purchase.groupBy({
+			by: ['title'],
+			_count: { orderNo: true },
+			orderBy: { _count: { orderNo: "desc" } },
+			take: 3
+		})
+	}
+
+	async productsNeverPurchased() {
+		return prisma.purchase.groupBy({
+			by: ['orderNo'],
+			_count: { orderNo: true },
+			having: { orderNo: { equals: 0 } }
+		})
+	}
+
 
 }
 
