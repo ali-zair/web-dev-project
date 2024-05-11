@@ -3,21 +3,35 @@ const prisma = new PrismaClient()
 
 class StatsRepo {
 
-	async totalAmountOfPurchases() {
+	async totalAmountPerPurchases() {
 		try {
 			const purchases = await prisma.purchase.findMany({})
 			const numOfItems = purchases.length;
-			const totalAmount = purchases.map(purchase => purchase.amount).reduce((a, b) => a + b, 0)
-			return { numOfItems, totalAmount };
+			const totalAmount = purchases.map(purchase => parseFloat(purchase.amount)).reduce((a, b) => a + b, 0)
+			return totalAmount / numOfItems
 		} catch (error) {
 			console.error("Error fetching purchases:", error);
 			throw error; // Rethrow the error to handle it at a higher level
 		}
 	}
 
+	async totalAmountOfPurchases() {
+		const purchasesPerItem = await prisma.purchase.groupBy({
+			by: [{ year: { date: true } }, { itemId: true }],
+			_sum: {
+				amount: true,
+			},
+		});
+		const itemIds = purchasesPerItem.map(purchase => purchase.itemId)
+		const itemTitles = await prisma.item.findMany({
+			where: { id: { in: itemIds } },
+			select: { title: true }
+		})
+		const totalAmounts = purchasesPerItem.map(purchase => purchase._sum.amount)
+		return { itemTitles, totalAmounts }
+	}
+
 	async totalNumberOfBuyersPerLocation() {
-		// const purcshases = await this.getItemsPurchasedForSeller(sellerId);
-		// const customerIds = purchases.map(purchase => purchase.customerId);
 		const buyersByLocation = await prisma.customer.groupBy({
 			by: ['country'],
 			_count: {

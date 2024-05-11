@@ -58,7 +58,10 @@ export default function Chart() {
 				},
 				title: {
 					display: true,
-					text: "Top 3 Most Selling Products"
+					text: "Top 3 Most Selling Products",
+					font: {
+						size: 20
+					}
 				}
 			}
 		}

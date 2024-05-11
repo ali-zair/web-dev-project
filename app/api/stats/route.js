@@ -6,12 +6,16 @@ export async function GET(request) {
 		const { searchParams } = new URL(request.url)
 		const buyersPerLocation = Boolean(searchParams.get('buyersPerLocation'))
 		const topThreeProducts = Boolean(searchParams.get('topThreeProducts'))
+		const productsNeverPurchased = Boolean(searchParams.get('productsNeverPurchased'))
 		let result
 		if (buyersPerLocation === true) {
 			result = await statsRepo.totalNumberOfBuyersPerLocation()
 		}
 		if (topThreeProducts === true) {
 			result = await statsRepo.topThreeProductsBought()
+		}
+		if (productsNeverPurchased === true) {
+			result = await statsRepo.productsNeverPurchased()
 		}
 		return Response.json(result, { status: 200 })
 	} catch (error) {

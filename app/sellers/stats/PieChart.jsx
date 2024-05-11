@@ -48,7 +48,7 @@ export default function PieChart() {
 					display: true,
 					text: 'Buyers per Location (Customer Traffic)',
 					font: {
-						size: 18,
+						size: 20,
 						weight: 'bold',
 					},
 				},

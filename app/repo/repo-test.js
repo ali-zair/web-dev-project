@@ -85,9 +85,15 @@ async function testProductsNeverPurchased() {
 	console.log(productsNeverPurchased);
 }
 
+async function testTotalAmountOfPurchases() {
+	const totalAmountOfPurchases = await statsRepo.totalAmountOfPurchases()
+	console.log(totalAmountOfPurchases);
+}
+
 // testPurchaseItem();
 // testAddItemToSeller();
 // testUpateSellerBalance();
 // testBuyersPerLocation();
 // testTopThreeProducts();
-// testProductsNeverPurchased();
+testProductsNeverPurchased();
+// testTotalAmountOfPurchases()
