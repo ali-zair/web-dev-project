@@ -95,5 +95,5 @@ async function testTotalAmountOfPurchases() {
 // testUpateSellerBalance();
 // testBuyersPerLocation();
 // testTopThreeProducts();
-testProductsNeverPurchased();
-// testTotalAmountOfPurchases()
+// testProductsNeverPurchased();
+testTotalAmountOfPurchases()

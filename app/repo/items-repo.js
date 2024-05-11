@@ -30,8 +30,9 @@ class ItemsRepo {
 		}
 	}
 
-	async createItem(item) {
+	async createItem(sellerId, item) {
 		try {
+			item.sellerId = sellerId
 			return prisma.item.create({ data: item })
 		} catch (error) {
 			return { error: error.message }

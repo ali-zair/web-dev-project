@@ -17,7 +17,7 @@ class StatsRepo {
 
 	async totalAmountOfPurchases() {
 		const purchasesPerItem = await prisma.purchase.groupBy({
-			by: [{ year: { date: true } }, { itemId: true }],
+			by: ['itemId'],
 			_sum: {
 				amount: true,
 			},

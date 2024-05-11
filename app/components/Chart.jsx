@@ -45,7 +45,7 @@ export default function Chart() {
 					title: 'Top Three Products',
 					label: "Number of Sales",
 					data: products.topThreeCounts,
-					backgroundColor: "rgba(53, 162, 235, 0.5)"
+					backgroundColor: "rgba(255, 206, 86, 0.5)"
 				}
 			]
 		}

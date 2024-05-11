@@ -7,6 +7,7 @@ export async function GET(request) {
 		const buyersPerLocation = Boolean(searchParams.get('buyersPerLocation'))
 		const topThreeProducts = Boolean(searchParams.get('topThreeProducts'))
 		const productsNeverPurchased = Boolean(searchParams.get('productsNeverPurchased'))
+		const totalAmountOfPurchases = Boolean(searchParams.get('totalAmountOfPurchases'))
 		let result
 		if (buyersPerLocation === true) {
 			result = await statsRepo.totalNumberOfBuyersPerLocation()
@@ -16,6 +17,9 @@ export async function GET(request) {
 		}
 		if (productsNeverPurchased === true) {
 			result = await statsRepo.productsNeverPurchased()
+		}
+		if (totalAmountOfPurchases === true) {
+			result = await statsRepo.totalAmountOfPurchases()
 		}
 		return Response.json(result, { status: 200 })
 	} catch (error) {
