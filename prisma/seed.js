@@ -16,33 +16,34 @@ async function main() {
 
 	const countries = ['Qatar', 'United Arab Emirates', 'Saudi Arabia', 'Kuwait', 'Bahrain', 'Oman'];
 
-	// Generate and insert 100 sellers
+	// Generate and insert 20 sellers
 	for (let i = 1; i <= 20; i++) {
 		const seller = generateSeller(i);
 		await prisma.seller.create({ data: seller });
 	}
 
-	// Generate and insert 500 customers
+	// Generate and insert 50 customers
 	for (let i = 1; i <= 50; i++) {
 		const country = faker.helpers.arrayElement(countries);
 		const customer = generateCustomer(i, country);
 		await prisma.customer.create({ data: customer });
 	}
 
-	// Generate and insert 100 purchases
+	// Generate and insert 500 purchases
 	for (let i = 1; i <= 500; i++) {
 		const cCounter = faker.number.int({ min: 1, max: 50 });
-		const purchase = generatePurchase(i % 50 + 1, cCounter);
+		const iCounter = faker.number.int({ min: 1, max: 100 })
+		const purchase = generatePurchase(iCounter, cCounter);
 		await prisma.purchase.create({ data: purchase });
 	}
 
-	// Generate and insert 100 bank accounts
+	// Generate and insert 20 bank accounts
 	for (let i = 1; i <= 20; i++) {
 		const bankAccount = generateBankAccount(i);
 		await prisma.bankAccount.create({ data: bankAccount });
 	}
 
-	// Generate and insert 1000 items
+	// Generate and insert 100 items
 	for (let i = 1; i <= 100; i++) {
 		const sCounter = faker.number.int({ min: 1, max: 20 });
 		const item = generateItem(i, sCounter);

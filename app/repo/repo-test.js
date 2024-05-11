@@ -88,6 +88,6 @@ async function testProductsNeverPurchased() {
 // testPurchaseItem();
 // testAddItemToSeller();
 // testUpateSellerBalance();
-testBuyersPerLocation();
+// testBuyersPerLocation();
 // testTopThreeProducts();
 // testProductsNeverPurchased();
