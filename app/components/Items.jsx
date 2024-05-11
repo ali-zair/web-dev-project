@@ -7,7 +7,7 @@ export default function Items() {
 	const [items, setItems] = useState([])
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/stats?productsNeverPurchased=true').
+		fetch('/api/stats?productsNeverPurchased=true').
 			then(res => res.json()).
 			then(data => setItems(data))
 	}, [])

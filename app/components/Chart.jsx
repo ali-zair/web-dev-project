@@ -30,7 +30,7 @@ export default function Chart() {
 	const [products, setProducts] = useState([])
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/stats?topThreeProducts=true').
+		fetch('/api/stats?topThreeProducts=true').
 			then(res => res.json()).
 			then(data => setProducts(data))
 	}, [])

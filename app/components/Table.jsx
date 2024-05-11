@@ -8,7 +8,7 @@ export default function Table() {
 	const [totalAmounts, setTotalAmounts] = useState([])
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/stats?totalAmountOfPurchases=true').
+		fetch('/api/stats?totalAmountOfPurchases=true').
 			then(res => res.json()).
 			then(data => {
 				setItemTitles(data?.itemTitles || []);

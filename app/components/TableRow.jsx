@@ -7,7 +7,7 @@ export default function TableRow({ index, title, amount }) {
 	return (
 		<tr>
 			<td>{index + 1}. {title}</td>
-			<td>{amount}</td>
+			<td>${amount}</td>
 		</tr>
 	)
 }

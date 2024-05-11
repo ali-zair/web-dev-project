@@ -11,6 +11,7 @@ let items = [];
 
 // if the user is not logged in as a seller then redirect
 if (!(await sellersFunc.isLoggedIn(localStorage.sellerCookie))) {
+	alert("Please login as a seller first");
 	window.location.href = "/home.html"
 }
 

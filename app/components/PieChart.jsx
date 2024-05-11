@@ -9,7 +9,7 @@ export default function PieChart() {
 	const [buyers, setBuyers] = useState([])
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/stats?buyersPerLocation=true').
+		fetch('/api/stats?buyersPerLocation=true').
 			then(res => res.json()).
 			then(data => setBuyers(data))
 	}, [])
